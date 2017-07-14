@@ -1,0 +1,40 @@
+c:\users\felipegonzalez\documents\visual studio 2015\Projects\Banquetzal\Banquetzal\bin\roslyn\csc.exe
+c:\users\felipegonzalez\documents\visual studio 2015\Projects\Banquetzal\Banquetzal\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\felipegonzalez\documents\visual studio 2015\Projects\Banquetzal\Banquetzal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\felipegonzalez\documents\visual studio 2015\Projects\Banquetzal\Banquetzal\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\felipegonzalez\documents\visual studio 2015\Projects\Banquetzal\Banquetzal\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\felipegonzalez\documents\visual studio 2015\Projects\Banquetzal\Banquetzal\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\felipegonzalez\documents\visual studio 2015\Projects\Banquetzal\Banquetzal\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\felipegonzalez\documents\visual studio 2015\Projects\Banquetzal\Banquetzal\bin\roslyn\System.Collections.Immutable.dll
+c:\users\felipegonzalez\documents\visual studio 2015\Projects\Banquetzal\Banquetzal\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\felipegonzalez\documents\visual studio 2015\Projects\Banquetzal\Banquetzal\bin\roslyn\vbc.exe
+c:\users\felipegonzalez\documents\visual studio 2015\Projects\Banquetzal\Banquetzal\bin\roslyn\VBCSCompiler.exe
+c:\users\felipegonzalez\documents\visual studio 2015\Projects\Banquetzal\Banquetzal\bin\roslyn\VBCSCompiler.exe.config
+c:\users\felipegonzalez\documents\visual studio 2015\Projects\Banquetzal\Banquetzal\bin\Banquetzal.dll.config
+c:\users\felipegonzalez\documents\visual studio 2015\Projects\Banquetzal\Banquetzal\bin\Banquetzal.dll
+c:\users\felipegonzalez\documents\visual studio 2015\Projects\Banquetzal\Banquetzal\bin\Banquetzal.pdb
+c:\users\felipegonzalez\documents\visual studio 2015\Projects\Banquetzal\Banquetzal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\felipegonzalez\documents\visual studio 2015\Projects\Banquetzal\Banquetzal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\felipegonzalez\documents\visual studio 2015\Projects\Banquetzal\Banquetzal\obj\Debug\Banquetzal.csprojResolveAssemblyReference.cache
+c:\users\felipegonzalez\documents\visual studio 2015\Projects\Banquetzal\Banquetzal\obj\Debug\Banquetzal.dll
+c:\users\felipegonzalez\documents\visual studio 2015\Projects\Banquetzal\Banquetzal\obj\Debug\Banquetzal.pdb
+C:\GitHub - Repositorios\Banquetzal Fase 2\CODIGO\Banquetzal\Banquetzal\bin\roslyn\csc.exe
+C:\GitHub - Repositorios\Banquetzal Fase 2\CODIGO\Banquetzal\Banquetzal\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\GitHub - Repositorios\Banquetzal Fase 2\CODIGO\Banquetzal\Banquetzal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\GitHub - Repositorios\Banquetzal Fase 2\CODIGO\Banquetzal\Banquetzal\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\GitHub - Repositorios\Banquetzal Fase 2\CODIGO\Banquetzal\Banquetzal\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\GitHub - Repositorios\Banquetzal Fase 2\CODIGO\Banquetzal\Banquetzal\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\GitHub - Repositorios\Banquetzal Fase 2\CODIGO\Banquetzal\Banquetzal\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\GitHub - Repositorios\Banquetzal Fase 2\CODIGO\Banquetzal\Banquetzal\bin\roslyn\System.Collections.Immutable.dll
+C:\GitHub - Repositorios\Banquetzal Fase 2\CODIGO\Banquetzal\Banquetzal\bin\roslyn\System.Reflection.Metadata.dll
+C:\GitHub - Repositorios\Banquetzal Fase 2\CODIGO\Banquetzal\Banquetzal\bin\roslyn\vbc.exe
+C:\GitHub - Repositorios\Banquetzal Fase 2\CODIGO\Banquetzal\Banquetzal\bin\roslyn\VBCSCompiler.exe
+C:\GitHub - Repositorios\Banquetzal Fase 2\CODIGO\Banquetzal\Banquetzal\bin\roslyn\VBCSCompiler.exe.config
+C:\GitHub - Repositorios\Banquetzal Fase 2\CODIGO\Banquetzal\Banquetzal\bin\Banquetzal.dll.config
+C:\GitHub - Repositorios\Banquetzal Fase 2\CODIGO\Banquetzal\Banquetzal\bin\Banquetzal.dll
+C:\GitHub - Repositorios\Banquetzal Fase 2\CODIGO\Banquetzal\Banquetzal\bin\Banquetzal.pdb
+C:\GitHub - Repositorios\Banquetzal Fase 2\CODIGO\Banquetzal\Banquetzal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\GitHub - Repositorios\Banquetzal Fase 2\CODIGO\Banquetzal\Banquetzal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\GitHub - Repositorios\Banquetzal Fase 2\CODIGO\Banquetzal\Banquetzal\obj\Debug\Banquetzal.dll
+C:\GitHub - Repositorios\Banquetzal Fase 2\CODIGO\Banquetzal\Banquetzal\obj\Debug\Banquetzal.pdb
+C:\GitHub - Repositorios\Banquetzal Fase 2\CODIGO\Banquetzal\Banquetzal\obj\Debug\Banquetzal.csprojResolveAssemblyReference.cache

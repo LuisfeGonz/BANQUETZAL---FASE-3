@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterCliente.master.cs" Inherits="Banquetzal.app.Cliente" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Banquetzal</title>
+    <link href="Estilos/principal.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="subpage">
+    <form id="form1" runat="server">
+        <div>
+            <header id="header">
+                <div class="inner">
+                    <nav id="nav">
+                        <a href="InicioCliente.aspx">Inicio</a>
+                        <a href="DatosPersonales.aspx">Datos Personales</a>
+                        <a href="OperacionesCliente.aspx">Operaciones</a>
+                        <a href="EstadoCuentaCliente.aspx">Estado de cuenta</a>
+                        <a href="OpcionesNomina.aspx">Opciones de Nomina</a>
+                        <a href="AcercaDe.aspx">Acerca De</a>
+                        <a href="CambiarContrasena.aspx">Cambiar contrasena</a>
+                        <a href="CerrarSesion.aspx" id="sesion">Cerrar sesión</a>
+                    </nav>
+                    <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+                </div>
+            </header>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <div class="flex">
+                    <div class="copyright">
+                        &copy; Banquetzal</a>.
+                    </div>
+                    <ul class="icons">
+                        <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                        <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                        <li><a href="#" class="icon fa-linkedin"><span class="label">linkedIn</span></a></li>
+                        <li><a href="#" class="icon fa-pinterest-p"><span class="label">Pinterest</span></a></li>
+                        <li><a href="#" class="icon fa-vimeo"><span class="label">Vimeo</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- Scripts -->
+        <script src="JS/jquery.min.js"></script>
+        <script src="JS/skel.min.js"></script>
+        <script src="JS/util.js"></script>
+        <script src="JS/main.js"></script>
+    </form>
+</body>
+</html>

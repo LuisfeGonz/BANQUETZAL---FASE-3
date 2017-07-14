@@ -1,0 +1,524 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3F5C1E15-4781-4DCE-BEA1-8FC4602DA798}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Banquetzal</RootNamespace>
+    <AssemblyName>Banquetzal</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\AgregarEmpleadoNomina.aspx" />
+    <Content Include="app\AgregarProducto.aspx" />
+    <Content Include="app\AgregarProveedor.aspx" />
+    <Content Include="app\AsociacionCuenta.aspx" />
+    <Content Include="app\CambiarCheque.aspx" />
+    <Content Include="app\CambiarContrasena.aspx" />
+    <Content Include="app\CambiarEstadoCuentaTrabajador.aspx" />
+    <Content Include="app\CerrarSesion.aspx" />
+    <Content Include="app\ClienteSinPermisos.aspx" />
+    <Content Include="app\DatosPersonales.aspx" />
+    <Content Include="app\Depositar.aspx" />
+    <Content Include="app\EstadoCuenta.aspx" />
+    <Content Include="app\EstadoCuentaCliente.aspx" />
+    <Content Include="app\EstadoPuntos.aspx" />
+    <Content Include="app\GestionarAgencia.aspx" />
+    <Content Include="app\GestionarEmpleadoBanco.aspx" />
+    <Content Include="app\InicioCliente.aspx" />
+    <Content Include="app\InicioTrabajador.aspx" />
+    <Content Include="app\Login.aspx" />
+    <Content Include="app\NuevaCuenta.aspx" />
+    <Content Include="app\OpcionesNomina.aspx" />
+    <Content Include="app\OperacionesCliente.aspx" />
+    <Content Include="app\OperacionesTrabajador.aspx" />
+    <Content Include="app\PagarSalarioNomina.aspx" />
+    <Content Include="app\PaginaInicio.aspx" />
+    <Content Include="app\PuntosCanje.aspx" />
+    <Content Include="app\ReportesGerenciales.aspx" />
+    <Content Include="app\ReportesGerentesGenerales.aspx" />
+    <Content Include="app\Retiro.aspx" />
+    <Content Include="app\SolicitarChequera.aspx" />
+    <Content Include="app\SolicitarPrestamoTrabajador.aspx" />
+    <Content Include="app\TrabajadorSinPermisos.aspx" />
+    <Content Include="app\TransferenciaCliente.aspx" />
+    <Content Include="app\VerSolicitudesPrestamo.aspx" />
+    <Content Include="app\VerSolicitudesPrestamoNomina.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="app\MasterCliente.Master" />
+    <Content Include="app\TrabajadorMaster.Master" />
+    <Content Include="app\InicioMaster.Master" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Web References\ServicioWeb\cliente.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\ServicioWeb\cuenta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\ServicioWeb\modalidadPagoPrestamo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\ServicioWeb\estadoCuenta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\ServicioWeb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServicioWeb\ServicioWeb.wsdl" />
+    <None Include="Web References\ServicioWeb\ServicioWeb.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Web References\SWFase3\cuenta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\SWFase3\estadoPrestamo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\SWFase3\cliente.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\SWFase3\Fase3.wsdl" />
+    <None Include="Web References\SWFase3\Fase3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Web References\SWFase3\prestamo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\SWFase3\proveedor.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\SWFase3\producto.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\SWFase3\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web References\SWFase3\stock.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="app\AgregarEmpleadoNomina.aspx.cs">
+      <DependentUpon>AgregarEmpleadoNomina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\AgregarEmpleadoNomina.aspx.designer.cs">
+      <DependentUpon>AgregarEmpleadoNomina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\AgregarProducto.aspx.cs">
+      <DependentUpon>AgregarProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\AgregarProducto.aspx.designer.cs">
+      <DependentUpon>AgregarProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\AgregarProveedor.aspx.cs">
+      <DependentUpon>AgregarProveedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\AgregarProveedor.aspx.designer.cs">
+      <DependentUpon>AgregarProveedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\AsociacionCuenta.aspx.cs">
+      <DependentUpon>AsociacionCuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\AsociacionCuenta.aspx.designer.cs">
+      <DependentUpon>AsociacionCuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\CambiarCheque.aspx.cs">
+      <DependentUpon>CambiarCheque.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\CambiarCheque.aspx.designer.cs">
+      <DependentUpon>CambiarCheque.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\CambiarContrasena.aspx.cs">
+      <DependentUpon>CambiarContrasena.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\CambiarContrasena.aspx.designer.cs">
+      <DependentUpon>CambiarContrasena.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\CambiarEstadoCuentaTrabajador.aspx.cs">
+      <DependentUpon>CambiarEstadoCuentaTrabajador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\CambiarEstadoCuentaTrabajador.aspx.designer.cs">
+      <DependentUpon>CambiarEstadoCuentaTrabajador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\CerrarSesion.aspx.cs">
+      <DependentUpon>CerrarSesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\CerrarSesion.aspx.designer.cs">
+      <DependentUpon>CerrarSesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\ClienteSinPermisos.aspx.cs">
+      <DependentUpon>ClienteSinPermisos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\ClienteSinPermisos.aspx.designer.cs">
+      <DependentUpon>ClienteSinPermisos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\DatosPersonales.aspx.cs">
+      <DependentUpon>DatosPersonales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\DatosPersonales.aspx.designer.cs">
+      <DependentUpon>DatosPersonales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\Depositar.aspx.cs">
+      <DependentUpon>Depositar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Depositar.aspx.designer.cs">
+      <DependentUpon>Depositar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\EstadoCuenta.aspx.cs">
+      <DependentUpon>EstadoCuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\EstadoCuenta.aspx.designer.cs">
+      <DependentUpon>EstadoCuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\EstadoCuentaCliente.aspx.cs">
+      <DependentUpon>EstadoCuentaCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\EstadoCuentaCliente.aspx.designer.cs">
+      <DependentUpon>EstadoCuentaCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\EstadoPuntos.aspx.cs">
+      <DependentUpon>EstadoPuntos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\EstadoPuntos.aspx.designer.cs">
+      <DependentUpon>EstadoPuntos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\GestionarAgencia.aspx.cs">
+      <DependentUpon>GestionarAgencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\GestionarAgencia.aspx.designer.cs">
+      <DependentUpon>GestionarAgencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\GestionarEmpleadoBanco.aspx.cs">
+      <DependentUpon>GestionarEmpleadoBanco.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\GestionarEmpleadoBanco.aspx.designer.cs">
+      <DependentUpon>GestionarEmpleadoBanco.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\InicioCliente.aspx.cs">
+      <DependentUpon>InicioCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\InicioCliente.aspx.designer.cs">
+      <DependentUpon>InicioCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\InicioMaster.Master.cs">
+      <DependentUpon>InicioMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\InicioMaster.Master.designer.cs">
+      <DependentUpon>InicioMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="app\InicioTrabajador.aspx.cs">
+      <DependentUpon>InicioTrabajador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\InicioTrabajador.aspx.designer.cs">
+      <DependentUpon>InicioTrabajador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\MasterCliente.Master.cs">
+      <DependentUpon>MasterCliente.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\MasterCliente.Master.designer.cs">
+      <DependentUpon>MasterCliente.Master</DependentUpon>
+    </Compile>
+    <Compile Include="app\NuevaCuenta.aspx.cs">
+      <DependentUpon>NuevaCuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\NuevaCuenta.aspx.designer.cs">
+      <DependentUpon>NuevaCuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\OpcionesNomina.aspx.cs">
+      <DependentUpon>OpcionesNomina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\OpcionesNomina.aspx.designer.cs">
+      <DependentUpon>OpcionesNomina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\OperacionesCliente.aspx.cs">
+      <DependentUpon>OperacionesCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\OperacionesCliente.aspx.designer.cs">
+      <DependentUpon>OperacionesCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\OperacionesTrabajador.aspx.cs">
+      <DependentUpon>OperacionesTrabajador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\OperacionesTrabajador.aspx.designer.cs">
+      <DependentUpon>OperacionesTrabajador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\PagarSalarioNomina.aspx.cs">
+      <DependentUpon>PagarSalarioNomina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\PagarSalarioNomina.aspx.designer.cs">
+      <DependentUpon>PagarSalarioNomina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\PaginaInicio.aspx.cs">
+      <DependentUpon>PaginaInicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\PaginaInicio.aspx.designer.cs">
+      <DependentUpon>PaginaInicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\PuntosCanje.aspx.cs">
+      <DependentUpon>PuntosCanje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\PuntosCanje.aspx.designer.cs">
+      <DependentUpon>PuntosCanje.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\ReportesGerenciales.aspx.cs">
+      <DependentUpon>ReportesGerenciales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\ReportesGerenciales.aspx.designer.cs">
+      <DependentUpon>ReportesGerenciales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\ReportesGerentesGenerales.aspx.cs">
+      <DependentUpon>ReportesGerentesGenerales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\ReportesGerentesGenerales.aspx.designer.cs">
+      <DependentUpon>ReportesGerentesGenerales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\Retiro.aspx.cs">
+      <DependentUpon>Retiro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\Retiro.aspx.designer.cs">
+      <DependentUpon>Retiro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\SolicitarChequera.aspx.cs">
+      <DependentUpon>SolicitarChequera.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\SolicitarChequera.aspx.designer.cs">
+      <DependentUpon>SolicitarChequera.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\SolicitarPrestamoTrabajador.aspx.cs">
+      <DependentUpon>SolicitarPrestamoTrabajador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\SolicitarPrestamoTrabajador.aspx.designer.cs">
+      <DependentUpon>SolicitarPrestamoTrabajador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\TrabajadorMaster.Master.cs">
+      <DependentUpon>TrabajadorMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\TrabajadorMaster.Master.designer.cs">
+      <DependentUpon>TrabajadorMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="app\TrabajadorSinPermisos.aspx.cs">
+      <DependentUpon>TrabajadorSinPermisos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\TrabajadorSinPermisos.aspx.designer.cs">
+      <DependentUpon>TrabajadorSinPermisos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\TransferenciaCliente.aspx.cs">
+      <DependentUpon>TransferenciaCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\TransferenciaCliente.aspx.designer.cs">
+      <DependentUpon>TransferenciaCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\VerSolicitudesPrestamo.aspx.cs">
+      <DependentUpon>VerSolicitudesPrestamo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\VerSolicitudesPrestamo.aspx.designer.cs">
+      <DependentUpon>VerSolicitudesPrestamo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\VerSolicitudesPrestamoNomina.aspx.cs">
+      <DependentUpon>VerSolicitudesPrestamoNomina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\VerSolicitudesPrestamoNomina.aspx.designer.cs">
+      <DependentUpon>VerSolicitudesPrestamoNomina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServicioWeb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SWFase3\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:8080/ServicioWebBanquetzal/Fase3%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SWFase3\</RelPath>
+      <UpdateFromURL>http://localhost:8080/ServicioWebBanquetzal/Fase3%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Banquetzal_SWFase3_Fase3</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:8080/ServicioWebBanquetzal/ServicioWeb%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServicioWeb\</RelPath>
+      <UpdateFromURL>http://localhost:8080/ServicioWebBanquetzal/ServicioWeb%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Banquetzal_ServicioWeb_ServicioWeb</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51648</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51648/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
