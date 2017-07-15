@@ -5,143 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/ServicioWebBanquetzal/ServicioWeb?xsd=1" namespace="http://ServicioWeb/" />
     </xsd:schema>
   </types>
-  <message name="actualizarDatosCliente">
-    <part name="parameters" element="tns:actualizarDatosCliente" />
-  </message>
-  <message name="actualizarDatosClienteResponse">
-    <part name="parameters" element="tns:actualizarDatosClienteResponse" />
-  </message>
-  <message name="asignarClienteCuentaMonetaria">
-    <part name="parameters" element="tns:asignarClienteCuentaMonetaria" />
-  </message>
-  <message name="asignarClienteCuentaMonetariaResponse">
-    <part name="parameters" element="tns:asignarClienteCuentaMonetariaResponse" />
-  </message>
-  <message name="CambiarContrasena">
-    <part name="parameters" element="tns:CambiarContrasena" />
-  </message>
-  <message name="CambiarContrasenaResponse">
-    <part name="parameters" element="tns:CambiarContrasenaResponse" />
-  </message>
-  <message name="mostrarTiposPrestamo">
-    <part name="parameters" element="tns:mostrarTiposPrestamo" />
-  </message>
-  <message name="mostrarTiposPrestamoResponse">
-    <part name="parameters" element="tns:mostrarTiposPrestamoResponse" />
-  </message>
-  <message name="mostrarDatosCliente">
-    <part name="parameters" element="tns:mostrarDatosCliente" />
-  </message>
-  <message name="mostrarDatosClienteResponse">
-    <part name="parameters" element="tns:mostrarDatosClienteResponse" />
-  </message>
-  <message name="mostrarTiposOperacion">
-    <part name="parameters" element="tns:mostrarTiposOperacion" />
-  </message>
-  <message name="mostrarTiposOperacionResponse">
-    <part name="parameters" element="tns:mostrarTiposOperacionResponse" />
-  </message>
-  <message name="mostrarTiposCuenta">
-    <part name="parameters" element="tns:mostrarTiposCuenta" />
-  </message>
-  <message name="mostrarTiposCuentaResponse">
-    <part name="parameters" element="tns:mostrarTiposCuentaResponse" />
-  </message>
-  <message name="agregarClienteIndividual">
-    <part name="parameters" element="tns:agregarClienteIndividual" />
-  </message>
-  <message name="agregarClienteIndividualResponse">
-    <part name="parameters" element="tns:agregarClienteIndividualResponse" />
-  </message>
-  <message name="descontarMontoCheque">
-    <part name="parameters" element="tns:descontarMontoCheque" />
-  </message>
-  <message name="descontarMontoChequeResponse">
-    <part name="parameters" element="tns:descontarMontoChequeResponse" />
-  </message>
-  <message name="agregarTrabajador">
-    <part name="parameters" element="tns:agregarTrabajador" />
-  </message>
-  <message name="agregarTrabajadorResponse">
-    <part name="parameters" element="tns:agregarTrabajadorResponse" />
-  </message>
-  <message name="crearCuentaIndividual">
-    <part name="parameters" element="tns:crearCuentaIndividual" />
-  </message>
-  <message name="crearCuentaIndividualResponse">
-    <part name="parameters" element="tns:crearCuentaIndividualResponse" />
-  </message>
-  <message name="asignarClienteCuenta">
-    <part name="parameters" element="tns:asignarClienteCuenta" />
-  </message>
-  <message name="asignarClienteCuentaResponse">
-    <part name="parameters" element="tns:asignarClienteCuentaResponse" />
-  </message>
-  <message name="mostrarCuentaPropietario">
-    <part name="parameters" element="tns:mostrarCuentaPropietario" />
-  </message>
-  <message name="mostrarCuentaPropietarioResponse">
-    <part name="parameters" element="tns:mostrarCuentaPropietarioResponse" />
-  </message>
-  <message name="solicitarPrestamo">
-    <part name="parameters" element="tns:solicitarPrestamo" />
-  </message>
-  <message name="solicitarPrestamoResponse">
-    <part name="parameters" element="tns:solicitarPrestamoResponse" />
-  </message>
-  <message name="verificarDatosCliente">
-    <part name="parameters" element="tns:verificarDatosCliente" />
-  </message>
-  <message name="verificarDatosClienteResponse">
-    <part name="parameters" element="tns:verificarDatosClienteResponse" />
-  </message>
-  <message name="cambiarEstadoCuenta">
-    <part name="parameters" element="tns:cambiarEstadoCuenta" />
-  </message>
-  <message name="cambiarEstadoCuentaResponse">
-    <part name="parameters" element="tns:cambiarEstadoCuentaResponse" />
-  </message>
-  <message name="mostrarModalidadesPago">
-    <part name="parameters" element="tns:mostrarModalidadesPago" />
-  </message>
-  <message name="mostrarModalidadesPagoResponse">
-    <part name="parameters" element="tns:mostrarModalidadesPagoResponse" />
-  </message>
-  <message name="solicitarChequera">
-    <part name="parameters" element="tns:solicitarChequera" />
-  </message>
-  <message name="solicitarChequeraResponse">
-    <part name="parameters" element="tns:solicitarChequeraResponse" />
-  </message>
-  <message name="mostrarEstadoCuenta">
-    <part name="parameters" element="tns:mostrarEstadoCuenta" />
-  </message>
-  <message name="mostrarEstadoCuentaResponse">
-    <part name="parameters" element="tns:mostrarEstadoCuentaResponse" />
-  </message>
-  <message name="crearCuentaIndividualNomina">
-    <part name="parameters" element="tns:crearCuentaIndividualNomina" />
-  </message>
-  <message name="crearCuentaIndividualNominaResponse">
-    <part name="parameters" element="tns:crearCuentaIndividualNominaResponse" />
-  </message>
   <message name="Login">
     <part name="parameters" element="tns:Login" />
   </message>
   <message name="LoginResponse">
     <part name="parameters" element="tns:LoginResponse" />
-  </message>
-  <message name="cambiarCheque">
-    <part name="parameters" element="tns:cambiarCheque" />
-  </message>
-  <message name="cambiarChequeResponse">
-    <part name="parameters" element="tns:cambiarChequeResponse" />
-  </message>
-  <message name="depositar">
-    <part name="parameters" element="tns:depositar" />
-  </message>
-  <message name="depositarResponse">
-    <part name="parameters" element="tns:depositarResponse" />
   </message>
   <message name="insertarNomina">
     <part name="parameters" element="tns:insertarNomina" />
@@ -149,17 +17,23 @@
   <message name="insertarNominaResponse">
     <part name="parameters" element="tns:insertarNominaResponse" />
   </message>
-  <message name="mostrarNominas">
-    <part name="parameters" element="tns:mostrarNominas" />
+  <message name="mostrarEstados">
+    <part name="parameters" element="tns:mostrarEstados" />
   </message>
-  <message name="mostrarNominasResponse">
-    <part name="parameters" element="tns:mostrarNominasResponse" />
+  <message name="mostrarEstadosResponse">
+    <part name="parameters" element="tns:mostrarEstadosResponse" />
   </message>
   <message name="mostrarRoles">
     <part name="parameters" element="tns:mostrarRoles" />
   </message>
   <message name="mostrarRolesResponse">
     <part name="parameters" element="tns:mostrarRolesResponse" />
+  </message>
+  <message name="mostrarAgencias">
+    <part name="parameters" element="tns:mostrarAgencias" />
+  </message>
+  <message name="mostrarAgenciasResponse">
+    <part name="parameters" element="tns:mostrarAgenciasResponse" />
   </message>
   <message name="mostrarCuenta">
     <part name="parameters" element="tns:mostrarCuenta" />
@@ -173,122 +47,164 @@
   <message name="nuevaAgenciaResponse">
     <part name="parameters" element="tns:nuevaAgenciaResponse" />
   </message>
-  <message name="mostrarEstados">
-    <part name="parameters" element="tns:mostrarEstados" />
+  <message name="mostrarNominas">
+    <part name="parameters" element="tns:mostrarNominas" />
   </message>
-  <message name="mostrarEstadosResponse">
-    <part name="parameters" element="tns:mostrarEstadosResponse" />
+  <message name="mostrarNominasResponse">
+    <part name="parameters" element="tns:mostrarNominasResponse" />
   </message>
-  <message name="mostrarAgencias">
-    <part name="parameters" element="tns:mostrarAgencias" />
+  <message name="mostrarModalidadesPago">
+    <part name="parameters" element="tns:mostrarModalidadesPago" />
   </message>
-  <message name="mostrarAgenciasResponse">
-    <part name="parameters" element="tns:mostrarAgenciasResponse" />
+  <message name="mostrarModalidadesPagoResponse">
+    <part name="parameters" element="tns:mostrarModalidadesPagoResponse" />
+  </message>
+  <message name="mostrarDatosCliente">
+    <part name="parameters" element="tns:mostrarDatosCliente" />
+  </message>
+  <message name="mostrarDatosClienteResponse">
+    <part name="parameters" element="tns:mostrarDatosClienteResponse" />
+  </message>
+  <message name="mostrarEstadoCuenta">
+    <part name="parameters" element="tns:mostrarEstadoCuenta" />
+  </message>
+  <message name="mostrarEstadoCuentaResponse">
+    <part name="parameters" element="tns:mostrarEstadoCuentaResponse" />
+  </message>
+  <message name="CambiarContrasena">
+    <part name="parameters" element="tns:CambiarContrasena" />
+  </message>
+  <message name="CambiarContrasenaResponse">
+    <part name="parameters" element="tns:CambiarContrasenaResponse" />
+  </message>
+  <message name="asignarClienteCuentaMonetaria">
+    <part name="parameters" element="tns:asignarClienteCuentaMonetaria" />
+  </message>
+  <message name="asignarClienteCuentaMonetariaResponse">
+    <part name="parameters" element="tns:asignarClienteCuentaMonetariaResponse" />
+  </message>
+  <message name="solicitarChequera">
+    <part name="parameters" element="tns:solicitarChequera" />
+  </message>
+  <message name="solicitarChequeraResponse">
+    <part name="parameters" element="tns:solicitarChequeraResponse" />
+  </message>
+  <message name="mostrarTiposCuenta">
+    <part name="parameters" element="tns:mostrarTiposCuenta" />
+  </message>
+  <message name="mostrarTiposCuentaResponse">
+    <part name="parameters" element="tns:mostrarTiposCuentaResponse" />
+  </message>
+  <message name="mostrarTiposPrestamo">
+    <part name="parameters" element="tns:mostrarTiposPrestamo" />
+  </message>
+  <message name="mostrarTiposPrestamoResponse">
+    <part name="parameters" element="tns:mostrarTiposPrestamoResponse" />
+  </message>
+  <message name="agregarClienteIndividual">
+    <part name="parameters" element="tns:agregarClienteIndividual" />
+  </message>
+  <message name="agregarClienteIndividualResponse">
+    <part name="parameters" element="tns:agregarClienteIndividualResponse" />
+  </message>
+  <message name="descontarMontoCheque">
+    <part name="parameters" element="tns:descontarMontoCheque" />
+  </message>
+  <message name="descontarMontoChequeResponse">
+    <part name="parameters" element="tns:descontarMontoChequeResponse" />
+  </message>
+  <message name="asignarClienteCuenta">
+    <part name="parameters" element="tns:asignarClienteCuenta" />
+  </message>
+  <message name="asignarClienteCuentaResponse">
+    <part name="parameters" element="tns:asignarClienteCuentaResponse" />
+  </message>
+  <message name="mostrarTiposOperacion">
+    <part name="parameters" element="tns:mostrarTiposOperacion" />
+  </message>
+  <message name="mostrarTiposOperacionResponse">
+    <part name="parameters" element="tns:mostrarTiposOperacionResponse" />
+  </message>
+  <message name="cambiarEstadoCuenta">
+    <part name="parameters" element="tns:cambiarEstadoCuenta" />
+  </message>
+  <message name="cambiarEstadoCuentaResponse">
+    <part name="parameters" element="tns:cambiarEstadoCuentaResponse" />
+  </message>
+  <message name="agregarTrabajador">
+    <part name="parameters" element="tns:agregarTrabajador" />
+  </message>
+  <message name="agregarTrabajadorResponse">
+    <part name="parameters" element="tns:agregarTrabajadorResponse" />
+  </message>
+  <message name="crearCuentaIndividual">
+    <part name="parameters" element="tns:crearCuentaIndividual" />
+  </message>
+  <message name="crearCuentaIndividualResponse">
+    <part name="parameters" element="tns:crearCuentaIndividualResponse" />
+  </message>
+  <message name="crearCuentaIndividualNomina">
+    <part name="parameters" element="tns:crearCuentaIndividualNomina" />
+  </message>
+  <message name="crearCuentaIndividualNominaResponse">
+    <part name="parameters" element="tns:crearCuentaIndividualNominaResponse" />
+  </message>
+  <message name="mostrarCuentaPropietario">
+    <part name="parameters" element="tns:mostrarCuentaPropietario" />
+  </message>
+  <message name="mostrarCuentaPropietarioResponse">
+    <part name="parameters" element="tns:mostrarCuentaPropietarioResponse" />
+  </message>
+  <message name="solicitarPrestamo">
+    <part name="parameters" element="tns:solicitarPrestamo" />
+  </message>
+  <message name="solicitarPrestamoResponse">
+    <part name="parameters" element="tns:solicitarPrestamoResponse" />
+  </message>
+  <message name="actualizarDatosCliente">
+    <part name="parameters" element="tns:actualizarDatosCliente" />
+  </message>
+  <message name="actualizarDatosClienteResponse">
+    <part name="parameters" element="tns:actualizarDatosClienteResponse" />
+  </message>
+  <message name="verificarDatosCliente">
+    <part name="parameters" element="tns:verificarDatosCliente" />
+  </message>
+  <message name="verificarDatosClienteResponse">
+    <part name="parameters" element="tns:verificarDatosClienteResponse" />
+  </message>
+  <message name="depositar">
+    <part name="parameters" element="tns:depositar" />
+  </message>
+  <message name="depositarResponse">
+    <part name="parameters" element="tns:depositarResponse" />
+  </message>
+  <message name="cambiarCheque">
+    <part name="parameters" element="tns:cambiarCheque" />
+  </message>
+  <message name="cambiarChequeResponse">
+    <part name="parameters" element="tns:cambiarChequeResponse" />
   </message>
   <portType name="ServicioWeb">
-    <operation name="actualizarDatosCliente">
-      <input wsam:Action="http://ServicioWeb/ServicioWeb/actualizarDatosClienteRequest" message="tns:actualizarDatosCliente" />
-      <output wsam:Action="http://ServicioWeb/ServicioWeb/actualizarDatosClienteResponse" message="tns:actualizarDatosClienteResponse" />
-    </operation>
-    <operation name="asignarClienteCuentaMonetaria">
-      <input wsam:Action="http://ServicioWeb/ServicioWeb/asignarClienteCuentaMonetariaRequest" message="tns:asignarClienteCuentaMonetaria" />
-      <output wsam:Action="http://ServicioWeb/ServicioWeb/asignarClienteCuentaMonetariaResponse" message="tns:asignarClienteCuentaMonetariaResponse" />
-    </operation>
-    <operation name="CambiarContrasena">
-      <input wsam:Action="http://ServicioWeb/ServicioWeb/CambiarContrasenaRequest" message="tns:CambiarContrasena" />
-      <output wsam:Action="http://ServicioWeb/ServicioWeb/CambiarContrasenaResponse" message="tns:CambiarContrasenaResponse" />
-    </operation>
-    <operation name="mostrarTiposPrestamo">
-      <input wsam:Action="http://ServicioWeb/ServicioWeb/mostrarTiposPrestamoRequest" message="tns:mostrarTiposPrestamo" />
-      <output wsam:Action="http://ServicioWeb/ServicioWeb/mostrarTiposPrestamoResponse" message="tns:mostrarTiposPrestamoResponse" />
-    </operation>
-    <operation name="mostrarDatosCliente">
-      <input wsam:Action="http://ServicioWeb/ServicioWeb/mostrarDatosClienteRequest" message="tns:mostrarDatosCliente" />
-      <output wsam:Action="http://ServicioWeb/ServicioWeb/mostrarDatosClienteResponse" message="tns:mostrarDatosClienteResponse" />
-    </operation>
-    <operation name="mostrarTiposOperacion">
-      <input wsam:Action="http://ServicioWeb/ServicioWeb/mostrarTiposOperacionRequest" message="tns:mostrarTiposOperacion" />
-      <output wsam:Action="http://ServicioWeb/ServicioWeb/mostrarTiposOperacionResponse" message="tns:mostrarTiposOperacionResponse" />
-    </operation>
-    <operation name="mostrarTiposCuenta">
-      <input wsam:Action="http://ServicioWeb/ServicioWeb/mostrarTiposCuentaRequest" message="tns:mostrarTiposCuenta" />
-      <output wsam:Action="http://ServicioWeb/ServicioWeb/mostrarTiposCuentaResponse" message="tns:mostrarTiposCuentaResponse" />
-    </operation>
-    <operation name="agregarClienteIndividual">
-      <input wsam:Action="http://ServicioWeb/ServicioWeb/agregarClienteIndividualRequest" message="tns:agregarClienteIndividual" />
-      <output wsam:Action="http://ServicioWeb/ServicioWeb/agregarClienteIndividualResponse" message="tns:agregarClienteIndividualResponse" />
-    </operation>
-    <operation name="descontarMontoCheque">
-      <input wsam:Action="http://ServicioWeb/ServicioWeb/descontarMontoChequeRequest" message="tns:descontarMontoCheque" />
-      <output wsam:Action="http://ServicioWeb/ServicioWeb/descontarMontoChequeResponse" message="tns:descontarMontoChequeResponse" />
-    </operation>
-    <operation name="agregarTrabajador">
-      <input wsam:Action="http://ServicioWeb/ServicioWeb/agregarTrabajadorRequest" message="tns:agregarTrabajador" />
-      <output wsam:Action="http://ServicioWeb/ServicioWeb/agregarTrabajadorResponse" message="tns:agregarTrabajadorResponse" />
-    </operation>
-    <operation name="crearCuentaIndividual">
-      <input wsam:Action="http://ServicioWeb/ServicioWeb/crearCuentaIndividualRequest" message="tns:crearCuentaIndividual" />
-      <output wsam:Action="http://ServicioWeb/ServicioWeb/crearCuentaIndividualResponse" message="tns:crearCuentaIndividualResponse" />
-    </operation>
-    <operation name="asignarClienteCuenta">
-      <input wsam:Action="http://ServicioWeb/ServicioWeb/asignarClienteCuentaRequest" message="tns:asignarClienteCuenta" />
-      <output wsam:Action="http://ServicioWeb/ServicioWeb/asignarClienteCuentaResponse" message="tns:asignarClienteCuentaResponse" />
-    </operation>
-    <operation name="mostrarCuentaPropietario">
-      <input wsam:Action="http://ServicioWeb/ServicioWeb/mostrarCuentaPropietarioRequest" message="tns:mostrarCuentaPropietario" />
-      <output wsam:Action="http://ServicioWeb/ServicioWeb/mostrarCuentaPropietarioResponse" message="tns:mostrarCuentaPropietarioResponse" />
-    </operation>
-    <operation name="solicitarPrestamo">
-      <input wsam:Action="http://ServicioWeb/ServicioWeb/solicitarPrestamoRequest" message="tns:solicitarPrestamo" />
-      <output wsam:Action="http://ServicioWeb/ServicioWeb/solicitarPrestamoResponse" message="tns:solicitarPrestamoResponse" />
-    </operation>
-    <operation name="verificarDatosCliente">
-      <input wsam:Action="http://ServicioWeb/ServicioWeb/verificarDatosClienteRequest" message="tns:verificarDatosCliente" />
-      <output wsam:Action="http://ServicioWeb/ServicioWeb/verificarDatosClienteResponse" message="tns:verificarDatosClienteResponse" />
-    </operation>
-    <operation name="cambiarEstadoCuenta">
-      <input wsam:Action="http://ServicioWeb/ServicioWeb/cambiarEstadoCuentaRequest" message="tns:cambiarEstadoCuenta" />
-      <output wsam:Action="http://ServicioWeb/ServicioWeb/cambiarEstadoCuentaResponse" message="tns:cambiarEstadoCuentaResponse" />
-    </operation>
-    <operation name="mostrarModalidadesPago">
-      <input wsam:Action="http://ServicioWeb/ServicioWeb/mostrarModalidadesPagoRequest" message="tns:mostrarModalidadesPago" />
-      <output wsam:Action="http://ServicioWeb/ServicioWeb/mostrarModalidadesPagoResponse" message="tns:mostrarModalidadesPagoResponse" />
-    </operation>
-    <operation name="solicitarChequera">
-      <input wsam:Action="http://ServicioWeb/ServicioWeb/solicitarChequeraRequest" message="tns:solicitarChequera" />
-      <output wsam:Action="http://ServicioWeb/ServicioWeb/solicitarChequeraResponse" message="tns:solicitarChequeraResponse" />
-    </operation>
-    <operation name="mostrarEstadoCuenta">
-      <input wsam:Action="http://ServicioWeb/ServicioWeb/mostrarEstadoCuentaRequest" message="tns:mostrarEstadoCuenta" />
-      <output wsam:Action="http://ServicioWeb/ServicioWeb/mostrarEstadoCuentaResponse" message="tns:mostrarEstadoCuentaResponse" />
-    </operation>
-    <operation name="crearCuentaIndividualNomina">
-      <input wsam:Action="http://ServicioWeb/ServicioWeb/crearCuentaIndividualNominaRequest" message="tns:crearCuentaIndividualNomina" />
-      <output wsam:Action="http://ServicioWeb/ServicioWeb/crearCuentaIndividualNominaResponse" message="tns:crearCuentaIndividualNominaResponse" />
-    </operation>
     <operation name="Login">
       <input wsam:Action="http://ServicioWeb/ServicioWeb/LoginRequest" message="tns:Login" />
       <output wsam:Action="http://ServicioWeb/ServicioWeb/LoginResponse" message="tns:LoginResponse" />
-    </operation>
-    <operation name="cambiarCheque">
-      <input wsam:Action="http://ServicioWeb/ServicioWeb/cambiarChequeRequest" message="tns:cambiarCheque" />
-      <output wsam:Action="http://ServicioWeb/ServicioWeb/cambiarChequeResponse" message="tns:cambiarChequeResponse" />
-    </operation>
-    <operation name="depositar">
-      <input wsam:Action="http://ServicioWeb/ServicioWeb/depositarRequest" message="tns:depositar" />
-      <output wsam:Action="http://ServicioWeb/ServicioWeb/depositarResponse" message="tns:depositarResponse" />
     </operation>
     <operation name="insertarNomina">
       <input wsam:Action="http://ServicioWeb/ServicioWeb/insertarNominaRequest" message="tns:insertarNomina" />
       <output wsam:Action="http://ServicioWeb/ServicioWeb/insertarNominaResponse" message="tns:insertarNominaResponse" />
     </operation>
-    <operation name="mostrarNominas">
-      <input wsam:Action="http://ServicioWeb/ServicioWeb/mostrarNominasRequest" message="tns:mostrarNominas" />
-      <output wsam:Action="http://ServicioWeb/ServicioWeb/mostrarNominasResponse" message="tns:mostrarNominasResponse" />
+    <operation name="mostrarEstados">
+      <input wsam:Action="http://ServicioWeb/ServicioWeb/mostrarEstadosRequest" message="tns:mostrarEstados" />
+      <output wsam:Action="http://ServicioWeb/ServicioWeb/mostrarEstadosResponse" message="tns:mostrarEstadosResponse" />
     </operation>
     <operation name="mostrarRoles">
       <input wsam:Action="http://ServicioWeb/ServicioWeb/mostrarRolesRequest" message="tns:mostrarRoles" />
       <output wsam:Action="http://ServicioWeb/ServicioWeb/mostrarRolesResponse" message="tns:mostrarRolesResponse" />
+    </operation>
+    <operation name="mostrarAgencias">
+      <input wsam:Action="http://ServicioWeb/ServicioWeb/mostrarAgenciasRequest" message="tns:mostrarAgencias" />
+      <output wsam:Action="http://ServicioWeb/ServicioWeb/mostrarAgenciasResponse" message="tns:mostrarAgenciasResponse" />
     </operation>
     <operation name="mostrarCuenta">
       <input wsam:Action="http://ServicioWeb/ServicioWeb/mostrarCuentaRequest" message="tns:mostrarCuenta" />
@@ -298,216 +214,102 @@
       <input wsam:Action="http://ServicioWeb/ServicioWeb/nuevaAgenciaRequest" message="tns:nuevaAgencia" />
       <output wsam:Action="http://ServicioWeb/ServicioWeb/nuevaAgenciaResponse" message="tns:nuevaAgenciaResponse" />
     </operation>
-    <operation name="mostrarEstados">
-      <input wsam:Action="http://ServicioWeb/ServicioWeb/mostrarEstadosRequest" message="tns:mostrarEstados" />
-      <output wsam:Action="http://ServicioWeb/ServicioWeb/mostrarEstadosResponse" message="tns:mostrarEstadosResponse" />
+    <operation name="mostrarNominas">
+      <input wsam:Action="http://ServicioWeb/ServicioWeb/mostrarNominasRequest" message="tns:mostrarNominas" />
+      <output wsam:Action="http://ServicioWeb/ServicioWeb/mostrarNominasResponse" message="tns:mostrarNominasResponse" />
     </operation>
-    <operation name="mostrarAgencias">
-      <input wsam:Action="http://ServicioWeb/ServicioWeb/mostrarAgenciasRequest" message="tns:mostrarAgencias" />
-      <output wsam:Action="http://ServicioWeb/ServicioWeb/mostrarAgenciasResponse" message="tns:mostrarAgenciasResponse" />
+    <operation name="mostrarModalidadesPago">
+      <input wsam:Action="http://ServicioWeb/ServicioWeb/mostrarModalidadesPagoRequest" message="tns:mostrarModalidadesPago" />
+      <output wsam:Action="http://ServicioWeb/ServicioWeb/mostrarModalidadesPagoResponse" message="tns:mostrarModalidadesPagoResponse" />
+    </operation>
+    <operation name="mostrarDatosCliente">
+      <input wsam:Action="http://ServicioWeb/ServicioWeb/mostrarDatosClienteRequest" message="tns:mostrarDatosCliente" />
+      <output wsam:Action="http://ServicioWeb/ServicioWeb/mostrarDatosClienteResponse" message="tns:mostrarDatosClienteResponse" />
+    </operation>
+    <operation name="mostrarEstadoCuenta">
+      <input wsam:Action="http://ServicioWeb/ServicioWeb/mostrarEstadoCuentaRequest" message="tns:mostrarEstadoCuenta" />
+      <output wsam:Action="http://ServicioWeb/ServicioWeb/mostrarEstadoCuentaResponse" message="tns:mostrarEstadoCuentaResponse" />
+    </operation>
+    <operation name="CambiarContrasena">
+      <input wsam:Action="http://ServicioWeb/ServicioWeb/CambiarContrasenaRequest" message="tns:CambiarContrasena" />
+      <output wsam:Action="http://ServicioWeb/ServicioWeb/CambiarContrasenaResponse" message="tns:CambiarContrasenaResponse" />
+    </operation>
+    <operation name="asignarClienteCuentaMonetaria">
+      <input wsam:Action="http://ServicioWeb/ServicioWeb/asignarClienteCuentaMonetariaRequest" message="tns:asignarClienteCuentaMonetaria" />
+      <output wsam:Action="http://ServicioWeb/ServicioWeb/asignarClienteCuentaMonetariaResponse" message="tns:asignarClienteCuentaMonetariaResponse" />
+    </operation>
+    <operation name="solicitarChequera">
+      <input wsam:Action="http://ServicioWeb/ServicioWeb/solicitarChequeraRequest" message="tns:solicitarChequera" />
+      <output wsam:Action="http://ServicioWeb/ServicioWeb/solicitarChequeraResponse" message="tns:solicitarChequeraResponse" />
+    </operation>
+    <operation name="mostrarTiposCuenta">
+      <input wsam:Action="http://ServicioWeb/ServicioWeb/mostrarTiposCuentaRequest" message="tns:mostrarTiposCuenta" />
+      <output wsam:Action="http://ServicioWeb/ServicioWeb/mostrarTiposCuentaResponse" message="tns:mostrarTiposCuentaResponse" />
+    </operation>
+    <operation name="mostrarTiposPrestamo">
+      <input wsam:Action="http://ServicioWeb/ServicioWeb/mostrarTiposPrestamoRequest" message="tns:mostrarTiposPrestamo" />
+      <output wsam:Action="http://ServicioWeb/ServicioWeb/mostrarTiposPrestamoResponse" message="tns:mostrarTiposPrestamoResponse" />
+    </operation>
+    <operation name="agregarClienteIndividual">
+      <input wsam:Action="http://ServicioWeb/ServicioWeb/agregarClienteIndividualRequest" message="tns:agregarClienteIndividual" />
+      <output wsam:Action="http://ServicioWeb/ServicioWeb/agregarClienteIndividualResponse" message="tns:agregarClienteIndividualResponse" />
+    </operation>
+    <operation name="descontarMontoCheque">
+      <input wsam:Action="http://ServicioWeb/ServicioWeb/descontarMontoChequeRequest" message="tns:descontarMontoCheque" />
+      <output wsam:Action="http://ServicioWeb/ServicioWeb/descontarMontoChequeResponse" message="tns:descontarMontoChequeResponse" />
+    </operation>
+    <operation name="asignarClienteCuenta">
+      <input wsam:Action="http://ServicioWeb/ServicioWeb/asignarClienteCuentaRequest" message="tns:asignarClienteCuenta" />
+      <output wsam:Action="http://ServicioWeb/ServicioWeb/asignarClienteCuentaResponse" message="tns:asignarClienteCuentaResponse" />
+    </operation>
+    <operation name="mostrarTiposOperacion">
+      <input wsam:Action="http://ServicioWeb/ServicioWeb/mostrarTiposOperacionRequest" message="tns:mostrarTiposOperacion" />
+      <output wsam:Action="http://ServicioWeb/ServicioWeb/mostrarTiposOperacionResponse" message="tns:mostrarTiposOperacionResponse" />
+    </operation>
+    <operation name="cambiarEstadoCuenta">
+      <input wsam:Action="http://ServicioWeb/ServicioWeb/cambiarEstadoCuentaRequest" message="tns:cambiarEstadoCuenta" />
+      <output wsam:Action="http://ServicioWeb/ServicioWeb/cambiarEstadoCuentaResponse" message="tns:cambiarEstadoCuentaResponse" />
+    </operation>
+    <operation name="agregarTrabajador">
+      <input wsam:Action="http://ServicioWeb/ServicioWeb/agregarTrabajadorRequest" message="tns:agregarTrabajador" />
+      <output wsam:Action="http://ServicioWeb/ServicioWeb/agregarTrabajadorResponse" message="tns:agregarTrabajadorResponse" />
+    </operation>
+    <operation name="crearCuentaIndividual">
+      <input wsam:Action="http://ServicioWeb/ServicioWeb/crearCuentaIndividualRequest" message="tns:crearCuentaIndividual" />
+      <output wsam:Action="http://ServicioWeb/ServicioWeb/crearCuentaIndividualResponse" message="tns:crearCuentaIndividualResponse" />
+    </operation>
+    <operation name="crearCuentaIndividualNomina">
+      <input wsam:Action="http://ServicioWeb/ServicioWeb/crearCuentaIndividualNominaRequest" message="tns:crearCuentaIndividualNomina" />
+      <output wsam:Action="http://ServicioWeb/ServicioWeb/crearCuentaIndividualNominaResponse" message="tns:crearCuentaIndividualNominaResponse" />
+    </operation>
+    <operation name="mostrarCuentaPropietario">
+      <input wsam:Action="http://ServicioWeb/ServicioWeb/mostrarCuentaPropietarioRequest" message="tns:mostrarCuentaPropietario" />
+      <output wsam:Action="http://ServicioWeb/ServicioWeb/mostrarCuentaPropietarioResponse" message="tns:mostrarCuentaPropietarioResponse" />
+    </operation>
+    <operation name="solicitarPrestamo">
+      <input wsam:Action="http://ServicioWeb/ServicioWeb/solicitarPrestamoRequest" message="tns:solicitarPrestamo" />
+      <output wsam:Action="http://ServicioWeb/ServicioWeb/solicitarPrestamoResponse" message="tns:solicitarPrestamoResponse" />
+    </operation>
+    <operation name="actualizarDatosCliente">
+      <input wsam:Action="http://ServicioWeb/ServicioWeb/actualizarDatosClienteRequest" message="tns:actualizarDatosCliente" />
+      <output wsam:Action="http://ServicioWeb/ServicioWeb/actualizarDatosClienteResponse" message="tns:actualizarDatosClienteResponse" />
+    </operation>
+    <operation name="verificarDatosCliente">
+      <input wsam:Action="http://ServicioWeb/ServicioWeb/verificarDatosClienteRequest" message="tns:verificarDatosCliente" />
+      <output wsam:Action="http://ServicioWeb/ServicioWeb/verificarDatosClienteResponse" message="tns:verificarDatosClienteResponse" />
+    </operation>
+    <operation name="depositar">
+      <input wsam:Action="http://ServicioWeb/ServicioWeb/depositarRequest" message="tns:depositar" />
+      <output wsam:Action="http://ServicioWeb/ServicioWeb/depositarResponse" message="tns:depositarResponse" />
+    </operation>
+    <operation name="cambiarCheque">
+      <input wsam:Action="http://ServicioWeb/ServicioWeb/cambiarChequeRequest" message="tns:cambiarCheque" />
+      <output wsam:Action="http://ServicioWeb/ServicioWeb/cambiarChequeResponse" message="tns:cambiarChequeResponse" />
     </operation>
   </portType>
   <binding name="ServicioWebPortBinding" type="tns:ServicioWeb">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="actualizarDatosCliente">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="asignarClienteCuentaMonetaria">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="CambiarContrasena">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="mostrarTiposPrestamo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="mostrarDatosCliente">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="mostrarTiposOperacion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="mostrarTiposCuenta">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="agregarClienteIndividual">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="descontarMontoCheque">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="agregarTrabajador">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="crearCuentaIndividual">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="asignarClienteCuenta">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="mostrarCuentaPropietario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="solicitarPrestamo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="verificarDatosCliente">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="cambiarEstadoCuenta">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="mostrarModalidadesPago">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="solicitarChequera">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="mostrarEstadoCuenta">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="crearCuentaIndividualNomina">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="Login">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="cambiarCheque">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="depositar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -525,7 +327,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="mostrarNominas">
+    <operation name="mostrarEstados">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -535,6 +337,15 @@
       </output>
     </operation>
     <operation name="mostrarRoles">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="mostrarAgencias">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -561,7 +372,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="mostrarEstados">
+    <operation name="mostrarNominas">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -570,7 +381,196 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="mostrarAgencias">
+    <operation name="mostrarModalidadesPago">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="mostrarDatosCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="mostrarEstadoCuenta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CambiarContrasena">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="asignarClienteCuentaMonetaria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="solicitarChequera">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="mostrarTiposCuenta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="mostrarTiposPrestamo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="agregarClienteIndividual">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="descontarMontoCheque">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="asignarClienteCuenta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="mostrarTiposOperacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cambiarEstadoCuenta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="agregarTrabajador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="crearCuentaIndividual">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="crearCuentaIndividualNomina">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="mostrarCuentaPropietario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="solicitarPrestamo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarDatosCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="verificarDatosCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="depositar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cambiarCheque">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

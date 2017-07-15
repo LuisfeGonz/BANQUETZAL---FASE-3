@@ -29,65 +29,65 @@ namespace Banquetzal.ServicioWeb {
     [System.Web.Services.WebServiceBindingAttribute(Name="ServicioWebPortBinding", Namespace="http://ServicioWeb/")]
     public partial class ServicioWeb : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
-        private System.Threading.SendOrPostCallback actualizarDatosClienteOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback asignarClienteCuentaMonetariaOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback CambiarContrasenaOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback mostrarTiposPrestamoOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback mostrarDatosClienteOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback mostrarTiposOperacionOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback mostrarTiposCuentaOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback agregarClienteIndividualOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback descontarMontoChequeOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback agregarTrabajadorOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback crearCuentaIndividualOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback asignarClienteCuentaOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback mostrarCuentaPropietarioOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback solicitarPrestamoOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback verificarDatosClienteOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback cambiarEstadoCuentaOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback mostrarModalidadesPagoOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback solicitarChequeraOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback mostrarEstadoCuentaOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback crearCuentaIndividualNominaOperationCompleted;
-        
         private System.Threading.SendOrPostCallback LoginOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback cambiarChequeOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback depositarOperationCompleted;
         
         private System.Threading.SendOrPostCallback insertarNominaOperationCompleted;
         
-        private System.Threading.SendOrPostCallback mostrarNominasOperationCompleted;
+        private System.Threading.SendOrPostCallback mostrarEstadosOperationCompleted;
         
         private System.Threading.SendOrPostCallback mostrarRolesOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mostrarAgenciasOperationCompleted;
         
         private System.Threading.SendOrPostCallback mostrarCuentaOperationCompleted;
         
         private System.Threading.SendOrPostCallback nuevaAgenciaOperationCompleted;
         
-        private System.Threading.SendOrPostCallback mostrarEstadosOperationCompleted;
+        private System.Threading.SendOrPostCallback mostrarNominasOperationCompleted;
         
-        private System.Threading.SendOrPostCallback mostrarAgenciasOperationCompleted;
+        private System.Threading.SendOrPostCallback mostrarModalidadesPagoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mostrarDatosClienteOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mostrarEstadoCuentaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback CambiarContrasenaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback asignarClienteCuentaMonetariaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback solicitarChequeraOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mostrarTiposCuentaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mostrarTiposPrestamoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback agregarClienteIndividualOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback descontarMontoChequeOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback asignarClienteCuentaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mostrarTiposOperacionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback cambiarEstadoCuentaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback agregarTrabajadorOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback crearCuentaIndividualOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback crearCuentaIndividualNominaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mostrarCuentaPropietarioOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback solicitarPrestamoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback actualizarDatosClienteOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback verificarDatosClienteOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback depositarOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback cambiarChequeOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -128,82 +128,19 @@ namespace Banquetzal.ServicioWeb {
         }
         
         /// <remarks/>
-        public event actualizarDatosClienteCompletedEventHandler actualizarDatosClienteCompleted;
-        
-        /// <remarks/>
-        public event asignarClienteCuentaMonetariaCompletedEventHandler asignarClienteCuentaMonetariaCompleted;
-        
-        /// <remarks/>
-        public event CambiarContrasenaCompletedEventHandler CambiarContrasenaCompleted;
-        
-        /// <remarks/>
-        public event mostrarTiposPrestamoCompletedEventHandler mostrarTiposPrestamoCompleted;
-        
-        /// <remarks/>
-        public event mostrarDatosClienteCompletedEventHandler mostrarDatosClienteCompleted;
-        
-        /// <remarks/>
-        public event mostrarTiposOperacionCompletedEventHandler mostrarTiposOperacionCompleted;
-        
-        /// <remarks/>
-        public event mostrarTiposCuentaCompletedEventHandler mostrarTiposCuentaCompleted;
-        
-        /// <remarks/>
-        public event agregarClienteIndividualCompletedEventHandler agregarClienteIndividualCompleted;
-        
-        /// <remarks/>
-        public event descontarMontoChequeCompletedEventHandler descontarMontoChequeCompleted;
-        
-        /// <remarks/>
-        public event agregarTrabajadorCompletedEventHandler agregarTrabajadorCompleted;
-        
-        /// <remarks/>
-        public event crearCuentaIndividualCompletedEventHandler crearCuentaIndividualCompleted;
-        
-        /// <remarks/>
-        public event asignarClienteCuentaCompletedEventHandler asignarClienteCuentaCompleted;
-        
-        /// <remarks/>
-        public event mostrarCuentaPropietarioCompletedEventHandler mostrarCuentaPropietarioCompleted;
-        
-        /// <remarks/>
-        public event solicitarPrestamoCompletedEventHandler solicitarPrestamoCompleted;
-        
-        /// <remarks/>
-        public event verificarDatosClienteCompletedEventHandler verificarDatosClienteCompleted;
-        
-        /// <remarks/>
-        public event cambiarEstadoCuentaCompletedEventHandler cambiarEstadoCuentaCompleted;
-        
-        /// <remarks/>
-        public event mostrarModalidadesPagoCompletedEventHandler mostrarModalidadesPagoCompleted;
-        
-        /// <remarks/>
-        public event solicitarChequeraCompletedEventHandler solicitarChequeraCompleted;
-        
-        /// <remarks/>
-        public event mostrarEstadoCuentaCompletedEventHandler mostrarEstadoCuentaCompleted;
-        
-        /// <remarks/>
-        public event crearCuentaIndividualNominaCompletedEventHandler crearCuentaIndividualNominaCompleted;
-        
-        /// <remarks/>
         public event LoginCompletedEventHandler LoginCompleted;
-        
-        /// <remarks/>
-        public event cambiarChequeCompletedEventHandler cambiarChequeCompleted;
-        
-        /// <remarks/>
-        public event depositarCompletedEventHandler depositarCompleted;
         
         /// <remarks/>
         public event insertarNominaCompletedEventHandler insertarNominaCompleted;
         
         /// <remarks/>
-        public event mostrarNominasCompletedEventHandler mostrarNominasCompleted;
+        public event mostrarEstadosCompletedEventHandler mostrarEstadosCompleted;
         
         /// <remarks/>
         public event mostrarRolesCompletedEventHandler mostrarRolesCompleted;
+        
+        /// <remarks/>
+        public event mostrarAgenciasCompletedEventHandler mostrarAgenciasCompleted;
         
         /// <remarks/>
         public event mostrarCuentaCompletedEventHandler mostrarCuentaCompleted;
@@ -212,82 +149,419 @@ namespace Banquetzal.ServicioWeb {
         public event nuevaAgenciaCompletedEventHandler nuevaAgenciaCompleted;
         
         /// <remarks/>
-        public event mostrarEstadosCompletedEventHandler mostrarEstadosCompleted;
+        public event mostrarNominasCompletedEventHandler mostrarNominasCompleted;
         
         /// <remarks/>
-        public event mostrarAgenciasCompletedEventHandler mostrarAgenciasCompleted;
+        public event mostrarModalidadesPagoCompletedEventHandler mostrarModalidadesPagoCompleted;
+        
+        /// <remarks/>
+        public event mostrarDatosClienteCompletedEventHandler mostrarDatosClienteCompleted;
+        
+        /// <remarks/>
+        public event mostrarEstadoCuentaCompletedEventHandler mostrarEstadoCuentaCompleted;
+        
+        /// <remarks/>
+        public event CambiarContrasenaCompletedEventHandler CambiarContrasenaCompleted;
+        
+        /// <remarks/>
+        public event asignarClienteCuentaMonetariaCompletedEventHandler asignarClienteCuentaMonetariaCompleted;
+        
+        /// <remarks/>
+        public event solicitarChequeraCompletedEventHandler solicitarChequeraCompleted;
+        
+        /// <remarks/>
+        public event mostrarTiposCuentaCompletedEventHandler mostrarTiposCuentaCompleted;
+        
+        /// <remarks/>
+        public event mostrarTiposPrestamoCompletedEventHandler mostrarTiposPrestamoCompleted;
+        
+        /// <remarks/>
+        public event agregarClienteIndividualCompletedEventHandler agregarClienteIndividualCompleted;
+        
+        /// <remarks/>
+        public event descontarMontoChequeCompletedEventHandler descontarMontoChequeCompleted;
+        
+        /// <remarks/>
+        public event asignarClienteCuentaCompletedEventHandler asignarClienteCuentaCompleted;
+        
+        /// <remarks/>
+        public event mostrarTiposOperacionCompletedEventHandler mostrarTiposOperacionCompleted;
+        
+        /// <remarks/>
+        public event cambiarEstadoCuentaCompletedEventHandler cambiarEstadoCuentaCompleted;
+        
+        /// <remarks/>
+        public event agregarTrabajadorCompletedEventHandler agregarTrabajadorCompleted;
+        
+        /// <remarks/>
+        public event crearCuentaIndividualCompletedEventHandler crearCuentaIndividualCompleted;
+        
+        /// <remarks/>
+        public event crearCuentaIndividualNominaCompletedEventHandler crearCuentaIndividualNominaCompleted;
+        
+        /// <remarks/>
+        public event mostrarCuentaPropietarioCompletedEventHandler mostrarCuentaPropietarioCompleted;
+        
+        /// <remarks/>
+        public event solicitarPrestamoCompletedEventHandler solicitarPrestamoCompleted;
+        
+        /// <remarks/>
+        public event actualizarDatosClienteCompletedEventHandler actualizarDatosClienteCompleted;
+        
+        /// <remarks/>
+        public event verificarDatosClienteCompletedEventHandler verificarDatosClienteCompleted;
+        
+        /// <remarks/>
+        public event depositarCompletedEventHandler depositarCompleted;
+        
+        /// <remarks/>
+        public event cambiarChequeCompletedEventHandler cambiarChequeCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string actualizarDatosCliente([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cui, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string usuario, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nombres, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string apellidos, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nacimiento) {
-            object[] results = this.Invoke("actualizarDatosCliente", new object[] {
-                        cui,
-                        usuario,
-                        nombres,
-                        apellidos,
-                        nacimiento});
+        public string Login([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string user, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string pass) {
+            object[] results = this.Invoke("Login", new object[] {
+                        user,
+                        pass});
             return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void actualizarDatosClienteAsync(long cui, string usuario, string nombres, string apellidos, string nacimiento) {
-            this.actualizarDatosClienteAsync(cui, usuario, nombres, apellidos, nacimiento, null);
+        public void LoginAsync(string user, string pass) {
+            this.LoginAsync(user, pass, null);
         }
         
         /// <remarks/>
-        public void actualizarDatosClienteAsync(long cui, string usuario, string nombres, string apellidos, string nacimiento, object userState) {
-            if ((this.actualizarDatosClienteOperationCompleted == null)) {
-                this.actualizarDatosClienteOperationCompleted = new System.Threading.SendOrPostCallback(this.OnactualizarDatosClienteOperationCompleted);
+        public void LoginAsync(string user, string pass, object userState) {
+            if ((this.LoginOperationCompleted == null)) {
+                this.LoginOperationCompleted = new System.Threading.SendOrPostCallback(this.OnLoginOperationCompleted);
             }
-            this.InvokeAsync("actualizarDatosCliente", new object[] {
-                        cui,
-                        usuario,
-                        nombres,
-                        apellidos,
-                        nacimiento}, this.actualizarDatosClienteOperationCompleted, userState);
+            this.InvokeAsync("Login", new object[] {
+                        user,
+                        pass}, this.LoginOperationCompleted, userState);
         }
         
-        private void OnactualizarDatosClienteOperationCompleted(object arg) {
-            if ((this.actualizarDatosClienteCompleted != null)) {
+        private void OnLoginOperationCompleted(object arg) {
+            if ((this.LoginCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.actualizarDatosClienteCompleted(this, new actualizarDatosClienteCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.LoginCompleted(this, new LoginCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string asignarClienteCuentaMonetaria([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cui, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int idcuenta, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] double salario, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int nomina) {
-            object[] results = this.Invoke("asignarClienteCuentaMonetaria", new object[] {
-                        cui,
-                        idcuenta,
-                        salario,
-                        nomina});
-            return ((string)(results[0]));
+        public int insertarNomina([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] double monto, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cuiPresidente, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cuiVice, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cuiContador, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] double sueldoPresidente, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] double sueldoVice, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] double sueldoContador, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cuitrabajador) {
+            object[] results = this.Invoke("insertarNomina", new object[] {
+                        monto,
+                        cuiPresidente,
+                        cuiVice,
+                        cuiContador,
+                        sueldoPresidente,
+                        sueldoVice,
+                        sueldoContador,
+                        cuitrabajador});
+            return ((int)(results[0]));
         }
         
         /// <remarks/>
-        public void asignarClienteCuentaMonetariaAsync(long cui, int idcuenta, double salario, int nomina) {
-            this.asignarClienteCuentaMonetariaAsync(cui, idcuenta, salario, nomina, null);
+        public void insertarNominaAsync(double monto, long cuiPresidente, long cuiVice, long cuiContador, double sueldoPresidente, double sueldoVice, double sueldoContador, long cuitrabajador) {
+            this.insertarNominaAsync(monto, cuiPresidente, cuiVice, cuiContador, sueldoPresidente, sueldoVice, sueldoContador, cuitrabajador, null);
         }
         
         /// <remarks/>
-        public void asignarClienteCuentaMonetariaAsync(long cui, int idcuenta, double salario, int nomina, object userState) {
-            if ((this.asignarClienteCuentaMonetariaOperationCompleted == null)) {
-                this.asignarClienteCuentaMonetariaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnasignarClienteCuentaMonetariaOperationCompleted);
+        public void insertarNominaAsync(double monto, long cuiPresidente, long cuiVice, long cuiContador, double sueldoPresidente, double sueldoVice, double sueldoContador, long cuitrabajador, object userState) {
+            if ((this.insertarNominaOperationCompleted == null)) {
+                this.insertarNominaOperationCompleted = new System.Threading.SendOrPostCallback(this.OninsertarNominaOperationCompleted);
             }
-            this.InvokeAsync("asignarClienteCuentaMonetaria", new object[] {
-                        cui,
-                        idcuenta,
-                        salario,
-                        nomina}, this.asignarClienteCuentaMonetariaOperationCompleted, userState);
+            this.InvokeAsync("insertarNomina", new object[] {
+                        monto,
+                        cuiPresidente,
+                        cuiVice,
+                        cuiContador,
+                        sueldoPresidente,
+                        sueldoVice,
+                        sueldoContador,
+                        cuitrabajador}, this.insertarNominaOperationCompleted, userState);
         }
         
-        private void OnasignarClienteCuentaMonetariaOperationCompleted(object arg) {
-            if ((this.asignarClienteCuentaMonetariaCompleted != null)) {
+        private void OninsertarNominaOperationCompleted(object arg) {
+            if ((this.insertarNominaCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.asignarClienteCuentaMonetariaCompleted(this, new asignarClienteCuentaMonetariaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.insertarNominaCompleted(this, new insertarNominaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string[] mostrarEstados() {
+            object[] results = this.Invoke("mostrarEstados", new object[0]);
+            return ((string[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mostrarEstadosAsync() {
+            this.mostrarEstadosAsync(null);
+        }
+        
+        /// <remarks/>
+        public void mostrarEstadosAsync(object userState) {
+            if ((this.mostrarEstadosOperationCompleted == null)) {
+                this.mostrarEstadosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarEstadosOperationCompleted);
+            }
+            this.InvokeAsync("mostrarEstados", new object[0], this.mostrarEstadosOperationCompleted, userState);
+        }
+        
+        private void OnmostrarEstadosOperationCompleted(object arg) {
+            if ((this.mostrarEstadosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mostrarEstadosCompleted(this, new mostrarEstadosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string[] mostrarRoles() {
+            object[] results = this.Invoke("mostrarRoles", new object[0]);
+            return ((string[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mostrarRolesAsync() {
+            this.mostrarRolesAsync(null);
+        }
+        
+        /// <remarks/>
+        public void mostrarRolesAsync(object userState) {
+            if ((this.mostrarRolesOperationCompleted == null)) {
+                this.mostrarRolesOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarRolesOperationCompleted);
+            }
+            this.InvokeAsync("mostrarRoles", new object[0], this.mostrarRolesOperationCompleted, userState);
+        }
+        
+        private void OnmostrarRolesOperationCompleted(object arg) {
+            if ((this.mostrarRolesCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mostrarRolesCompleted(this, new mostrarRolesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string[] mostrarAgencias() {
+            object[] results = this.Invoke("mostrarAgencias", new object[0]);
+            return ((string[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mostrarAgenciasAsync() {
+            this.mostrarAgenciasAsync(null);
+        }
+        
+        /// <remarks/>
+        public void mostrarAgenciasAsync(object userState) {
+            if ((this.mostrarAgenciasOperationCompleted == null)) {
+                this.mostrarAgenciasOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarAgenciasOperationCompleted);
+            }
+            this.InvokeAsync("mostrarAgencias", new object[0], this.mostrarAgenciasOperationCompleted, userState);
+        }
+        
+        private void OnmostrarAgenciasOperationCompleted(object arg) {
+            if ((this.mostrarAgenciasCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mostrarAgenciasCompleted(this, new mostrarAgenciasCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public cuenta mostrarCuenta([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int idcuenta) {
+            object[] results = this.Invoke("mostrarCuenta", new object[] {
+                        idcuenta});
+            return ((cuenta)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mostrarCuentaAsync(int idcuenta) {
+            this.mostrarCuentaAsync(idcuenta, null);
+        }
+        
+        /// <remarks/>
+        public void mostrarCuentaAsync(int idcuenta, object userState) {
+            if ((this.mostrarCuentaOperationCompleted == null)) {
+                this.mostrarCuentaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarCuentaOperationCompleted);
+            }
+            this.InvokeAsync("mostrarCuenta", new object[] {
+                        idcuenta}, this.mostrarCuentaOperationCompleted, userState);
+        }
+        
+        private void OnmostrarCuentaOperationCompleted(object arg) {
+            if ((this.mostrarCuentaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mostrarCuentaCompleted(this, new mostrarCuentaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool nuevaAgencia([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nombre, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string direccion, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] double fondos) {
+            object[] results = this.Invoke("nuevaAgencia", new object[] {
+                        nombre,
+                        direccion,
+                        fondos});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void nuevaAgenciaAsync(string nombre, string direccion, double fondos) {
+            this.nuevaAgenciaAsync(nombre, direccion, fondos, null);
+        }
+        
+        /// <remarks/>
+        public void nuevaAgenciaAsync(string nombre, string direccion, double fondos, object userState) {
+            if ((this.nuevaAgenciaOperationCompleted == null)) {
+                this.nuevaAgenciaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnnuevaAgenciaOperationCompleted);
+            }
+            this.InvokeAsync("nuevaAgencia", new object[] {
+                        nombre,
+                        direccion,
+                        fondos}, this.nuevaAgenciaOperationCompleted, userState);
+        }
+        
+        private void OnnuevaAgenciaOperationCompleted(object arg) {
+            if ((this.nuevaAgenciaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.nuevaAgenciaCompleted(this, new nuevaAgenciaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int[] mostrarNominas([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long CUI) {
+            object[] results = this.Invoke("mostrarNominas", new object[] {
+                        CUI});
+            return ((int[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mostrarNominasAsync(long CUI) {
+            this.mostrarNominasAsync(CUI, null);
+        }
+        
+        /// <remarks/>
+        public void mostrarNominasAsync(long CUI, object userState) {
+            if ((this.mostrarNominasOperationCompleted == null)) {
+                this.mostrarNominasOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarNominasOperationCompleted);
+            }
+            this.InvokeAsync("mostrarNominas", new object[] {
+                        CUI}, this.mostrarNominasOperationCompleted, userState);
+        }
+        
+        private void OnmostrarNominasOperationCompleted(object arg) {
+            if ((this.mostrarNominasCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mostrarNominasCompleted(this, new mostrarNominasCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public modalidadPagoPrestamo[] mostrarModalidadesPago() {
+            object[] results = this.Invoke("mostrarModalidadesPago", new object[0]);
+            return ((modalidadPagoPrestamo[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mostrarModalidadesPagoAsync() {
+            this.mostrarModalidadesPagoAsync(null);
+        }
+        
+        /// <remarks/>
+        public void mostrarModalidadesPagoAsync(object userState) {
+            if ((this.mostrarModalidadesPagoOperationCompleted == null)) {
+                this.mostrarModalidadesPagoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarModalidadesPagoOperationCompleted);
+            }
+            this.InvokeAsync("mostrarModalidadesPago", new object[0], this.mostrarModalidadesPagoOperationCompleted, userState);
+        }
+        
+        private void OnmostrarModalidadesPagoOperationCompleted(object arg) {
+            if ((this.mostrarModalidadesPagoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mostrarModalidadesPagoCompleted(this, new mostrarModalidadesPagoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public cliente mostrarDatosCliente([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cui) {
+            object[] results = this.Invoke("mostrarDatosCliente", new object[] {
+                        cui});
+            return ((cliente)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mostrarDatosClienteAsync(long cui) {
+            this.mostrarDatosClienteAsync(cui, null);
+        }
+        
+        /// <remarks/>
+        public void mostrarDatosClienteAsync(long cui, object userState) {
+            if ((this.mostrarDatosClienteOperationCompleted == null)) {
+                this.mostrarDatosClienteOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarDatosClienteOperationCompleted);
+            }
+            this.InvokeAsync("mostrarDatosCliente", new object[] {
+                        cui}, this.mostrarDatosClienteOperationCompleted, userState);
+        }
+        
+        private void OnmostrarDatosClienteOperationCompleted(object arg) {
+            if ((this.mostrarDatosClienteCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mostrarDatosClienteCompleted(this, new mostrarDatosClienteCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public estadoCuenta[] mostrarEstadoCuenta([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int idcuenta, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string fechainicio, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string fechafinal, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string debehaber) {
+            object[] results = this.Invoke("mostrarEstadoCuenta", new object[] {
+                        idcuenta,
+                        fechainicio,
+                        fechafinal,
+                        debehaber});
+            return ((estadoCuenta[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mostrarEstadoCuentaAsync(int idcuenta, string fechainicio, string fechafinal, string debehaber) {
+            this.mostrarEstadoCuentaAsync(idcuenta, fechainicio, fechafinal, debehaber, null);
+        }
+        
+        /// <remarks/>
+        public void mostrarEstadoCuentaAsync(int idcuenta, string fechainicio, string fechafinal, string debehaber, object userState) {
+            if ((this.mostrarEstadoCuentaOperationCompleted == null)) {
+                this.mostrarEstadoCuentaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarEstadoCuentaOperationCompleted);
+            }
+            this.InvokeAsync("mostrarEstadoCuenta", new object[] {
+                        idcuenta,
+                        fechainicio,
+                        fechafinal,
+                        debehaber}, this.mostrarEstadoCuentaOperationCompleted, userState);
+        }
+        
+        private void OnmostrarEstadoCuentaOperationCompleted(object arg) {
+            if ((this.mostrarEstadoCuentaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mostrarEstadoCuentaCompleted(this, new mostrarEstadoCuentaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -330,86 +604,68 @@ namespace Banquetzal.ServicioWeb {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string[] mostrarTiposPrestamo() {
-            object[] results = this.Invoke("mostrarTiposPrestamo", new object[0]);
-            return ((string[])(results[0]));
+        public string asignarClienteCuentaMonetaria([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cui, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int idcuenta, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] double salario, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int nomina) {
+            object[] results = this.Invoke("asignarClienteCuentaMonetaria", new object[] {
+                        cui,
+                        idcuenta,
+                        salario,
+                        nomina});
+            return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void mostrarTiposPrestamoAsync() {
-            this.mostrarTiposPrestamoAsync(null);
+        public void asignarClienteCuentaMonetariaAsync(long cui, int idcuenta, double salario, int nomina) {
+            this.asignarClienteCuentaMonetariaAsync(cui, idcuenta, salario, nomina, null);
         }
         
         /// <remarks/>
-        public void mostrarTiposPrestamoAsync(object userState) {
-            if ((this.mostrarTiposPrestamoOperationCompleted == null)) {
-                this.mostrarTiposPrestamoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarTiposPrestamoOperationCompleted);
+        public void asignarClienteCuentaMonetariaAsync(long cui, int idcuenta, double salario, int nomina, object userState) {
+            if ((this.asignarClienteCuentaMonetariaOperationCompleted == null)) {
+                this.asignarClienteCuentaMonetariaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnasignarClienteCuentaMonetariaOperationCompleted);
             }
-            this.InvokeAsync("mostrarTiposPrestamo", new object[0], this.mostrarTiposPrestamoOperationCompleted, userState);
+            this.InvokeAsync("asignarClienteCuentaMonetaria", new object[] {
+                        cui,
+                        idcuenta,
+                        salario,
+                        nomina}, this.asignarClienteCuentaMonetariaOperationCompleted, userState);
         }
         
-        private void OnmostrarTiposPrestamoOperationCompleted(object arg) {
-            if ((this.mostrarTiposPrestamoCompleted != null)) {
+        private void OnasignarClienteCuentaMonetariaOperationCompleted(object arg) {
+            if ((this.asignarClienteCuentaMonetariaCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.mostrarTiposPrestamoCompleted(this, new mostrarTiposPrestamoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.asignarClienteCuentaMonetariaCompleted(this, new asignarClienteCuentaMonetariaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public cliente mostrarDatosCliente([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cui) {
-            object[] results = this.Invoke("mostrarDatosCliente", new object[] {
-                        cui});
-            return ((cliente)(results[0]));
+        public bool solicitarChequera([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int idcuenta, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cuitrabajador) {
+            object[] results = this.Invoke("solicitarChequera", new object[] {
+                        idcuenta,
+                        cuitrabajador});
+            return ((bool)(results[0]));
         }
         
         /// <remarks/>
-        public void mostrarDatosClienteAsync(long cui) {
-            this.mostrarDatosClienteAsync(cui, null);
+        public void solicitarChequeraAsync(int idcuenta, long cuitrabajador) {
+            this.solicitarChequeraAsync(idcuenta, cuitrabajador, null);
         }
         
         /// <remarks/>
-        public void mostrarDatosClienteAsync(long cui, object userState) {
-            if ((this.mostrarDatosClienteOperationCompleted == null)) {
-                this.mostrarDatosClienteOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarDatosClienteOperationCompleted);
+        public void solicitarChequeraAsync(int idcuenta, long cuitrabajador, object userState) {
+            if ((this.solicitarChequeraOperationCompleted == null)) {
+                this.solicitarChequeraOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsolicitarChequeraOperationCompleted);
             }
-            this.InvokeAsync("mostrarDatosCliente", new object[] {
-                        cui}, this.mostrarDatosClienteOperationCompleted, userState);
+            this.InvokeAsync("solicitarChequera", new object[] {
+                        idcuenta,
+                        cuitrabajador}, this.solicitarChequeraOperationCompleted, userState);
         }
         
-        private void OnmostrarDatosClienteOperationCompleted(object arg) {
-            if ((this.mostrarDatosClienteCompleted != null)) {
+        private void OnsolicitarChequeraOperationCompleted(object arg) {
+            if ((this.solicitarChequeraCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.mostrarDatosClienteCompleted(this, new mostrarDatosClienteCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string[] mostrarTiposOperacion() {
-            object[] results = this.Invoke("mostrarTiposOperacion", new object[0]);
-            return ((string[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void mostrarTiposOperacionAsync() {
-            this.mostrarTiposOperacionAsync(null);
-        }
-        
-        /// <remarks/>
-        public void mostrarTiposOperacionAsync(object userState) {
-            if ((this.mostrarTiposOperacionOperationCompleted == null)) {
-                this.mostrarTiposOperacionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarTiposOperacionOperationCompleted);
-            }
-            this.InvokeAsync("mostrarTiposOperacion", new object[0], this.mostrarTiposOperacionOperationCompleted, userState);
-        }
-        
-        private void OnmostrarTiposOperacionOperationCompleted(object arg) {
-            if ((this.mostrarTiposOperacionCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.mostrarTiposOperacionCompleted(this, new mostrarTiposOperacionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.solicitarChequeraCompleted(this, new solicitarChequeraCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -438,6 +694,34 @@ namespace Banquetzal.ServicioWeb {
             if ((this.mostrarTiposCuentaCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.mostrarTiposCuentaCompleted(this, new mostrarTiposCuentaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string[] mostrarTiposPrestamo() {
+            object[] results = this.Invoke("mostrarTiposPrestamo", new object[0]);
+            return ((string[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mostrarTiposPrestamoAsync() {
+            this.mostrarTiposPrestamoAsync(null);
+        }
+        
+        /// <remarks/>
+        public void mostrarTiposPrestamoAsync(object userState) {
+            if ((this.mostrarTiposPrestamoOperationCompleted == null)) {
+                this.mostrarTiposPrestamoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarTiposPrestamoOperationCompleted);
+            }
+            this.InvokeAsync("mostrarTiposPrestamo", new object[0], this.mostrarTiposPrestamoOperationCompleted, userState);
+        }
+        
+        private void OnmostrarTiposPrestamoOperationCompleted(object arg) {
+            if ((this.mostrarTiposPrestamoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mostrarTiposPrestamoCompleted(this, new mostrarTiposPrestamoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -516,6 +800,102 @@ namespace Banquetzal.ServicioWeb {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string asignarClienteCuenta([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cui, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int idcuenta, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] double salario) {
+            object[] results = this.Invoke("asignarClienteCuenta", new object[] {
+                        cui,
+                        idcuenta,
+                        salario});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void asignarClienteCuentaAsync(long cui, int idcuenta, double salario) {
+            this.asignarClienteCuentaAsync(cui, idcuenta, salario, null);
+        }
+        
+        /// <remarks/>
+        public void asignarClienteCuentaAsync(long cui, int idcuenta, double salario, object userState) {
+            if ((this.asignarClienteCuentaOperationCompleted == null)) {
+                this.asignarClienteCuentaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnasignarClienteCuentaOperationCompleted);
+            }
+            this.InvokeAsync("asignarClienteCuenta", new object[] {
+                        cui,
+                        idcuenta,
+                        salario}, this.asignarClienteCuentaOperationCompleted, userState);
+        }
+        
+        private void OnasignarClienteCuentaOperationCompleted(object arg) {
+            if ((this.asignarClienteCuentaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.asignarClienteCuentaCompleted(this, new asignarClienteCuentaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string[] mostrarTiposOperacion() {
+            object[] results = this.Invoke("mostrarTiposOperacion", new object[0]);
+            return ((string[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mostrarTiposOperacionAsync() {
+            this.mostrarTiposOperacionAsync(null);
+        }
+        
+        /// <remarks/>
+        public void mostrarTiposOperacionAsync(object userState) {
+            if ((this.mostrarTiposOperacionOperationCompleted == null)) {
+                this.mostrarTiposOperacionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarTiposOperacionOperationCompleted);
+            }
+            this.InvokeAsync("mostrarTiposOperacion", new object[0], this.mostrarTiposOperacionOperationCompleted, userState);
+        }
+        
+        private void OnmostrarTiposOperacionOperationCompleted(object arg) {
+            if ((this.mostrarTiposOperacionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mostrarTiposOperacionCompleted(this, new mostrarTiposOperacionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool cambiarEstadoCuenta([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int idcuenta, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int nuevoEstado, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cuitrabajador) {
+            object[] results = this.Invoke("cambiarEstadoCuenta", new object[] {
+                        idcuenta,
+                        nuevoEstado,
+                        cuitrabajador});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void cambiarEstadoCuentaAsync(int idcuenta, int nuevoEstado, long cuitrabajador) {
+            this.cambiarEstadoCuentaAsync(idcuenta, nuevoEstado, cuitrabajador, null);
+        }
+        
+        /// <remarks/>
+        public void cambiarEstadoCuentaAsync(int idcuenta, int nuevoEstado, long cuitrabajador, object userState) {
+            if ((this.cambiarEstadoCuentaOperationCompleted == null)) {
+                this.cambiarEstadoCuentaOperationCompleted = new System.Threading.SendOrPostCallback(this.OncambiarEstadoCuentaOperationCompleted);
+            }
+            this.InvokeAsync("cambiarEstadoCuenta", new object[] {
+                        idcuenta,
+                        nuevoEstado,
+                        cuitrabajador}, this.cambiarEstadoCuentaOperationCompleted, userState);
+        }
+        
+        private void OncambiarEstadoCuentaOperationCompleted(object arg) {
+            if ((this.cambiarEstadoCuentaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.cambiarEstadoCuentaCompleted(this, new cambiarEstadoCuentaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public bool agregarTrabajador([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cui, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string usuario, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nombre, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string apellido, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int telefono, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string direccion, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int rol, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int agencia) {
             object[] results = this.Invoke("agregarTrabajador", new object[] {
                         cui,
@@ -560,28 +940,30 @@ namespace Banquetzal.ServicioWeb {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int crearCuentaIndividual([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cui, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] double monto, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int tipoCuenta) {
+        public int crearCuentaIndividual([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cui, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] double monto, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int tipoCuenta, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cuitrabajador) {
             object[] results = this.Invoke("crearCuentaIndividual", new object[] {
                         cui,
                         monto,
-                        tipoCuenta});
+                        tipoCuenta,
+                        cuitrabajador});
             return ((int)(results[0]));
         }
         
         /// <remarks/>
-        public void crearCuentaIndividualAsync(long cui, double monto, int tipoCuenta) {
-            this.crearCuentaIndividualAsync(cui, monto, tipoCuenta, null);
+        public void crearCuentaIndividualAsync(long cui, double monto, int tipoCuenta, long cuitrabajador) {
+            this.crearCuentaIndividualAsync(cui, monto, tipoCuenta, cuitrabajador, null);
         }
         
         /// <remarks/>
-        public void crearCuentaIndividualAsync(long cui, double monto, int tipoCuenta, object userState) {
+        public void crearCuentaIndividualAsync(long cui, double monto, int tipoCuenta, long cuitrabajador, object userState) {
             if ((this.crearCuentaIndividualOperationCompleted == null)) {
                 this.crearCuentaIndividualOperationCompleted = new System.Threading.SendOrPostCallback(this.OncrearCuentaIndividualOperationCompleted);
             }
             this.InvokeAsync("crearCuentaIndividual", new object[] {
                         cui,
                         monto,
-                        tipoCuenta}, this.crearCuentaIndividualOperationCompleted, userState);
+                        tipoCuenta,
+                        cuitrabajador}, this.crearCuentaIndividualOperationCompleted, userState);
         }
         
         private void OncrearCuentaIndividualOperationCompleted(object arg) {
@@ -594,34 +976,36 @@ namespace Banquetzal.ServicioWeb {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string asignarClienteCuenta([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cui, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int idcuenta, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] double salario) {
-            object[] results = this.Invoke("asignarClienteCuenta", new object[] {
+        public string crearCuentaIndividualNomina([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cui, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long salario, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int nomina, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cuitrabajador) {
+            object[] results = this.Invoke("crearCuentaIndividualNomina", new object[] {
                         cui,
-                        idcuenta,
-                        salario});
+                        salario,
+                        nomina,
+                        cuitrabajador});
             return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void asignarClienteCuentaAsync(long cui, int idcuenta, double salario) {
-            this.asignarClienteCuentaAsync(cui, idcuenta, salario, null);
+        public void crearCuentaIndividualNominaAsync(long cui, long salario, int nomina, long cuitrabajador) {
+            this.crearCuentaIndividualNominaAsync(cui, salario, nomina, cuitrabajador, null);
         }
         
         /// <remarks/>
-        public void asignarClienteCuentaAsync(long cui, int idcuenta, double salario, object userState) {
-            if ((this.asignarClienteCuentaOperationCompleted == null)) {
-                this.asignarClienteCuentaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnasignarClienteCuentaOperationCompleted);
+        public void crearCuentaIndividualNominaAsync(long cui, long salario, int nomina, long cuitrabajador, object userState) {
+            if ((this.crearCuentaIndividualNominaOperationCompleted == null)) {
+                this.crearCuentaIndividualNominaOperationCompleted = new System.Threading.SendOrPostCallback(this.OncrearCuentaIndividualNominaOperationCompleted);
             }
-            this.InvokeAsync("asignarClienteCuenta", new object[] {
+            this.InvokeAsync("crearCuentaIndividualNomina", new object[] {
                         cui,
-                        idcuenta,
-                        salario}, this.asignarClienteCuentaOperationCompleted, userState);
+                        salario,
+                        nomina,
+                        cuitrabajador}, this.crearCuentaIndividualNominaOperationCompleted, userState);
         }
         
-        private void OnasignarClienteCuentaOperationCompleted(object arg) {
-            if ((this.asignarClienteCuentaCompleted != null)) {
+        private void OncrearCuentaIndividualNominaOperationCompleted(object arg) {
+            if ((this.crearCuentaIndividualNominaCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.asignarClienteCuentaCompleted(this, new asignarClienteCuentaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.crearCuentaIndividualNominaCompleted(this, new crearCuentaIndividualNominaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -658,22 +1042,23 @@ namespace Banquetzal.ServicioWeb {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool solicitarPrestamo([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cui, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] double monto, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int tipo, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int modalidad) {
+        public bool solicitarPrestamo([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cui, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] double monto, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int tipo, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int modalidad, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cuitrabajador) {
             object[] results = this.Invoke("solicitarPrestamo", new object[] {
                         cui,
                         monto,
                         tipo,
-                        modalidad});
+                        modalidad,
+                        cuitrabajador});
             return ((bool)(results[0]));
         }
         
         /// <remarks/>
-        public void solicitarPrestamoAsync(long cui, double monto, int tipo, int modalidad) {
-            this.solicitarPrestamoAsync(cui, monto, tipo, modalidad, null);
+        public void solicitarPrestamoAsync(long cui, double monto, int tipo, int modalidad, long cuitrabajador) {
+            this.solicitarPrestamoAsync(cui, monto, tipo, modalidad, cuitrabajador, null);
         }
         
         /// <remarks/>
-        public void solicitarPrestamoAsync(long cui, double monto, int tipo, int modalidad, object userState) {
+        public void solicitarPrestamoAsync(long cui, double monto, int tipo, int modalidad, long cuitrabajador, object userState) {
             if ((this.solicitarPrestamoOperationCompleted == null)) {
                 this.solicitarPrestamoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsolicitarPrestamoOperationCompleted);
             }
@@ -681,13 +1066,52 @@ namespace Banquetzal.ServicioWeb {
                         cui,
                         monto,
                         tipo,
-                        modalidad}, this.solicitarPrestamoOperationCompleted, userState);
+                        modalidad,
+                        cuitrabajador}, this.solicitarPrestamoOperationCompleted, userState);
         }
         
         private void OnsolicitarPrestamoOperationCompleted(object arg) {
             if ((this.solicitarPrestamoCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.solicitarPrestamoCompleted(this, new solicitarPrestamoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string actualizarDatosCliente([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cui, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string usuario, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nombres, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string apellidos, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nacimiento) {
+            object[] results = this.Invoke("actualizarDatosCliente", new object[] {
+                        cui,
+                        usuario,
+                        nombres,
+                        apellidos,
+                        nacimiento});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void actualizarDatosClienteAsync(long cui, string usuario, string nombres, string apellidos, string nacimiento) {
+            this.actualizarDatosClienteAsync(cui, usuario, nombres, apellidos, nacimiento, null);
+        }
+        
+        /// <remarks/>
+        public void actualizarDatosClienteAsync(long cui, string usuario, string nombres, string apellidos, string nacimiento, object userState) {
+            if ((this.actualizarDatosClienteOperationCompleted == null)) {
+                this.actualizarDatosClienteOperationCompleted = new System.Threading.SendOrPostCallback(this.OnactualizarDatosClienteOperationCompleted);
+            }
+            this.InvokeAsync("actualizarDatosCliente", new object[] {
+                        cui,
+                        usuario,
+                        nombres,
+                        apellidos,
+                        nacimiento}, this.actualizarDatosClienteOperationCompleted, userState);
+        }
+        
+        private void OnactualizarDatosClienteOperationCompleted(object arg) {
+            if ((this.actualizarDatosClienteCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.actualizarDatosClienteCompleted(this, new actualizarDatosClienteCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -716,236 +1140,6 @@ namespace Banquetzal.ServicioWeb {
             if ((this.verificarDatosClienteCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.verificarDatosClienteCompleted(this, new verificarDatosClienteCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool cambiarEstadoCuenta([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int idcuenta, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int nuevoEstado) {
-            object[] results = this.Invoke("cambiarEstadoCuenta", new object[] {
-                        idcuenta,
-                        nuevoEstado});
-            return ((bool)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void cambiarEstadoCuentaAsync(int idcuenta, int nuevoEstado) {
-            this.cambiarEstadoCuentaAsync(idcuenta, nuevoEstado, null);
-        }
-        
-        /// <remarks/>
-        public void cambiarEstadoCuentaAsync(int idcuenta, int nuevoEstado, object userState) {
-            if ((this.cambiarEstadoCuentaOperationCompleted == null)) {
-                this.cambiarEstadoCuentaOperationCompleted = new System.Threading.SendOrPostCallback(this.OncambiarEstadoCuentaOperationCompleted);
-            }
-            this.InvokeAsync("cambiarEstadoCuenta", new object[] {
-                        idcuenta,
-                        nuevoEstado}, this.cambiarEstadoCuentaOperationCompleted, userState);
-        }
-        
-        private void OncambiarEstadoCuentaOperationCompleted(object arg) {
-            if ((this.cambiarEstadoCuentaCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.cambiarEstadoCuentaCompleted(this, new cambiarEstadoCuentaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public modalidadPagoPrestamo[] mostrarModalidadesPago() {
-            object[] results = this.Invoke("mostrarModalidadesPago", new object[0]);
-            return ((modalidadPagoPrestamo[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void mostrarModalidadesPagoAsync() {
-            this.mostrarModalidadesPagoAsync(null);
-        }
-        
-        /// <remarks/>
-        public void mostrarModalidadesPagoAsync(object userState) {
-            if ((this.mostrarModalidadesPagoOperationCompleted == null)) {
-                this.mostrarModalidadesPagoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarModalidadesPagoOperationCompleted);
-            }
-            this.InvokeAsync("mostrarModalidadesPago", new object[0], this.mostrarModalidadesPagoOperationCompleted, userState);
-        }
-        
-        private void OnmostrarModalidadesPagoOperationCompleted(object arg) {
-            if ((this.mostrarModalidadesPagoCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.mostrarModalidadesPagoCompleted(this, new mostrarModalidadesPagoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool solicitarChequera([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int idcuenta) {
-            object[] results = this.Invoke("solicitarChequera", new object[] {
-                        idcuenta});
-            return ((bool)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void solicitarChequeraAsync(int idcuenta) {
-            this.solicitarChequeraAsync(idcuenta, null);
-        }
-        
-        /// <remarks/>
-        public void solicitarChequeraAsync(int idcuenta, object userState) {
-            if ((this.solicitarChequeraOperationCompleted == null)) {
-                this.solicitarChequeraOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsolicitarChequeraOperationCompleted);
-            }
-            this.InvokeAsync("solicitarChequera", new object[] {
-                        idcuenta}, this.solicitarChequeraOperationCompleted, userState);
-        }
-        
-        private void OnsolicitarChequeraOperationCompleted(object arg) {
-            if ((this.solicitarChequeraCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.solicitarChequeraCompleted(this, new solicitarChequeraCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public estadoCuenta[] mostrarEstadoCuenta([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int idcuenta, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string fechainicio, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string fechafinal, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string debehaber) {
-            object[] results = this.Invoke("mostrarEstadoCuenta", new object[] {
-                        idcuenta,
-                        fechainicio,
-                        fechafinal,
-                        debehaber});
-            return ((estadoCuenta[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void mostrarEstadoCuentaAsync(int idcuenta, string fechainicio, string fechafinal, string debehaber) {
-            this.mostrarEstadoCuentaAsync(idcuenta, fechainicio, fechafinal, debehaber, null);
-        }
-        
-        /// <remarks/>
-        public void mostrarEstadoCuentaAsync(int idcuenta, string fechainicio, string fechafinal, string debehaber, object userState) {
-            if ((this.mostrarEstadoCuentaOperationCompleted == null)) {
-                this.mostrarEstadoCuentaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarEstadoCuentaOperationCompleted);
-            }
-            this.InvokeAsync("mostrarEstadoCuenta", new object[] {
-                        idcuenta,
-                        fechainicio,
-                        fechafinal,
-                        debehaber}, this.mostrarEstadoCuentaOperationCompleted, userState);
-        }
-        
-        private void OnmostrarEstadoCuentaOperationCompleted(object arg) {
-            if ((this.mostrarEstadoCuentaCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.mostrarEstadoCuentaCompleted(this, new mostrarEstadoCuentaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string crearCuentaIndividualNomina([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cui, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long salario, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int nomina) {
-            object[] results = this.Invoke("crearCuentaIndividualNomina", new object[] {
-                        cui,
-                        salario,
-                        nomina});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void crearCuentaIndividualNominaAsync(long cui, long salario, int nomina) {
-            this.crearCuentaIndividualNominaAsync(cui, salario, nomina, null);
-        }
-        
-        /// <remarks/>
-        public void crearCuentaIndividualNominaAsync(long cui, long salario, int nomina, object userState) {
-            if ((this.crearCuentaIndividualNominaOperationCompleted == null)) {
-                this.crearCuentaIndividualNominaOperationCompleted = new System.Threading.SendOrPostCallback(this.OncrearCuentaIndividualNominaOperationCompleted);
-            }
-            this.InvokeAsync("crearCuentaIndividualNomina", new object[] {
-                        cui,
-                        salario,
-                        nomina}, this.crearCuentaIndividualNominaOperationCompleted, userState);
-        }
-        
-        private void OncrearCuentaIndividualNominaOperationCompleted(object arg) {
-            if ((this.crearCuentaIndividualNominaCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.crearCuentaIndividualNominaCompleted(this, new crearCuentaIndividualNominaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string Login([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string user, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string pass) {
-            object[] results = this.Invoke("Login", new object[] {
-                        user,
-                        pass});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void LoginAsync(string user, string pass) {
-            this.LoginAsync(user, pass, null);
-        }
-        
-        /// <remarks/>
-        public void LoginAsync(string user, string pass, object userState) {
-            if ((this.LoginOperationCompleted == null)) {
-                this.LoginOperationCompleted = new System.Threading.SendOrPostCallback(this.OnLoginOperationCompleted);
-            }
-            this.InvokeAsync("Login", new object[] {
-                        user,
-                        pass}, this.LoginOperationCompleted, userState);
-        }
-        
-        private void OnLoginOperationCompleted(object arg) {
-            if ((this.LoginCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.LoginCompleted(this, new LoginCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string cambiarCheque([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int idcuenta, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long idcheque, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long monto, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string transaccionista, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cuiTrabajador) {
-            object[] results = this.Invoke("cambiarCheque", new object[] {
-                        idcuenta,
-                        idcheque,
-                        monto,
-                        transaccionista,
-                        cuiTrabajador});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void cambiarChequeAsync(int idcuenta, long idcheque, long monto, string transaccionista, long cuiTrabajador) {
-            this.cambiarChequeAsync(idcuenta, idcheque, monto, transaccionista, cuiTrabajador, null);
-        }
-        
-        /// <remarks/>
-        public void cambiarChequeAsync(int idcuenta, long idcheque, long monto, string transaccionista, long cuiTrabajador, object userState) {
-            if ((this.cambiarChequeOperationCompleted == null)) {
-                this.cambiarChequeOperationCompleted = new System.Threading.SendOrPostCallback(this.OncambiarChequeOperationCompleted);
-            }
-            this.InvokeAsync("cambiarCheque", new object[] {
-                        idcuenta,
-                        idcheque,
-                        monto,
-                        transaccionista,
-                        cuiTrabajador}, this.cambiarChequeOperationCompleted, userState);
-        }
-        
-        private void OncambiarChequeOperationCompleted(object arg) {
-            if ((this.cambiarChequeCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.cambiarChequeCompleted(this, new cambiarChequeCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -994,220 +1188,38 @@ namespace Banquetzal.ServicioWeb {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int insertarNomina([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] double monto, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cuiPresidente, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cuiVice, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cuiContador, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] double sueldoPresidente, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] double sueldoVice, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] double sueldoContador) {
-            object[] results = this.Invoke("insertarNomina", new object[] {
+        public string cambiarCheque([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int idcuenta, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long idcheque, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long monto, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string transaccionista, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cuiTrabajador) {
+            object[] results = this.Invoke("cambiarCheque", new object[] {
+                        idcuenta,
+                        idcheque,
                         monto,
-                        cuiPresidente,
-                        cuiVice,
-                        cuiContador,
-                        sueldoPresidente,
-                        sueldoVice,
-                        sueldoContador});
-            return ((int)(results[0]));
+                        transaccionista,
+                        cuiTrabajador});
+            return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void insertarNominaAsync(double monto, long cuiPresidente, long cuiVice, long cuiContador, double sueldoPresidente, double sueldoVice, double sueldoContador) {
-            this.insertarNominaAsync(monto, cuiPresidente, cuiVice, cuiContador, sueldoPresidente, sueldoVice, sueldoContador, null);
+        public void cambiarChequeAsync(int idcuenta, long idcheque, long monto, string transaccionista, long cuiTrabajador) {
+            this.cambiarChequeAsync(idcuenta, idcheque, monto, transaccionista, cuiTrabajador, null);
         }
         
         /// <remarks/>
-        public void insertarNominaAsync(double monto, long cuiPresidente, long cuiVice, long cuiContador, double sueldoPresidente, double sueldoVice, double sueldoContador, object userState) {
-            if ((this.insertarNominaOperationCompleted == null)) {
-                this.insertarNominaOperationCompleted = new System.Threading.SendOrPostCallback(this.OninsertarNominaOperationCompleted);
+        public void cambiarChequeAsync(int idcuenta, long idcheque, long monto, string transaccionista, long cuiTrabajador, object userState) {
+            if ((this.cambiarChequeOperationCompleted == null)) {
+                this.cambiarChequeOperationCompleted = new System.Threading.SendOrPostCallback(this.OncambiarChequeOperationCompleted);
             }
-            this.InvokeAsync("insertarNomina", new object[] {
+            this.InvokeAsync("cambiarCheque", new object[] {
+                        idcuenta,
+                        idcheque,
                         monto,
-                        cuiPresidente,
-                        cuiVice,
-                        cuiContador,
-                        sueldoPresidente,
-                        sueldoVice,
-                        sueldoContador}, this.insertarNominaOperationCompleted, userState);
+                        transaccionista,
+                        cuiTrabajador}, this.cambiarChequeOperationCompleted, userState);
         }
         
-        private void OninsertarNominaOperationCompleted(object arg) {
-            if ((this.insertarNominaCompleted != null)) {
+        private void OncambiarChequeOperationCompleted(object arg) {
+            if ((this.cambiarChequeCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.insertarNominaCompleted(this, new insertarNominaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int[] mostrarNominas([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long CUI) {
-            object[] results = this.Invoke("mostrarNominas", new object[] {
-                        CUI});
-            return ((int[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void mostrarNominasAsync(long CUI) {
-            this.mostrarNominasAsync(CUI, null);
-        }
-        
-        /// <remarks/>
-        public void mostrarNominasAsync(long CUI, object userState) {
-            if ((this.mostrarNominasOperationCompleted == null)) {
-                this.mostrarNominasOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarNominasOperationCompleted);
-            }
-            this.InvokeAsync("mostrarNominas", new object[] {
-                        CUI}, this.mostrarNominasOperationCompleted, userState);
-        }
-        
-        private void OnmostrarNominasOperationCompleted(object arg) {
-            if ((this.mostrarNominasCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.mostrarNominasCompleted(this, new mostrarNominasCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string[] mostrarRoles() {
-            object[] results = this.Invoke("mostrarRoles", new object[0]);
-            return ((string[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void mostrarRolesAsync() {
-            this.mostrarRolesAsync(null);
-        }
-        
-        /// <remarks/>
-        public void mostrarRolesAsync(object userState) {
-            if ((this.mostrarRolesOperationCompleted == null)) {
-                this.mostrarRolesOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarRolesOperationCompleted);
-            }
-            this.InvokeAsync("mostrarRoles", new object[0], this.mostrarRolesOperationCompleted, userState);
-        }
-        
-        private void OnmostrarRolesOperationCompleted(object arg) {
-            if ((this.mostrarRolesCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.mostrarRolesCompleted(this, new mostrarRolesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public cuenta mostrarCuenta([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int idcuenta) {
-            object[] results = this.Invoke("mostrarCuenta", new object[] {
-                        idcuenta});
-            return ((cuenta)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void mostrarCuentaAsync(int idcuenta) {
-            this.mostrarCuentaAsync(idcuenta, null);
-        }
-        
-        /// <remarks/>
-        public void mostrarCuentaAsync(int idcuenta, object userState) {
-            if ((this.mostrarCuentaOperationCompleted == null)) {
-                this.mostrarCuentaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarCuentaOperationCompleted);
-            }
-            this.InvokeAsync("mostrarCuenta", new object[] {
-                        idcuenta}, this.mostrarCuentaOperationCompleted, userState);
-        }
-        
-        private void OnmostrarCuentaOperationCompleted(object arg) {
-            if ((this.mostrarCuentaCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.mostrarCuentaCompleted(this, new mostrarCuentaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool nuevaAgencia([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nombre, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string direccion, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] double fondos) {
-            object[] results = this.Invoke("nuevaAgencia", new object[] {
-                        nombre,
-                        direccion,
-                        fondos});
-            return ((bool)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void nuevaAgenciaAsync(string nombre, string direccion, double fondos) {
-            this.nuevaAgenciaAsync(nombre, direccion, fondos, null);
-        }
-        
-        /// <remarks/>
-        public void nuevaAgenciaAsync(string nombre, string direccion, double fondos, object userState) {
-            if ((this.nuevaAgenciaOperationCompleted == null)) {
-                this.nuevaAgenciaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnnuevaAgenciaOperationCompleted);
-            }
-            this.InvokeAsync("nuevaAgencia", new object[] {
-                        nombre,
-                        direccion,
-                        fondos}, this.nuevaAgenciaOperationCompleted, userState);
-        }
-        
-        private void OnnuevaAgenciaOperationCompleted(object arg) {
-            if ((this.nuevaAgenciaCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.nuevaAgenciaCompleted(this, new nuevaAgenciaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string[] mostrarEstados() {
-            object[] results = this.Invoke("mostrarEstados", new object[0]);
-            return ((string[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void mostrarEstadosAsync() {
-            this.mostrarEstadosAsync(null);
-        }
-        
-        /// <remarks/>
-        public void mostrarEstadosAsync(object userState) {
-            if ((this.mostrarEstadosOperationCompleted == null)) {
-                this.mostrarEstadosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarEstadosOperationCompleted);
-            }
-            this.InvokeAsync("mostrarEstados", new object[0], this.mostrarEstadosOperationCompleted, userState);
-        }
-        
-        private void OnmostrarEstadosOperationCompleted(object arg) {
-            if ((this.mostrarEstadosCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.mostrarEstadosCompleted(this, new mostrarEstadosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string[] mostrarAgencias() {
-            object[] results = this.Invoke("mostrarAgencias", new object[0]);
-            return ((string[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void mostrarAgenciasAsync() {
-            this.mostrarAgenciasAsync(null);
-        }
-        
-        /// <remarks/>
-        public void mostrarAgenciasAsync(object userState) {
-            if ((this.mostrarAgenciasOperationCompleted == null)) {
-                this.mostrarAgenciasOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarAgenciasOperationCompleted);
-            }
-            this.InvokeAsync("mostrarAgencias", new object[0], this.mostrarAgenciasOperationCompleted, userState);
-        }
-        
-        private void OnmostrarAgenciasOperationCompleted(object arg) {
-            if ((this.mostrarAgenciasCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.mostrarAgenciasCompleted(this, new mostrarAgenciasCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.cambiarChequeCompleted(this, new cambiarChequeCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1227,202 +1239,6 @@ namespace Banquetzal.ServicioWeb {
                 return true;
             }
             return false;
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ServicioWeb/")]
-    public partial class cliente {
-        
-        private string apellidoField;
-        
-        private long cuiField;
-        
-        private string nacimientoField;
-        
-        private string nombreField;
-        
-        private int puntosField;
-        
-        private double salarioField;
-        
-        private string usuarioField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string apellido {
-            get {
-                return this.apellidoField;
-            }
-            set {
-                this.apellidoField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public long cui {
-            get {
-                return this.cuiField;
-            }
-            set {
-                this.cuiField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nacimiento {
-            get {
-                return this.nacimientoField;
-            }
-            set {
-                this.nacimientoField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int puntos {
-            get {
-                return this.puntosField;
-            }
-            set {
-                this.puntosField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public double salario {
-            get {
-                return this.salarioField;
-            }
-            set {
-                this.salarioField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string usuario {
-            get {
-                return this.usuarioField;
-            }
-            set {
-                this.usuarioField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ServicioWeb/")]
-    public partial class estadoCuenta {
-        
-        private string fechaField;
-        
-        private long montoField;
-        
-        private string operacionField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string fecha {
-            get {
-                return this.fechaField;
-            }
-            set {
-                this.fechaField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public long monto {
-            get {
-                return this.montoField;
-            }
-            set {
-                this.montoField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string operacion {
-            get {
-                return this.operacionField;
-            }
-            set {
-                this.operacionField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ServicioWeb/")]
-    public partial class modalidadPagoPrestamo {
-        
-        private string descripcionField;
-        
-        private int idField;
-        
-        private string nombreField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string descripcion {
-            get {
-                return this.descripcionField;
-            }
-            set {
-                this.descripcionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-            }
         }
     }
     
@@ -1566,521 +1382,197 @@ namespace Banquetzal.ServicioWeb {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void actualizarDatosClienteCompletedEventHandler(object sender, actualizarDatosClienteCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class actualizarDatosClienteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ServicioWeb/")]
+    public partial class estadoCuenta {
         
-        private object[] results;
+        private string fechaField;
         
-        internal actualizarDatosClienteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
+        private long montoField;
+        
+        private string operacionField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string fecha {
+            get {
+                return this.fechaField;
+            }
+            set {
+                this.fechaField = value;
+            }
         }
         
         /// <remarks/>
-        public string Result {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long monto {
             get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
+                return this.montoField;
+            }
+            set {
+                this.montoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string operacion {
+            get {
+                return this.operacionField;
+            }
+            set {
+                this.operacionField = value;
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void asignarClienteCuentaMonetariaCompletedEventHandler(object sender, asignarClienteCuentaMonetariaCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class asignarClienteCuentaMonetariaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ServicioWeb/")]
+    public partial class cliente {
         
-        private object[] results;
+        private string apellidoField;
         
-        internal asignarClienteCuentaMonetariaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
+        private long cuiField;
+        
+        private string nacimientoField;
+        
+        private string nombreField;
+        
+        private int puntosField;
+        
+        private double salarioField;
+        
+        private string usuarioField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string apellido {
+            get {
+                return this.apellidoField;
+            }
+            set {
+                this.apellidoField = value;
+            }
         }
         
         /// <remarks/>
-        public string Result {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long cui {
             get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
+                return this.cuiField;
+            }
+            set {
+                this.cuiField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nacimiento {
+            get {
+                return this.nacimientoField;
+            }
+            set {
+                this.nacimientoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int puntos {
+            get {
+                return this.puntosField;
+            }
+            set {
+                this.puntosField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public double salario {
+            get {
+                return this.salarioField;
+            }
+            set {
+                this.salarioField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string usuario {
+            get {
+                return this.usuarioField;
+            }
+            set {
+                this.usuarioField = value;
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void CambiarContrasenaCompletedEventHandler(object sender, CambiarContrasenaCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class CambiarContrasenaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ServicioWeb/")]
+    public partial class modalidadPagoPrestamo {
         
-        private object[] results;
+        private string descripcionField;
         
-        internal CambiarContrasenaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
+        private int idField;
+        
+        private string nombreField;
         
         /// <remarks/>
-        public bool Result {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string descripcion {
             get {
-                this.RaiseExceptionIfNecessary();
-                return ((bool)(this.results[0]));
+                return this.descripcionField;
+            }
+            set {
+                this.descripcionField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void mostrarTiposPrestamoCompletedEventHandler(object sender, mostrarTiposPrestamoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class mostrarTiposPrestamoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal mostrarTiposPrestamoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
         
         /// <remarks/>
-        public string[] Result {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id {
             get {
-                this.RaiseExceptionIfNecessary();
-                return ((string[])(this.results[0]));
+                return this.idField;
+            }
+            set {
+                this.idField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void mostrarDatosClienteCompletedEventHandler(object sender, mostrarDatosClienteCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class mostrarDatosClienteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal mostrarDatosClienteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
         
         /// <remarks/>
-        public cliente Result {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre {
             get {
-                this.RaiseExceptionIfNecessary();
-                return ((cliente)(this.results[0]));
+                return this.nombreField;
             }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void mostrarTiposOperacionCompletedEventHandler(object sender, mostrarTiposOperacionCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class mostrarTiposOperacionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal mostrarTiposOperacionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void mostrarTiposCuentaCompletedEventHandler(object sender, mostrarTiposCuentaCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class mostrarTiposCuentaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal mostrarTiposCuentaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void agregarClienteIndividualCompletedEventHandler(object sender, agregarClienteIndividualCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class agregarClienteIndividualCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal agregarClienteIndividualCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public bool Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((bool)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void descontarMontoChequeCompletedEventHandler(object sender, descontarMontoChequeCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class descontarMontoChequeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal descontarMontoChequeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public bool Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((bool)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void agregarTrabajadorCompletedEventHandler(object sender, agregarTrabajadorCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class agregarTrabajadorCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal agregarTrabajadorCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public bool Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((bool)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void crearCuentaIndividualCompletedEventHandler(object sender, crearCuentaIndividualCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class crearCuentaIndividualCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal crearCuentaIndividualCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public int Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((int)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void asignarClienteCuentaCompletedEventHandler(object sender, asignarClienteCuentaCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class asignarClienteCuentaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal asignarClienteCuentaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void mostrarCuentaPropietarioCompletedEventHandler(object sender, mostrarCuentaPropietarioCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class mostrarCuentaPropietarioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal mostrarCuentaPropietarioCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public cuenta Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((cuenta)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void solicitarPrestamoCompletedEventHandler(object sender, solicitarPrestamoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class solicitarPrestamoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal solicitarPrestamoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public bool Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((bool)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void verificarDatosClienteCompletedEventHandler(object sender, verificarDatosClienteCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class verificarDatosClienteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal verificarDatosClienteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public cliente[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((cliente[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void cambiarEstadoCuentaCompletedEventHandler(object sender, cambiarEstadoCuentaCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class cambiarEstadoCuentaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal cambiarEstadoCuentaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public bool Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((bool)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void mostrarModalidadesPagoCompletedEventHandler(object sender, mostrarModalidadesPagoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class mostrarModalidadesPagoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal mostrarModalidadesPagoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public modalidadPagoPrestamo[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((modalidadPagoPrestamo[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void solicitarChequeraCompletedEventHandler(object sender, solicitarChequeraCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class solicitarChequeraCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal solicitarChequeraCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public bool Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((bool)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void mostrarEstadoCuentaCompletedEventHandler(object sender, mostrarEstadoCuentaCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class mostrarEstadoCuentaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal mostrarEstadoCuentaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public estadoCuenta[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((estadoCuenta[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void crearCuentaIndividualNominaCompletedEventHandler(object sender, crearCuentaIndividualNominaCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class crearCuentaIndividualNominaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal crearCuentaIndividualNominaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
+            set {
+                this.nombreField = value;
             }
         }
     }
@@ -2098,58 +1590,6 @@ namespace Banquetzal.ServicioWeb {
         private object[] results;
         
         internal LoginCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void cambiarChequeCompletedEventHandler(object sender, cambiarChequeCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class cambiarChequeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal cambiarChequeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void depositarCompletedEventHandler(object sender, depositarCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class depositarCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal depositarCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -2191,26 +1631,26 @@ namespace Banquetzal.ServicioWeb {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void mostrarNominasCompletedEventHandler(object sender, mostrarNominasCompletedEventArgs e);
+    public delegate void mostrarEstadosCompletedEventHandler(object sender, mostrarEstadosCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class mostrarNominasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class mostrarEstadosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal mostrarNominasCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal mostrarEstadosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
         
         /// <remarks/>
-        public int[] Result {
+        public string[] Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((int[])(this.results[0]));
+                return ((string[])(this.results[0]));
             }
         }
     }
@@ -2228,6 +1668,32 @@ namespace Banquetzal.ServicioWeb {
         private object[] results;
         
         internal mostrarRolesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void mostrarAgenciasCompletedEventHandler(object sender, mostrarAgenciasCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mostrarAgenciasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mostrarAgenciasCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -2295,17 +1761,199 @@ namespace Banquetzal.ServicioWeb {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void mostrarEstadosCompletedEventHandler(object sender, mostrarEstadosCompletedEventArgs e);
+    public delegate void mostrarNominasCompletedEventHandler(object sender, mostrarNominasCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class mostrarEstadosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class mostrarNominasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal mostrarEstadosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal mostrarNominasCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void mostrarModalidadesPagoCompletedEventHandler(object sender, mostrarModalidadesPagoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mostrarModalidadesPagoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mostrarModalidadesPagoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public modalidadPagoPrestamo[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((modalidadPagoPrestamo[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void mostrarDatosClienteCompletedEventHandler(object sender, mostrarDatosClienteCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mostrarDatosClienteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mostrarDatosClienteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public cliente Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((cliente)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void mostrarEstadoCuentaCompletedEventHandler(object sender, mostrarEstadoCuentaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mostrarEstadoCuentaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mostrarEstadoCuentaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public estadoCuenta[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((estadoCuenta[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void CambiarContrasenaCompletedEventHandler(object sender, CambiarContrasenaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class CambiarContrasenaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal CambiarContrasenaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void asignarClienteCuentaMonetariaCompletedEventHandler(object sender, asignarClienteCuentaMonetariaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class asignarClienteCuentaMonetariaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal asignarClienteCuentaMonetariaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void solicitarChequeraCompletedEventHandler(object sender, solicitarChequeraCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class solicitarChequeraCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal solicitarChequeraCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void mostrarTiposCuentaCompletedEventHandler(object sender, mostrarTiposCuentaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mostrarTiposCuentaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mostrarTiposCuentaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -2321,17 +1969,17 @@ namespace Banquetzal.ServicioWeb {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void mostrarAgenciasCompletedEventHandler(object sender, mostrarAgenciasCompletedEventArgs e);
+    public delegate void mostrarTiposPrestamoCompletedEventHandler(object sender, mostrarTiposPrestamoCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class mostrarAgenciasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class mostrarTiposPrestamoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal mostrarAgenciasCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal mostrarTiposPrestamoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -2341,6 +1989,370 @@ namespace Banquetzal.ServicioWeb {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((string[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void agregarClienteIndividualCompletedEventHandler(object sender, agregarClienteIndividualCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class agregarClienteIndividualCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal agregarClienteIndividualCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void descontarMontoChequeCompletedEventHandler(object sender, descontarMontoChequeCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class descontarMontoChequeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal descontarMontoChequeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void asignarClienteCuentaCompletedEventHandler(object sender, asignarClienteCuentaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class asignarClienteCuentaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal asignarClienteCuentaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void mostrarTiposOperacionCompletedEventHandler(object sender, mostrarTiposOperacionCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mostrarTiposOperacionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mostrarTiposOperacionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void cambiarEstadoCuentaCompletedEventHandler(object sender, cambiarEstadoCuentaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class cambiarEstadoCuentaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal cambiarEstadoCuentaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void agregarTrabajadorCompletedEventHandler(object sender, agregarTrabajadorCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class agregarTrabajadorCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal agregarTrabajadorCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void crearCuentaIndividualCompletedEventHandler(object sender, crearCuentaIndividualCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class crearCuentaIndividualCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal crearCuentaIndividualCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void crearCuentaIndividualNominaCompletedEventHandler(object sender, crearCuentaIndividualNominaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class crearCuentaIndividualNominaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal crearCuentaIndividualNominaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void mostrarCuentaPropietarioCompletedEventHandler(object sender, mostrarCuentaPropietarioCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mostrarCuentaPropietarioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mostrarCuentaPropietarioCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public cuenta Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((cuenta)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void solicitarPrestamoCompletedEventHandler(object sender, solicitarPrestamoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class solicitarPrestamoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal solicitarPrestamoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void actualizarDatosClienteCompletedEventHandler(object sender, actualizarDatosClienteCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class actualizarDatosClienteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal actualizarDatosClienteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void verificarDatosClienteCompletedEventHandler(object sender, verificarDatosClienteCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class verificarDatosClienteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal verificarDatosClienteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public cliente[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((cliente[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void depositarCompletedEventHandler(object sender, depositarCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class depositarCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal depositarCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void cambiarChequeCompletedEventHandler(object sender, cambiarChequeCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class cambiarChequeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal cambiarChequeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
             }
         }
     }

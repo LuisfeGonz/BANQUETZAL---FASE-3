@@ -39,7 +39,8 @@ namespace Banquetzal.app
         {
             int cuenta = Convert.ToInt32(this.cuenta.Text);
             long monto = Convert.ToInt64(this.monto.Text);
-            estado.Text = swjava.retirar(cuenta, monto);
+            long cuitrabajador = Convert.ToInt64(Session["cui"].ToString());
+            estado.Text = swjava.retirar(cuenta, monto, cuitrabajador);
         }
 
         protected void verificar_Click(object sender, EventArgs e)

@@ -109,6 +109,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Content Include="app\ReportesGerentesAgencias.aspx" />
     <Content Include="Web References\ServicioWeb\cliente.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </Content>
@@ -440,6 +441,13 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="app\ReportesGerentesAgencias.aspx.cs">
+      <DependentUpon>ReportesGerentesAgencias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\ReportesGerentesAgencias.aspx.designer.cs">
+      <DependentUpon>ReportesGerentesAgencias.aspx</DependentUpon>
     </Compile>
     <Compile Include="Web References\ServicioWeb\Reference.cs">
       <AutoGen>True</AutoGen>

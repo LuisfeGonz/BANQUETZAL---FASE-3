@@ -81,6 +81,7 @@ public class Fase3 {
         int existencias;
         int id;
         int puntos;
+        Double[] arreglo;
 
         try {
             resultSet1 = statement1.executeQuery(consulta);
@@ -523,7 +524,8 @@ public class Fase3 {
     @WebMethod(operationName = "transferir")
     public String transferir(@WebParam(name = "origen") int origen,
             @WebParam(name = "destino") int destino,
-            @WebParam(name = "monto") long monto) {
+            @WebParam(name = "monto") long monto,
+            @WebParam(name = "cuitrabajador") long cuitrabajador) {
         long fondosOrigen = 0;
         long fondosDestino = 0;
         try {
@@ -550,6 +552,14 @@ public class Fase3 {
                         + " WHERE IDCUENTA = " + destino + ";";
                 resultSet1 = statement1.executeQuery(consulta);
 
+                //registrar operacion
+                String fechaHora = formatoFechaHora.format(fecha);
+                consulta = "INSERT INTO OPERACION(FECHA, MONTO, CUENTATRANSFERENCIA, "
+                        + "     IDCUENTA, IDTIPOOPERACION, CUICLIENTE) "
+                        + "VALUES('" + fechaHora + "', " + monto + ", " + destino
+                        + ", " + origen + ", 9, " + cuitrabajador + ");";
+                resultSet1 = statement1.executeQuery(consulta);
+
                 System.out.println("*****Transferencia exitosa*****");
                 return "Transferencia exitosa";
             } else {
@@ -557,7 +567,7 @@ public class Fase3 {
             }
 
         } catch (Exception e) {
-            System.out.println("-----Error en transferencia-----");
+            System.out.println("-----Error en transferencia-----" + e);
             return "Error en transferencia";
         }
 
@@ -565,7 +575,8 @@ public class Fase3 {
 
     @WebMethod(operationName = "retirar")
     public String retirar(@WebParam(name = "cuenta") int cuenta,
-            @WebParam(name = "monto") long monto) {
+            @WebParam(name = "monto") long monto,
+            @WebParam(name = "cuitrabajador") long cuitrabajador) {
         long fondos = 0;
 
         try {
@@ -584,6 +595,14 @@ public class Fase3 {
                 consulta = "UPDATE CUENTA SET FONDOS = " + fondos
                         + " WHERE IDCUENTA = " + cuenta + ";";
                 resultSet1 = statement1.executeQuery(consulta);
+
+                //REGISTRAR OPERACION
+                String fechaHora = formatoFechaHora.format(fecha);
+                consulta = "INSERT INTO OPERACION(FECHA, MONTO, IDCUENTA, "
+                        + "IDTIPOOPERACION, CUITRABAJADOR) "
+                        + "VALUES('" + fechaHora + "', " + monto + ", " + cuenta + ", 6, " + cuitrabajador + ");";
+                resultSet1 = statement1.executeQuery(consulta);
+
                 return "Retiro exitoso.";
             } else {
                 return "Cuenta sin suficientes fondos.";
@@ -786,4 +805,9 @@ public class Fase3 {
         }
     }
 
+    @WebMethod(operationName = "prueba")
+    public double[] prueba() {
+        double[] vector = new double[5];
+        return vector;
+    }
 }

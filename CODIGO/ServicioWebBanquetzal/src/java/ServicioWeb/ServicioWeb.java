@@ -114,11 +114,18 @@ public class ServicioWeb {
      */
     @WebMethod(operationName = "cambiarEstadoCuenta")
     public boolean cambiarEstadoCuenta(@WebParam(name = "idcuenta") int idcuenta,
-            @WebParam(name = "nuevoEstado") int nuevoEstado) {
+            @WebParam(name = "nuevoEstado") int nuevoEstado,
+            @WebParam(name = "cuitrabajador") long cuitrabajador) {
         consulta = "UPDATE CUENTA SET IDESTADO = " + nuevoEstado
                 + " WHERE IDCUENTA = " + idcuenta + ";";
 
         try {
+            resultSet1 = statement1.executeQuery(consulta);
+
+            //registrar operacion
+            String fechaHora = formatoFechaHora.format(fecha);
+            consulta = "INSERT INTO OPERACION(FECHA, IDCUENTA, IDTIPOOPERACION, CUITRABAJADOR) "
+                    + "VALUES('" + fechaHora + "',  " + idcuenta + ", 2, " + cuitrabajador + ");";
             resultSet1 = statement1.executeQuery(consulta);
 
             System.out.println("*****Estado de cuenta cambiado*****");
@@ -136,7 +143,6 @@ public class ServicioWeb {
             @WebParam(name = "transaccionista") String transaccionista,
             @WebParam(name = "cuiTrabajador") long cuiTrabajador) {
         String fechaHora = formatoFechaHora.format(fecha);
-        long fondos = -1;
         if (descontarMontoCheque(idcuenta, idcheque, monto)) {
             try {
                 consulta = "INSERT INTO OPERACION (FECHA, MONTO, NOMBRETRANSACCIONISTA,"
@@ -194,7 +200,6 @@ public class ServicioWeb {
             @WebParam(name = "transaccionista") String transaccionista,
             @WebParam(name = "cuiTrabajador") long cuiTrabajador) {
         String fechaHora = formatoFechaHora.format(fecha);
-        long fondosCuentaCheque = -1;
 
         if (conCheque) {
 
@@ -612,7 +617,8 @@ public class ServicioWeb {
 
     //Verifica que exista el cliente, de lo contrario solicita crear un cliente con 
     //valores por defecto
-    private boolean clienteExiste(@WebParam(name = "cui") long cui) {
+    private boolean clienteExiste(@WebParam(name = "cui") long cui,
+            @WebParam(name = "cuitrabajador") long cuitrabajador) {
         boolean clienteExiste = false;
         consulta = "SELECT * FROM CLIENTE WHERE CUI = " + cui + ";";
 
@@ -624,7 +630,7 @@ public class ServicioWeb {
             }
 
             if (!clienteExiste) {
-                clienteExiste = crearNuevoCliente(cui);
+                clienteExiste = crearNuevoCliente(cui, cuitrabajador);
 
                 if (!clienteExiste) {
                     return false;
@@ -636,13 +642,13 @@ public class ServicioWeb {
             }
 
         } catch (Exception e) {
-            System.out.println("-----Error al consultar los datos-----clienteExiste");
+            System.out.println("-----Error al consultar los datos-----clienteExiste" + e);
             return false;
         }
     }
 
     //Crea un cliente con valores por defecto
-    private boolean crearNuevoCliente(long cui) {
+    private boolean crearNuevoCliente(long cui, long cuitrabajador) {
         String contrasena = generarContrasena();
         consulta = "INSERT INTO CLIENTE VALUES (" + cui + ", '" + cui + "', '" + contrasena
                 + "', '" + cui + "', '" + cui + "', '" + "1000-01-01" + "', " + "0"
@@ -651,7 +657,7 @@ public class ServicioWeb {
         try {
             resultSet1 = statement1.executeQuery(consulta);
 
-            crearCuentaIndividual(cui, 0, 1);
+            crearCuentaIndividual(cui, 0, 1, cuitrabajador);
 
             System.out.println("*****Se creo un nuevo cliente*****");
             return true;
@@ -703,12 +709,13 @@ public class ServicioWeb {
     @WebMethod(operationName = "crearCuentaIndividual")
     public int crearCuentaIndividual(@WebParam(name = "cui") long cui,
             @WebParam(name = "monto") double monto,
-            @WebParam(name = "tipoCuenta") int tipoCuenta) {
+            @WebParam(name = "tipoCuenta") int tipoCuenta,
+            @WebParam(name = "cuitrabajador") long cuitrabajador) {
         int idcuenta = -1;
 
-        if (clienteExiste(cui)) {
+        if (clienteExiste(cui, cuitrabajador)) {
             //Crea e inserta una nueva cuenta individual
-            idcuenta = insertarCuentaIndividual(monto, tipoCuenta);
+            idcuenta = insertarCuentaIndividual(monto, tipoCuenta, cuitrabajador);
             //Asigna Cliente en Cuenta
             asignarClienteCuenta(cui, idcuenta, 0);
         }
@@ -719,17 +726,18 @@ public class ServicioWeb {
     @WebMethod(operationName = "crearCuentaIndividualNomina")
     public String crearCuentaIndividualNomina(@WebParam(name = "cui") long cui,
             @WebParam(name = "salario") long salario,
-            @WebParam(name = "nomina") int nomina) {
+            @WebParam(name = "nomina") int nomina,
+            @WebParam(name = "cuitrabajador") long cuitrabajador) {
 
         int idcuenta = -1;
         String mensaje = "";
 
-        if (clienteExiste(cui)) {
+        if (clienteExiste(cui, cuitrabajador)) {
             //Crea e inserta una nueva cuenta individual
-            idcuenta = insertarCuentaIndividual(0, 1);
+            idcuenta = insertarCuentaIndividual(0, 1, cuitrabajador);
             mensaje = idcuenta + "; ";
             //Asigna Cliente a su Cuenta recien creada (monetaria)
-            mensaje = asignarClienteCuenta(cui, idcuenta, 0) + "; ";
+            //mensaje += asignarClienteCuenta(cui, idcuenta, 0) + "; ";
             //Asigna Cliente a la nomina
             mensaje += asignarClienteCuenta(cui, nomina, salario);
         }
@@ -740,7 +748,7 @@ public class ServicioWeb {
 
     //***********LISTO, FUNCIONAL, NO BORRAR
     //Inserta en BD la nueva cuenta
-    private int insertarCuentaIndividual(double monto, int tipoCuenta) {
+    private int insertarCuentaIndividual(double monto, int tipoCuenta, long cuitrabajador) {
         int idcuenta = generarId();
         consulta = "INSERT INTO CUENTA (IDCUENTA, FONDOS, INDIVIDUALIDAD, IDTIPOCUENTA, IDESTADO) "
                 + "VALUES (" + idcuenta + ", " + monto + ", 'V', " + tipoCuenta + ", 1);";
@@ -748,10 +756,24 @@ public class ServicioWeb {
         try {
             resultSet1 = statement1.executeQuery(consulta);
 
+            try {
+                //registrar operacion
+                String fechaHora = formatoFechaHora.format(fecha);
+                consulta = "INSERT INTO OPERACION(FECHA, MONTO, IDCUENTA, IDTIPOOPERACION, CUITRABAJADOR) "
+                        + "VALUES('" + fechaHora + "', " + monto + ", " + idcuenta + ", 1, " + cuitrabajador + ");";
+                resultSet1 = statement1.executeQuery(consulta);
+            } catch (Exception e) {
+                //registrar operacion
+                String fechaHora = formatoFechaHora.format(fecha);
+                consulta = "INSERT INTO OPERACION(FECHA, MONTO, IDCUENTA, IDTIPOOPERACION, CUICLIENTE) "
+                        + "VALUES('" + fechaHora + "', " + monto + ", " + idcuenta + ", 1, " + cuitrabajador + ");";
+                resultSet1 = statement1.executeQuery(consulta);
+            }
+
             System.out.println("*****Se inserto una nueva cuenta*****");
             return idcuenta;
         } catch (Exception e) {
-            System.out.println("-----Error al consultar los datos-----insertarCuentaIndividual");
+            System.out.println("-----Error al consultar los datos-----insertarCuentaIndividual" + e);
             return -1;
         }
     }
@@ -770,7 +792,7 @@ public class ServicioWeb {
             System.out.println("*****Asignacion CLIENTECUENTA realizada*****");
             return "Cliente agregado a la nomina.";
         } catch (Exception e) {
-            System.out.println("-----Error al consultar los datos-----asignarClienteCuenta");
+            System.out.println("-----Error al consultar los datos-----asignarClienteCuenta" + e);
             return "Error al consultar los datos.";
         }
     }
@@ -811,12 +833,13 @@ public class ServicioWeb {
             @WebParam(name = "cuiContador") long cuiContador,
             @WebParam(name = "sueldoPresidente") double sueldoPresidente,
             @WebParam(name = "sueldoVice") double sueldoVice,
-            @WebParam(name = "sueldoContador") double sueldoContador) {
+            @WebParam(name = "sueldoContador") double sueldoContador,
+            @WebParam(name = "cuitrabajador") long cuitrabajador) {
         int idcuenta = -1;
         boolean asignados = false;
-        boolean encargado1 = clienteExiste(cuiPresidente);
-        boolean encargado2 = clienteExiste(cuiVice);
-        boolean encargado3 = clienteExiste(cuiContador);
+        boolean encargado1 = clienteExiste(cuiPresidente, cuitrabajador);
+        boolean encargado2 = clienteExiste(cuiVice, cuitrabajador);
+        boolean encargado3 = clienteExiste(cuiContador, cuitrabajador);
 
         if (encargado1 && encargado2 && encargado3) {
             idcuenta = generarId();
@@ -826,6 +849,13 @@ public class ServicioWeb {
                     + ", " + cuiPresidente + ", " + cuiVice + ", " + cuiContador + ");";
 
             try {
+                resultSet1 = statement1.executeQuery(consulta);
+
+                //registrar operacion
+                String fechaHora = formatoFechaHora.format(fecha);
+                consulta = "INSERT INTO OPERACION(FECHA, MONTO, IDCUENTA, IDTIPOOPERACION, CUITRABAJADOR) "
+                        + "VALUES('" + fechaHora + "', " + monto + ", " + idcuenta + ", "
+                        + 1 + ", " + cuitrabajador + ");";
                 resultSet1 = statement1.executeQuery(consulta);
                 System.out.println("*****Se inserto una nueva NOMINA*****");
 
@@ -840,7 +870,7 @@ public class ServicioWeb {
                 return -1;
 
             } catch (Exception e) {
-                System.out.println("-----Error al consultar los datos-----insertarNomina");
+                System.out.println("-----Error al consultar los datos-----insertarNomina" + e);
                 return -1;
             }
         }
@@ -1222,7 +1252,8 @@ public class ServicioWeb {
     public boolean solicitarPrestamo(@WebParam(name = "cui") long cui,
             @WebParam(name = "monto") double monto,
             @WebParam(name = "tipo") int tipo,
-            @WebParam(name = "modalidad") int modalidad) {
+            @WebParam(name = "modalidad") int modalidad,
+            @WebParam(name = "cuitrabajador") long cuitrabajador) {
 
         consulta = "INSERT INTO PRESTAMO (CUICLIENTE, MONTO, SALDO, IDESTADOPRESTAMO,"
                 + " IDMODALIDADPAGO, IDTIPOPRESTAMO)"
@@ -1230,6 +1261,12 @@ public class ServicioWeb {
                 + ", " + modalidad + ", " + tipo + ");";
 
         try {
+            resultSet1 = statement1.executeQuery(consulta);
+
+            //registrar operacion
+            String fechaHora = formatoFechaHora.format(fecha);
+            consulta = "INSERT INTO OPERACION(FECHA, MONTO, CUICLIENTE, IDTIPOOPERACION, CUITRABAJADOR) "
+                    + "VALUES ('" + fechaHora + "', " + monto + ", " + cui + ", " + 5 + ", " + cuitrabajador + ");";
             resultSet1 = statement1.executeQuery(consulta);
 
             System.out.println("*****Se ingreso solicitud de prestamo*****");
@@ -1246,7 +1283,8 @@ public class ServicioWeb {
     *
      */
     @WebMethod(operationName = "solicitarChequera")
-    public boolean solicitarChequera(@WebParam(name = "idcuenta") int idcuenta) {
+    public boolean solicitarChequera(@WebParam(name = "idcuenta") int idcuenta,
+            @WebParam(name = "cuitrabajador") long cuitrabajador) {
         consulta = "SELECT IDCUENTA, NOMBRE FROM CUENTA C INNER JOIN TIPOCUENTA T "
                 + "ON C.IDTIPOCUENTA = T.IDTIPOCUENTA WHERE NOMBRE = 'MONETARIA' "
                 + "AND IDCUENTA = " + idcuenta + ";";
@@ -1264,6 +1302,12 @@ public class ServicioWeb {
                 boolean cheques = insertarCheques(idcuenta, 1);
 
                 if (cheques) {
+                    //registrar operacion
+                    String fechaHora = formatoFechaHora.format(fecha);
+                    consulta = "INSERT INTO OPERACION(FECHA, IDCUENTA, IDTIPOOPERACION, CUITRABAJADOR) "
+                            + "VALUES('" + fechaHora + "', " + idcuenta + ", 3, " + cuitrabajador + ");";
+                    resultSet1 = statement1.executeQuery(consulta);
+
                     return true;
                 } else {
                     return false;

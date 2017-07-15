@@ -33,8 +33,9 @@ namespace Banquetzal.app
             int cuenta = Convert.ToInt32(this.cuenta.Text);
 
             ServicioWeb.ServicioWeb swjava = new ServicioWeb.ServicioWeb();
+            long cuitrabajador = Convert.ToInt64(Session["cui"].ToString());
 
-            bool chequera = swjava.solicitarChequera(cuenta);
+            bool chequera = swjava.solicitarChequera(cuenta, cuitrabajador);
 
             if (chequera)
             {

@@ -64,13 +64,14 @@ namespace Banquetzal.app
         {
             int modalidad = Convert.ToInt32(this.modalidad.SelectedValue);
             int tipo = Convert.ToInt32(this.tipo.SelectedValue);
+            long cuitrabajador = Convert.ToInt64(Session["cui"].ToString());
 
             if (modalidad != -1 && tipo != -1)
             {
                 long cui = Convert.ToInt64(this.cui.Text);
                 double monto = Convert.ToInt64(this.monto.Text);
 
-                bool solicitud = swjava.solicitarPrestamo(cui, monto, tipo, modalidad);
+                bool solicitud = swjava.solicitarPrestamo(cui, monto, tipo, modalidad, cuitrabajador);
 
                 if (solicitud)
                 {

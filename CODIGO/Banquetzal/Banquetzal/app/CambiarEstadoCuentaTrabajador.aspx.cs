@@ -60,7 +60,9 @@ namespace Banquetzal.app
         {
             int nuevoEstado = listaEstados.SelectedIndex + 1;
             int idcuenta = Convert.ToInt32(cuenta.Text);
-            bool cambiado = swjava.cambiarEstadoCuenta(idcuenta, nuevoEstado);
+            long cuitrabajador = Convert.ToInt64(Session["cui"].ToString());
+
+            bool cambiado = swjava.cambiarEstadoCuenta(idcuenta, nuevoEstado, cuitrabajador);
 
             if (cambiado)
             {

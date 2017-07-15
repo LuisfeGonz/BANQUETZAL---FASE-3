@@ -34,12 +34,27 @@
   <xs:element name="mostrarProveedoresResponse" type="tns:mostrarProveedoresResponse" />
   <xs:element name="mostrarStock" type="tns:mostrarStock" />
   <xs:element name="mostrarStockResponse" type="tns:mostrarStockResponse" />
+  <xs:element name="prueba" type="tns:prueba" />
+  <xs:element name="pruebaResponse" type="tns:pruebaResponse" />
   <xs:element name="puntosCliente" type="tns:puntosCliente" />
   <xs:element name="puntosClienteResponse" type="tns:puntosClienteResponse" />
   <xs:element name="retirar" type="tns:retirar" />
   <xs:element name="retirarResponse" type="tns:retirarResponse" />
   <xs:element name="transferir" type="tns:transferir" />
   <xs:element name="transferirResponse" type="tns:transferirResponse" />
+  <xs:complexType name="transferir">
+    <xs:sequence>
+      <xs:element name="origen" type="xs:int" />
+      <xs:element name="destino" type="xs:int" />
+      <xs:element name="monto" type="xs:long" />
+      <xs:element name="cuitrabajador" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="transferirResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="cambiarEstadoPrestamo">
     <xs:sequence>
       <xs:element name="idprestamo" type="xs:int" />
@@ -51,14 +66,13 @@
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="transferir">
+  <xs:complexType name="asociarCuenta">
     <xs:sequence>
-      <xs:element name="origen" type="xs:int" />
-      <xs:element name="destino" type="xs:int" />
-      <xs:element name="monto" type="xs:long" />
+      <xs:element name="cui" type="xs:long" />
+      <xs:element name="idcuenta" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="transferirResponse">
+  <xs:complexType name="asociarCuentaResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
@@ -85,13 +99,17 @@
       <xs:element minOccurs="0" name="tipo" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="asociarCuenta">
+  <xs:complexType name="agregarProducto">
     <xs:sequence>
-      <xs:element name="cui" type="xs:long" />
-      <xs:element name="idcuenta" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="valor" type="xs:int" />
+      <xs:element name="cantidad" type="xs:int" />
+      <xs:element name="idproveedor" type="xs:int" />
+      <xs:element name="idproducto" type="xs:long" />
+      <xs:element name="nuevo" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="asociarCuentaResponse">
+  <xs:complexType name="agregarProductoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
@@ -118,21 +136,6 @@
       <xs:element minOccurs="0" name="individualidad" type="xs:string" />
       <xs:element minOccurs="0" name="propietario" type="xs:string" />
       <xs:element name="tipo" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="agregarProducto">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
-      <xs:element name="valor" type="xs:int" />
-      <xs:element name="cantidad" type="xs:int" />
-      <xs:element name="idproveedor" type="xs:int" />
-      <xs:element name="idproducto" type="xs:long" />
-      <xs:element name="nuevo" type="xs:boolean" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="agregarProductoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="hello">
@@ -193,20 +196,20 @@
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="mostrarPrestamosTrabajador">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="mostrarPrestamosTrabajadorResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:prestamo" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="mostrarProveedores">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="mostrarProveedoresResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:proveedor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mostrarPrestamosTrabajador">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="mostrarPrestamosTrabajadorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:prestamo" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="puntosCliente">
@@ -219,30 +222,24 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="prueba">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="pruebaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="retirar">
     <xs:sequence>
       <xs:element name="cuenta" type="xs:int" />
       <xs:element name="monto" type="xs:long" />
+      <xs:element name="cuitrabajador" type="xs:long" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="retirarResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="mostrarEstadosPrestamos">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="mostrarEstadosPrestamosResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:estadoPrestamo" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="estadoPrestamo">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
-      <xs:element name="id" type="xs:int" />
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="mostrarStock">
@@ -260,6 +257,21 @@
       <xs:element minOccurs="0" name="producto" type="xs:string" />
       <xs:element minOccurs="0" name="proveedor" type="xs:string" />
       <xs:element name="puntos" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mostrarEstadosPrestamos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="mostrarEstadosPrestamosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:estadoPrestamo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estadoPrestamo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="mostrarPropietarioDeCuenta">
@@ -283,10 +295,10 @@
       <xs:element minOccurs="0" name="usuario" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="mostarProductosMasSolicitados">
+  <xs:complexType name="mostrarProductos">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="mostarProductosMasSolicitadosResponse">
+  <xs:complexType name="mostrarProductosResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:producto" />
     </xs:sequence>
@@ -299,10 +311,10 @@
       <xs:element name="valor" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="mostrarProductos">
+  <xs:complexType name="mostarProductosMasSolicitados">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="mostrarProductosResponse">
+  <xs:complexType name="mostarProductosMasSolicitadosResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:producto" />
     </xs:sequence>

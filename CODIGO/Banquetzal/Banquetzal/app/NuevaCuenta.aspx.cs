@@ -14,7 +14,6 @@ namespace Banquetzal.app
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
             //Verificar usuario loggeado
 
             int rol = Convert.ToInt32(Session["rol"]);
@@ -58,8 +57,9 @@ namespace Banquetzal.app
                 double sueldoP = Convert.ToDouble(sueldoPresidente.Text);
                 double sueldoV = Convert.ToDouble(sueldoVice.Text);
                 double sueldoC = Convert.ToDouble(sueldoContador.Text);
+                long cuitrabajador = Convert.ToInt64(Session["cui"].ToString());
 
-                idcuenta = swjava.insertarNomina(fondos, cuiP, cuiV, cuiC, sueldoP, sueldoV, sueldoC);
+                idcuenta = swjava.insertarNomina(fondos, cuiP, cuiV, cuiC, sueldoP, sueldoV, sueldoC, cuitrabajador);
 
                 if (idcuenta > -1)
                 {
@@ -81,8 +81,9 @@ namespace Banquetzal.app
                 //INDIVIDUAL   
                 long cuiCliente = Convert.ToInt64(this.cuiCliente.Text);
                 int tipoCuenta = listaTipo.SelectedIndex + 1;
+                long cuitrabajador = Convert.ToInt64(Session["cui"].ToString());
 
-                idcuenta = swjava.crearCuentaIndividual(cuiCliente, fondos, tipoCuenta);
+                idcuenta = swjava.crearCuentaIndividual(cuiCliente, fondos, tipoCuenta, cuitrabajador);
 
                 if (idcuenta > -1)
                 {

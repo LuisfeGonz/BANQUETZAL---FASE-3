@@ -67,11 +67,11 @@ namespace Banquetzal.app
                 long cui = Convert.ToInt64(this.cuiCliente.Text);
                 long salario = Convert.ToInt64(this.salario.Text);
                 int nomina = Convert.ToInt32(this.nominas.SelectedItem.ToString());
-                
+                long cuitrabajador = Convert.ToInt64(Session["cui"].ToString());
 
                 if (nuevaCuenta.Checked)
                 {
-                    estado.Text = swjava.crearCuentaIndividualNomina(cui, salario, nomina);
+                    estado.Text = swjava.crearCuentaIndividualNomina(cui, salario, nomina, cuitrabajador);
                 }
                 else
                 {

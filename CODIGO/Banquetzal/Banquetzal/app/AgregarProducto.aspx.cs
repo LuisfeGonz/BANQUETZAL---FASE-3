@@ -60,13 +60,11 @@ namespace Banquetzal.app
                     ddlProducto.Items.Add(item);
                 }
             }
-
-
-
         }
 
         protected void agregar_Click(object sender, EventArgs e)
         {
+
             if (!ddlProveedor.SelectedValue.Equals("-1"))
             {
                 if (nuevo.Checked)

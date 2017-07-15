@@ -5,53 +5,23 @@
       <xsd:import schemaLocation="http://localhost:8080/ServicioWebBanquetzal/Fase3?xsd=1" namespace="http://ServicioWeb/" />
     </xsd:schema>
   </types>
+  <message name="agregarProveedor">
+    <part name="parameters" element="tns:agregarProveedor" />
+  </message>
+  <message name="agregarProveedorResponse">
+    <part name="parameters" element="tns:agregarProveedorResponse" />
+  </message>
+  <message name="transferir">
+    <part name="parameters" element="tns:transferir" />
+  </message>
+  <message name="transferirResponse">
+    <part name="parameters" element="tns:transferirResponse" />
+  </message>
   <message name="retirar">
     <part name="parameters" element="tns:retirar" />
   </message>
   <message name="retirarResponse">
     <part name="parameters" element="tns:retirarResponse" />
-  </message>
-  <message name="mostrarCuentasAsociadas">
-    <part name="parameters" element="tns:mostrarCuentasAsociadas" />
-  </message>
-  <message name="mostrarCuentasAsociadasResponse">
-    <part name="parameters" element="tns:mostrarCuentasAsociadasResponse" />
-  </message>
-  <message name="mostrarPrestamosCliente">
-    <part name="parameters" element="tns:mostrarPrestamosCliente" />
-  </message>
-  <message name="mostrarPrestamosClienteResponse">
-    <part name="parameters" element="tns:mostrarPrestamosClienteResponse" />
-  </message>
-  <message name="mostrarPrestamosTrabajador">
-    <part name="parameters" element="tns:mostrarPrestamosTrabajador" />
-  </message>
-  <message name="mostrarPrestamosTrabajadorResponse">
-    <part name="parameters" element="tns:mostrarPrestamosTrabajadorResponse" />
-  </message>
-  <message name="mostrarEstadosPrestamos">
-    <part name="parameters" element="tns:mostrarEstadosPrestamos" />
-  </message>
-  <message name="mostrarEstadosPrestamosResponse">
-    <part name="parameters" element="tns:mostrarEstadosPrestamosResponse" />
-  </message>
-  <message name="cambiarEstadoPrestamo">
-    <part name="parameters" element="tns:cambiarEstadoPrestamo" />
-  </message>
-  <message name="cambiarEstadoPrestamoResponse">
-    <part name="parameters" element="tns:cambiarEstadoPrestamoResponse" />
-  </message>
-  <message name="mostrarCuentasCliente">
-    <part name="parameters" element="tns:mostrarCuentasCliente" />
-  </message>
-  <message name="mostrarCuentasClienteResponse">
-    <part name="parameters" element="tns:mostrarCuentasClienteResponse" />
-  </message>
-  <message name="mostrarPropietarioDeCuenta">
-    <part name="parameters" element="tns:mostrarPropietarioDeCuenta" />
-  </message>
-  <message name="mostrarPropietarioDeCuentaResponse">
-    <part name="parameters" element="tns:mostrarPropietarioDeCuentaResponse" />
   </message>
   <message name="mostrarStock">
     <part name="parameters" element="tns:mostrarStock" />
@@ -59,23 +29,11 @@
   <message name="mostrarStockResponse">
     <part name="parameters" element="tns:mostrarStockResponse" />
   </message>
-  <message name="puntosCliente">
-    <part name="parameters" element="tns:puntosCliente" />
-  </message>
-  <message name="puntosClienteResponse">
-    <part name="parameters" element="tns:puntosClienteResponse" />
-  </message>
   <message name="asociarCuenta">
     <part name="parameters" element="tns:asociarCuenta" />
   </message>
   <message name="asociarCuentaResponse">
     <part name="parameters" element="tns:asociarCuentaResponse" />
-  </message>
-  <message name="transferir">
-    <part name="parameters" element="tns:transferir" />
-  </message>
-  <message name="transferirResponse">
-    <part name="parameters" element="tns:transferirResponse" />
   </message>
   <message name="hello">
     <part name="parameters" element="tns:hello" />
@@ -89,23 +47,11 @@
   <message name="canjearProductoResponse">
     <part name="parameters" element="tns:canjearProductoResponse" />
   </message>
-  <message name="mostarProductosMasSolicitados">
-    <part name="parameters" element="tns:mostarProductosMasSolicitados" />
+  <message name="puntosCliente">
+    <part name="parameters" element="tns:puntosCliente" />
   </message>
-  <message name="mostarProductosMasSolicitadosResponse">
-    <part name="parameters" element="tns:mostarProductosMasSolicitadosResponse" />
-  </message>
-  <message name="mostarProveedoresMasSolicitados">
-    <part name="parameters" element="tns:mostarProveedoresMasSolicitados" />
-  </message>
-  <message name="mostarProveedoresMasSolicitadosResponse">
-    <part name="parameters" element="tns:mostarProveedoresMasSolicitadosResponse" />
-  </message>
-  <message name="mostrarProveedores">
-    <part name="parameters" element="tns:mostrarProveedores" />
-  </message>
-  <message name="mostrarProveedoresResponse">
-    <part name="parameters" element="tns:mostrarProveedoresResponse" />
+  <message name="puntosClienteResponse">
+    <part name="parameters" element="tns:puntosClienteResponse" />
   </message>
   <message name="mostrarProductos">
     <part name="parameters" element="tns:mostrarProductos" />
@@ -119,60 +65,92 @@
   <message name="agregarProductoResponse">
     <part name="parameters" element="tns:agregarProductoResponse" />
   </message>
-  <message name="agregarProveedor">
-    <part name="parameters" element="tns:agregarProveedor" />
+  <message name="prueba">
+    <part name="parameters" element="tns:prueba" />
   </message>
-  <message name="agregarProveedorResponse">
-    <part name="parameters" element="tns:agregarProveedorResponse" />
+  <message name="pruebaResponse">
+    <part name="parameters" element="tns:pruebaResponse" />
+  </message>
+  <message name="mostrarCuentasCliente">
+    <part name="parameters" element="tns:mostrarCuentasCliente" />
+  </message>
+  <message name="mostrarCuentasClienteResponse">
+    <part name="parameters" element="tns:mostrarCuentasClienteResponse" />
+  </message>
+  <message name="mostarProveedoresMasSolicitados">
+    <part name="parameters" element="tns:mostarProveedoresMasSolicitados" />
+  </message>
+  <message name="mostarProveedoresMasSolicitadosResponse">
+    <part name="parameters" element="tns:mostarProveedoresMasSolicitadosResponse" />
+  </message>
+  <message name="cambiarEstadoPrestamo">
+    <part name="parameters" element="tns:cambiarEstadoPrestamo" />
+  </message>
+  <message name="cambiarEstadoPrestamoResponse">
+    <part name="parameters" element="tns:cambiarEstadoPrestamoResponse" />
+  </message>
+  <message name="mostrarProveedores">
+    <part name="parameters" element="tns:mostrarProveedores" />
+  </message>
+  <message name="mostrarProveedoresResponse">
+    <part name="parameters" element="tns:mostrarProveedoresResponse" />
+  </message>
+  <message name="mostrarPropietarioDeCuenta">
+    <part name="parameters" element="tns:mostrarPropietarioDeCuenta" />
+  </message>
+  <message name="mostrarPropietarioDeCuentaResponse">
+    <part name="parameters" element="tns:mostrarPropietarioDeCuentaResponse" />
+  </message>
+  <message name="mostrarPrestamosTrabajador">
+    <part name="parameters" element="tns:mostrarPrestamosTrabajador" />
+  </message>
+  <message name="mostrarPrestamosTrabajadorResponse">
+    <part name="parameters" element="tns:mostrarPrestamosTrabajadorResponse" />
+  </message>
+  <message name="mostrarPrestamosCliente">
+    <part name="parameters" element="tns:mostrarPrestamosCliente" />
+  </message>
+  <message name="mostrarPrestamosClienteResponse">
+    <part name="parameters" element="tns:mostrarPrestamosClienteResponse" />
+  </message>
+  <message name="mostrarCuentasAsociadas">
+    <part name="parameters" element="tns:mostrarCuentasAsociadas" />
+  </message>
+  <message name="mostrarCuentasAsociadasResponse">
+    <part name="parameters" element="tns:mostrarCuentasAsociadasResponse" />
+  </message>
+  <message name="mostrarEstadosPrestamos">
+    <part name="parameters" element="tns:mostrarEstadosPrestamos" />
+  </message>
+  <message name="mostrarEstadosPrestamosResponse">
+    <part name="parameters" element="tns:mostrarEstadosPrestamosResponse" />
+  </message>
+  <message name="mostarProductosMasSolicitados">
+    <part name="parameters" element="tns:mostarProductosMasSolicitados" />
+  </message>
+  <message name="mostarProductosMasSolicitadosResponse">
+    <part name="parameters" element="tns:mostarProductosMasSolicitadosResponse" />
   </message>
   <portType name="Fase3">
+    <operation name="agregarProveedor">
+      <input wsam:Action="http://ServicioWeb/Fase3/agregarProveedorRequest" message="tns:agregarProveedor" />
+      <output wsam:Action="http://ServicioWeb/Fase3/agregarProveedorResponse" message="tns:agregarProveedorResponse" />
+    </operation>
+    <operation name="transferir">
+      <input wsam:Action="http://ServicioWeb/Fase3/transferirRequest" message="tns:transferir" />
+      <output wsam:Action="http://ServicioWeb/Fase3/transferirResponse" message="tns:transferirResponse" />
+    </operation>
     <operation name="retirar">
       <input wsam:Action="http://ServicioWeb/Fase3/retirarRequest" message="tns:retirar" />
       <output wsam:Action="http://ServicioWeb/Fase3/retirarResponse" message="tns:retirarResponse" />
-    </operation>
-    <operation name="mostrarCuentasAsociadas">
-      <input wsam:Action="http://ServicioWeb/Fase3/mostrarCuentasAsociadasRequest" message="tns:mostrarCuentasAsociadas" />
-      <output wsam:Action="http://ServicioWeb/Fase3/mostrarCuentasAsociadasResponse" message="tns:mostrarCuentasAsociadasResponse" />
-    </operation>
-    <operation name="mostrarPrestamosCliente">
-      <input wsam:Action="http://ServicioWeb/Fase3/mostrarPrestamosClienteRequest" message="tns:mostrarPrestamosCliente" />
-      <output wsam:Action="http://ServicioWeb/Fase3/mostrarPrestamosClienteResponse" message="tns:mostrarPrestamosClienteResponse" />
-    </operation>
-    <operation name="mostrarPrestamosTrabajador">
-      <input wsam:Action="http://ServicioWeb/Fase3/mostrarPrestamosTrabajadorRequest" message="tns:mostrarPrestamosTrabajador" />
-      <output wsam:Action="http://ServicioWeb/Fase3/mostrarPrestamosTrabajadorResponse" message="tns:mostrarPrestamosTrabajadorResponse" />
-    </operation>
-    <operation name="mostrarEstadosPrestamos">
-      <input wsam:Action="http://ServicioWeb/Fase3/mostrarEstadosPrestamosRequest" message="tns:mostrarEstadosPrestamos" />
-      <output wsam:Action="http://ServicioWeb/Fase3/mostrarEstadosPrestamosResponse" message="tns:mostrarEstadosPrestamosResponse" />
-    </operation>
-    <operation name="cambiarEstadoPrestamo">
-      <input wsam:Action="http://ServicioWeb/Fase3/cambiarEstadoPrestamoRequest" message="tns:cambiarEstadoPrestamo" />
-      <output wsam:Action="http://ServicioWeb/Fase3/cambiarEstadoPrestamoResponse" message="tns:cambiarEstadoPrestamoResponse" />
-    </operation>
-    <operation name="mostrarCuentasCliente">
-      <input wsam:Action="http://ServicioWeb/Fase3/mostrarCuentasClienteRequest" message="tns:mostrarCuentasCliente" />
-      <output wsam:Action="http://ServicioWeb/Fase3/mostrarCuentasClienteResponse" message="tns:mostrarCuentasClienteResponse" />
-    </operation>
-    <operation name="mostrarPropietarioDeCuenta">
-      <input wsam:Action="http://ServicioWeb/Fase3/mostrarPropietarioDeCuentaRequest" message="tns:mostrarPropietarioDeCuenta" />
-      <output wsam:Action="http://ServicioWeb/Fase3/mostrarPropietarioDeCuentaResponse" message="tns:mostrarPropietarioDeCuentaResponse" />
     </operation>
     <operation name="mostrarStock">
       <input wsam:Action="http://ServicioWeb/Fase3/mostrarStockRequest" message="tns:mostrarStock" />
       <output wsam:Action="http://ServicioWeb/Fase3/mostrarStockResponse" message="tns:mostrarStockResponse" />
     </operation>
-    <operation name="puntosCliente">
-      <input wsam:Action="http://ServicioWeb/Fase3/puntosClienteRequest" message="tns:puntosCliente" />
-      <output wsam:Action="http://ServicioWeb/Fase3/puntosClienteResponse" message="tns:puntosClienteResponse" />
-    </operation>
     <operation name="asociarCuenta">
       <input wsam:Action="http://ServicioWeb/Fase3/asociarCuentaRequest" message="tns:asociarCuenta" />
       <output wsam:Action="http://ServicioWeb/Fase3/asociarCuentaResponse" message="tns:asociarCuentaResponse" />
-    </operation>
-    <operation name="transferir">
-      <input wsam:Action="http://ServicioWeb/Fase3/transferirRequest" message="tns:transferir" />
-      <output wsam:Action="http://ServicioWeb/Fase3/transferirResponse" message="tns:transferirResponse" />
     </operation>
     <operation name="hello">
       <input wsam:Action="http://ServicioWeb/Fase3/helloRequest" message="tns:hello" />
@@ -182,17 +160,9 @@
       <input wsam:Action="http://ServicioWeb/Fase3/canjearProductoRequest" message="tns:canjearProducto" />
       <output wsam:Action="http://ServicioWeb/Fase3/canjearProductoResponse" message="tns:canjearProductoResponse" />
     </operation>
-    <operation name="mostarProductosMasSolicitados">
-      <input wsam:Action="http://ServicioWeb/Fase3/mostarProductosMasSolicitadosRequest" message="tns:mostarProductosMasSolicitados" />
-      <output wsam:Action="http://ServicioWeb/Fase3/mostarProductosMasSolicitadosResponse" message="tns:mostarProductosMasSolicitadosResponse" />
-    </operation>
-    <operation name="mostarProveedoresMasSolicitados">
-      <input wsam:Action="http://ServicioWeb/Fase3/mostarProveedoresMasSolicitadosRequest" message="tns:mostarProveedoresMasSolicitados" />
-      <output wsam:Action="http://ServicioWeb/Fase3/mostarProveedoresMasSolicitadosResponse" message="tns:mostarProveedoresMasSolicitadosResponse" />
-    </operation>
-    <operation name="mostrarProveedores">
-      <input wsam:Action="http://ServicioWeb/Fase3/mostrarProveedoresRequest" message="tns:mostrarProveedores" />
-      <output wsam:Action="http://ServicioWeb/Fase3/mostrarProveedoresResponse" message="tns:mostrarProveedoresResponse" />
+    <operation name="puntosCliente">
+      <input wsam:Action="http://ServicioWeb/Fase3/puntosClienteRequest" message="tns:puntosCliente" />
+      <output wsam:Action="http://ServicioWeb/Fase3/puntosClienteResponse" message="tns:puntosClienteResponse" />
     </operation>
     <operation name="mostrarProductos">
       <input wsam:Action="http://ServicioWeb/Fase3/mostrarProductosRequest" message="tns:mostrarProductos" />
@@ -202,77 +172,72 @@
       <input wsam:Action="http://ServicioWeb/Fase3/agregarProductoRequest" message="tns:agregarProducto" />
       <output wsam:Action="http://ServicioWeb/Fase3/agregarProductoResponse" message="tns:agregarProductoResponse" />
     </operation>
-    <operation name="agregarProveedor">
-      <input wsam:Action="http://ServicioWeb/Fase3/agregarProveedorRequest" message="tns:agregarProveedor" />
-      <output wsam:Action="http://ServicioWeb/Fase3/agregarProveedorResponse" message="tns:agregarProveedorResponse" />
+    <operation name="prueba">
+      <input wsam:Action="http://ServicioWeb/Fase3/pruebaRequest" message="tns:prueba" />
+      <output wsam:Action="http://ServicioWeb/Fase3/pruebaResponse" message="tns:pruebaResponse" />
+    </operation>
+    <operation name="mostrarCuentasCliente">
+      <input wsam:Action="http://ServicioWeb/Fase3/mostrarCuentasClienteRequest" message="tns:mostrarCuentasCliente" />
+      <output wsam:Action="http://ServicioWeb/Fase3/mostrarCuentasClienteResponse" message="tns:mostrarCuentasClienteResponse" />
+    </operation>
+    <operation name="mostarProveedoresMasSolicitados">
+      <input wsam:Action="http://ServicioWeb/Fase3/mostarProveedoresMasSolicitadosRequest" message="tns:mostarProveedoresMasSolicitados" />
+      <output wsam:Action="http://ServicioWeb/Fase3/mostarProveedoresMasSolicitadosResponse" message="tns:mostarProveedoresMasSolicitadosResponse" />
+    </operation>
+    <operation name="cambiarEstadoPrestamo">
+      <input wsam:Action="http://ServicioWeb/Fase3/cambiarEstadoPrestamoRequest" message="tns:cambiarEstadoPrestamo" />
+      <output wsam:Action="http://ServicioWeb/Fase3/cambiarEstadoPrestamoResponse" message="tns:cambiarEstadoPrestamoResponse" />
+    </operation>
+    <operation name="mostrarProveedores">
+      <input wsam:Action="http://ServicioWeb/Fase3/mostrarProveedoresRequest" message="tns:mostrarProveedores" />
+      <output wsam:Action="http://ServicioWeb/Fase3/mostrarProveedoresResponse" message="tns:mostrarProveedoresResponse" />
+    </operation>
+    <operation name="mostrarPropietarioDeCuenta">
+      <input wsam:Action="http://ServicioWeb/Fase3/mostrarPropietarioDeCuentaRequest" message="tns:mostrarPropietarioDeCuenta" />
+      <output wsam:Action="http://ServicioWeb/Fase3/mostrarPropietarioDeCuentaResponse" message="tns:mostrarPropietarioDeCuentaResponse" />
+    </operation>
+    <operation name="mostrarPrestamosTrabajador">
+      <input wsam:Action="http://ServicioWeb/Fase3/mostrarPrestamosTrabajadorRequest" message="tns:mostrarPrestamosTrabajador" />
+      <output wsam:Action="http://ServicioWeb/Fase3/mostrarPrestamosTrabajadorResponse" message="tns:mostrarPrestamosTrabajadorResponse" />
+    </operation>
+    <operation name="mostrarPrestamosCliente">
+      <input wsam:Action="http://ServicioWeb/Fase3/mostrarPrestamosClienteRequest" message="tns:mostrarPrestamosCliente" />
+      <output wsam:Action="http://ServicioWeb/Fase3/mostrarPrestamosClienteResponse" message="tns:mostrarPrestamosClienteResponse" />
+    </operation>
+    <operation name="mostrarCuentasAsociadas">
+      <input wsam:Action="http://ServicioWeb/Fase3/mostrarCuentasAsociadasRequest" message="tns:mostrarCuentasAsociadas" />
+      <output wsam:Action="http://ServicioWeb/Fase3/mostrarCuentasAsociadasResponse" message="tns:mostrarCuentasAsociadasResponse" />
+    </operation>
+    <operation name="mostrarEstadosPrestamos">
+      <input wsam:Action="http://ServicioWeb/Fase3/mostrarEstadosPrestamosRequest" message="tns:mostrarEstadosPrestamos" />
+      <output wsam:Action="http://ServicioWeb/Fase3/mostrarEstadosPrestamosResponse" message="tns:mostrarEstadosPrestamosResponse" />
+    </operation>
+    <operation name="mostarProductosMasSolicitados">
+      <input wsam:Action="http://ServicioWeb/Fase3/mostarProductosMasSolicitadosRequest" message="tns:mostarProductosMasSolicitados" />
+      <output wsam:Action="http://ServicioWeb/Fase3/mostarProductosMasSolicitadosResponse" message="tns:mostarProductosMasSolicitadosResponse" />
     </operation>
   </portType>
   <binding name="Fase3PortBinding" type="tns:Fase3">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="agregarProveedor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="transferir">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="retirar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="mostrarCuentasAsociadas">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="mostrarPrestamosCliente">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="mostrarPrestamosTrabajador">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="mostrarEstadosPrestamos">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="cambiarEstadoPrestamo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="mostrarCuentasCliente">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="mostrarPropietarioDeCuenta">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -290,25 +255,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="puntosCliente">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="asociarCuenta">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="transferir">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -335,25 +282,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="mostarProductosMasSolicitados">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="mostarProveedoresMasSolicitados">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="mostrarProveedores">
+    <operation name="puntosCliente">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -380,7 +309,97 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="agregarProveedor">
+    <operation name="prueba">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="mostrarCuentasCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="mostarProveedoresMasSolicitados">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cambiarEstadoPrestamo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="mostrarProveedores">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="mostrarPropietarioDeCuenta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="mostrarPrestamosTrabajador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="mostrarPrestamosCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="mostrarCuentasAsociadas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="mostrarEstadosPrestamos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="mostarProductosMasSolicitados">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

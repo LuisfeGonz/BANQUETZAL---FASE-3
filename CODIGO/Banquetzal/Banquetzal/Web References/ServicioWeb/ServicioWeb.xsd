@@ -148,15 +148,14 @@
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="cambiarEstadoCuenta">
+  <xs:complexType name="mostrarCuenta">
     <xs:sequence>
       <xs:element name="idcuenta" type="xs:int" />
-      <xs:element name="nuevoEstado" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="cambiarEstadoCuentaResponse">
+  <xs:complexType name="mostrarCuentaResponse">
     <xs:sequence>
-      <xs:element name="return" type="xs:boolean" />
+      <xs:element minOccurs="0" name="return" type="tns:cuenta" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="mostrarEstadoCuenta">
@@ -179,14 +178,16 @@
       <xs:element minOccurs="0" name="operacion" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="mostrarCuenta">
+  <xs:complexType name="cambiarEstadoCuenta">
     <xs:sequence>
       <xs:element name="idcuenta" type="xs:int" />
+      <xs:element name="nuevoEstado" type="xs:int" />
+      <xs:element name="cuitrabajador" type="xs:long" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="mostrarCuentaResponse">
+  <xs:complexType name="cambiarEstadoCuentaResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:cuenta" />
+      <xs:element name="return" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="solicitarPrestamo">
@@ -195,6 +196,7 @@
       <xs:element name="monto" type="xs:double" />
       <xs:element name="tipo" type="xs:int" />
       <xs:element name="modalidad" type="xs:int" />
+      <xs:element name="cuitrabajador" type="xs:long" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="solicitarPrestamoResponse">
@@ -251,6 +253,7 @@
       <xs:element name="cui" type="xs:long" />
       <xs:element name="monto" type="xs:double" />
       <xs:element name="tipoCuenta" type="xs:int" />
+      <xs:element name="cuitrabajador" type="xs:long" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="crearCuentaIndividualResponse">
@@ -269,6 +272,7 @@
   <xs:complexType name="solicitarChequera">
     <xs:sequence>
       <xs:element name="idcuenta" type="xs:int" />
+      <xs:element name="cuitrabajador" type="xs:long" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="solicitarChequeraResponse">
@@ -323,18 +327,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="asignarClienteCuenta">
-    <xs:sequence>
-      <xs:element name="cui" type="xs:long" />
-      <xs:element name="idcuenta" type="xs:int" />
-      <xs:element name="salario" type="xs:double" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="asignarClienteCuentaResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="nuevaAgencia">
     <xs:sequence>
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
@@ -345,6 +337,18 @@
   <xs:complexType name="nuevaAgenciaResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="asignarClienteCuenta">
+    <xs:sequence>
+      <xs:element name="cui" type="xs:long" />
+      <xs:element name="idcuenta" type="xs:int" />
+      <xs:element name="salario" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="asignarClienteCuentaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="Login">
@@ -363,6 +367,7 @@
       <xs:element name="cui" type="xs:long" />
       <xs:element name="salario" type="xs:long" />
       <xs:element name="nomina" type="xs:int" />
+      <xs:element name="cuitrabajador" type="xs:long" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="crearCuentaIndividualNominaResponse">
@@ -396,16 +401,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="mostrarDatosCliente">
-    <xs:sequence>
-      <xs:element name="cui" type="xs:long" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="mostrarDatosClienteResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:cliente" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="insertarNomina">
     <xs:sequence>
       <xs:element name="monto" type="xs:double" />
@@ -415,11 +410,22 @@
       <xs:element name="sueldoPresidente" type="xs:double" />
       <xs:element name="sueldoVice" type="xs:double" />
       <xs:element name="sueldoContador" type="xs:double" />
+      <xs:element name="cuitrabajador" type="xs:long" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarNominaResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mostrarDatosCliente">
+    <xs:sequence>
+      <xs:element name="cui" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mostrarDatosClienteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:cliente" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="mostrarTiposCuenta">

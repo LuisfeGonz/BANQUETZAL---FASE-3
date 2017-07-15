@@ -67,7 +67,8 @@ namespace Banquetzal.app
             int cuentaOrigen = Convert.ToInt32(ddlOrigen.SelectedValue);
             int cuentaDestino = Convert.ToInt32(ddlDestino.SelectedValue);
             long monto = Convert.ToInt64(this.monto.Text);
-            estado.Text = swjava.transferir(cuentaOrigen, cuentaDestino, monto);
+            long cuitrabajador = Convert.ToInt64(Session["cui"].ToString());
+            estado.Text = swjava.transferir(cuentaOrigen, cuentaDestino, monto, cuitrabajador);
         }
     }
 }

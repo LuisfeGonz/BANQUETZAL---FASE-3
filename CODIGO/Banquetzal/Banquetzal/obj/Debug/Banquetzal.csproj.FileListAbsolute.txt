@@ -38,3 +38,23 @@ C:\GitHub - Repositorios\Banquetzal Fase 2\CODIGO\Banquetzal\Banquetzal\bin\Micr
 C:\GitHub - Repositorios\Banquetzal Fase 2\CODIGO\Banquetzal\Banquetzal\obj\Debug\Banquetzal.dll
 C:\GitHub - Repositorios\Banquetzal Fase 2\CODIGO\Banquetzal\Banquetzal\obj\Debug\Banquetzal.pdb
 C:\GitHub - Repositorios\Banquetzal Fase 2\CODIGO\Banquetzal\Banquetzal\obj\Debug\Banquetzal.csprojResolveAssemblyReference.cache
+C:\GitHub - Repositorios\BANQUETZAL - FASE 3\CODIGO\Banquetzal\Banquetzal\obj\Debug\Banquetzal.csprojResolveAssemblyReference.cache
+C:\GitHub - Repositorios\BANQUETZAL - FASE 3\CODIGO\Banquetzal\Banquetzal\obj\Debug\Banquetzal.dll
+C:\GitHub - Repositorios\BANQUETZAL - FASE 3\CODIGO\Banquetzal\Banquetzal\obj\Debug\Banquetzal.pdb
+C:\GitHub - Repositorios\BANQUETZAL - FASE 3\CODIGO\Banquetzal\Banquetzal\bin\roslyn\csc.exe
+C:\GitHub - Repositorios\BANQUETZAL - FASE 3\CODIGO\Banquetzal\Banquetzal\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\GitHub - Repositorios\BANQUETZAL - FASE 3\CODIGO\Banquetzal\Banquetzal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\GitHub - Repositorios\BANQUETZAL - FASE 3\CODIGO\Banquetzal\Banquetzal\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\GitHub - Repositorios\BANQUETZAL - FASE 3\CODIGO\Banquetzal\Banquetzal\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\GitHub - Repositorios\BANQUETZAL - FASE 3\CODIGO\Banquetzal\Banquetzal\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\GitHub - Repositorios\BANQUETZAL - FASE 3\CODIGO\Banquetzal\Banquetzal\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\GitHub - Repositorios\BANQUETZAL - FASE 3\CODIGO\Banquetzal\Banquetzal\bin\roslyn\System.Collections.Immutable.dll
+C:\GitHub - Repositorios\BANQUETZAL - FASE 3\CODIGO\Banquetzal\Banquetzal\bin\roslyn\System.Reflection.Metadata.dll
+C:\GitHub - Repositorios\BANQUETZAL - FASE 3\CODIGO\Banquetzal\Banquetzal\bin\roslyn\vbc.exe
+C:\GitHub - Repositorios\BANQUETZAL - FASE 3\CODIGO\Banquetzal\Banquetzal\bin\roslyn\VBCSCompiler.exe
+C:\GitHub - Repositorios\BANQUETZAL - FASE 3\CODIGO\Banquetzal\Banquetzal\bin\roslyn\VBCSCompiler.exe.config
+C:\GitHub - Repositorios\BANQUETZAL - FASE 3\CODIGO\Banquetzal\Banquetzal\bin\Banquetzal.dll.config
+C:\GitHub - Repositorios\BANQUETZAL - FASE 3\CODIGO\Banquetzal\Banquetzal\bin\Banquetzal.dll
+C:\GitHub - Repositorios\BANQUETZAL - FASE 3\CODIGO\Banquetzal\Banquetzal\bin\Banquetzal.pdb
+C:\GitHub - Repositorios\BANQUETZAL - FASE 3\CODIGO\Banquetzal\Banquetzal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\GitHub - Repositorios\BANQUETZAL - FASE 3\CODIGO\Banquetzal\Banquetzal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml

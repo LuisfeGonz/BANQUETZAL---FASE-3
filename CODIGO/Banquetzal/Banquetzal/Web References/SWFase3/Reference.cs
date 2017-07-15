@@ -29,45 +29,47 @@ namespace Banquetzal.SWFase3 {
     [System.Web.Services.WebServiceBindingAttribute(Name="Fase3PortBinding", Namespace="http://ServicioWeb/")]
     public partial class Fase3 : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
+        private System.Threading.SendOrPostCallback agregarProveedorOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback transferirOperationCompleted;
+        
         private System.Threading.SendOrPostCallback retirarOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback mostrarCuentasAsociadasOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback mostrarPrestamosClienteOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback mostrarPrestamosTrabajadorOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback mostrarEstadosPrestamosOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback cambiarEstadoPrestamoOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback mostrarCuentasClienteOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback mostrarPropietarioDeCuentaOperationCompleted;
         
         private System.Threading.SendOrPostCallback mostrarStockOperationCompleted;
         
-        private System.Threading.SendOrPostCallback puntosClienteOperationCompleted;
-        
         private System.Threading.SendOrPostCallback asociarCuentaOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback transferirOperationCompleted;
         
         private System.Threading.SendOrPostCallback helloOperationCompleted;
         
         private System.Threading.SendOrPostCallback canjearProductoOperationCompleted;
         
-        private System.Threading.SendOrPostCallback mostarProductosMasSolicitadosOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback mostarProveedoresMasSolicitadosOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback mostrarProveedoresOperationCompleted;
+        private System.Threading.SendOrPostCallback puntosClienteOperationCompleted;
         
         private System.Threading.SendOrPostCallback mostrarProductosOperationCompleted;
         
         private System.Threading.SendOrPostCallback agregarProductoOperationCompleted;
         
-        private System.Threading.SendOrPostCallback agregarProveedorOperationCompleted;
+        private System.Threading.SendOrPostCallback pruebaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mostrarCuentasClienteOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mostarProveedoresMasSolicitadosOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback cambiarEstadoPrestamoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mostrarProveedoresOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mostrarPropietarioDeCuentaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mostrarPrestamosTrabajadorOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mostrarPrestamosClienteOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mostrarCuentasAsociadasOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mostrarEstadosPrestamosOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mostarProductosMasSolicitadosOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -108,40 +110,19 @@ namespace Banquetzal.SWFase3 {
         }
         
         /// <remarks/>
+        public event agregarProveedorCompletedEventHandler agregarProveedorCompleted;
+        
+        /// <remarks/>
+        public event transferirCompletedEventHandler transferirCompleted;
+        
+        /// <remarks/>
         public event retirarCompletedEventHandler retirarCompleted;
-        
-        /// <remarks/>
-        public event mostrarCuentasAsociadasCompletedEventHandler mostrarCuentasAsociadasCompleted;
-        
-        /// <remarks/>
-        public event mostrarPrestamosClienteCompletedEventHandler mostrarPrestamosClienteCompleted;
-        
-        /// <remarks/>
-        public event mostrarPrestamosTrabajadorCompletedEventHandler mostrarPrestamosTrabajadorCompleted;
-        
-        /// <remarks/>
-        public event mostrarEstadosPrestamosCompletedEventHandler mostrarEstadosPrestamosCompleted;
-        
-        /// <remarks/>
-        public event cambiarEstadoPrestamoCompletedEventHandler cambiarEstadoPrestamoCompleted;
-        
-        /// <remarks/>
-        public event mostrarCuentasClienteCompletedEventHandler mostrarCuentasClienteCompleted;
-        
-        /// <remarks/>
-        public event mostrarPropietarioDeCuentaCompletedEventHandler mostrarPropietarioDeCuentaCompleted;
         
         /// <remarks/>
         public event mostrarStockCompletedEventHandler mostrarStockCompleted;
         
         /// <remarks/>
-        public event puntosClienteCompletedEventHandler puntosClienteCompleted;
-        
-        /// <remarks/>
         public event asociarCuentaCompletedEventHandler asociarCuentaCompleted;
-        
-        /// <remarks/>
-        public event transferirCompletedEventHandler transferirCompleted;
         
         /// <remarks/>
         public event helloCompletedEventHandler helloCompleted;
@@ -150,13 +131,7 @@ namespace Banquetzal.SWFase3 {
         public event canjearProductoCompletedEventHandler canjearProductoCompleted;
         
         /// <remarks/>
-        public event mostarProductosMasSolicitadosCompletedEventHandler mostarProductosMasSolicitadosCompleted;
-        
-        /// <remarks/>
-        public event mostarProveedoresMasSolicitadosCompletedEventHandler mostarProveedoresMasSolicitadosCompleted;
-        
-        /// <remarks/>
-        public event mostrarProveedoresCompletedEventHandler mostrarProveedoresCompleted;
+        public event puntosClienteCompletedEventHandler puntosClienteCompleted;
         
         /// <remarks/>
         public event mostrarProductosCompletedEventHandler mostrarProductosCompleted;
@@ -165,245 +140,137 @@ namespace Banquetzal.SWFase3 {
         public event agregarProductoCompletedEventHandler agregarProductoCompleted;
         
         /// <remarks/>
-        public event agregarProveedorCompletedEventHandler agregarProveedorCompleted;
+        public event pruebaCompletedEventHandler pruebaCompleted;
+        
+        /// <remarks/>
+        public event mostrarCuentasClienteCompletedEventHandler mostrarCuentasClienteCompleted;
+        
+        /// <remarks/>
+        public event mostarProveedoresMasSolicitadosCompletedEventHandler mostarProveedoresMasSolicitadosCompleted;
+        
+        /// <remarks/>
+        public event cambiarEstadoPrestamoCompletedEventHandler cambiarEstadoPrestamoCompleted;
+        
+        /// <remarks/>
+        public event mostrarProveedoresCompletedEventHandler mostrarProveedoresCompleted;
+        
+        /// <remarks/>
+        public event mostrarPropietarioDeCuentaCompletedEventHandler mostrarPropietarioDeCuentaCompleted;
+        
+        /// <remarks/>
+        public event mostrarPrestamosTrabajadorCompletedEventHandler mostrarPrestamosTrabajadorCompleted;
+        
+        /// <remarks/>
+        public event mostrarPrestamosClienteCompletedEventHandler mostrarPrestamosClienteCompleted;
+        
+        /// <remarks/>
+        public event mostrarCuentasAsociadasCompletedEventHandler mostrarCuentasAsociadasCompleted;
+        
+        /// <remarks/>
+        public event mostrarEstadosPrestamosCompletedEventHandler mostrarEstadosPrestamosCompleted;
+        
+        /// <remarks/>
+        public event mostarProductosMasSolicitadosCompletedEventHandler mostarProductosMasSolicitadosCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string retirar([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int cuenta, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long monto) {
-            object[] results = this.Invoke("retirar", new object[] {
-                        cuenta,
-                        monto});
+        public string agregarProveedor([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nombre, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string direccion) {
+            object[] results = this.Invoke("agregarProveedor", new object[] {
+                        nombre,
+                        direccion});
             return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void retirarAsync(int cuenta, long monto) {
-            this.retirarAsync(cuenta, monto, null);
+        public void agregarProveedorAsync(string nombre, string direccion) {
+            this.agregarProveedorAsync(nombre, direccion, null);
         }
         
         /// <remarks/>
-        public void retirarAsync(int cuenta, long monto, object userState) {
+        public void agregarProveedorAsync(string nombre, string direccion, object userState) {
+            if ((this.agregarProveedorOperationCompleted == null)) {
+                this.agregarProveedorOperationCompleted = new System.Threading.SendOrPostCallback(this.OnagregarProveedorOperationCompleted);
+            }
+            this.InvokeAsync("agregarProveedor", new object[] {
+                        nombre,
+                        direccion}, this.agregarProveedorOperationCompleted, userState);
+        }
+        
+        private void OnagregarProveedorOperationCompleted(object arg) {
+            if ((this.agregarProveedorCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.agregarProveedorCompleted(this, new agregarProveedorCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string transferir([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int origen, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int destino, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long monto, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cuitrabajador) {
+            object[] results = this.Invoke("transferir", new object[] {
+                        origen,
+                        destino,
+                        monto,
+                        cuitrabajador});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void transferirAsync(int origen, int destino, long monto, long cuitrabajador) {
+            this.transferirAsync(origen, destino, monto, cuitrabajador, null);
+        }
+        
+        /// <remarks/>
+        public void transferirAsync(int origen, int destino, long monto, long cuitrabajador, object userState) {
+            if ((this.transferirOperationCompleted == null)) {
+                this.transferirOperationCompleted = new System.Threading.SendOrPostCallback(this.OntransferirOperationCompleted);
+            }
+            this.InvokeAsync("transferir", new object[] {
+                        origen,
+                        destino,
+                        monto,
+                        cuitrabajador}, this.transferirOperationCompleted, userState);
+        }
+        
+        private void OntransferirOperationCompleted(object arg) {
+            if ((this.transferirCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.transferirCompleted(this, new transferirCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string retirar([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int cuenta, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long monto, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cuitrabajador) {
+            object[] results = this.Invoke("retirar", new object[] {
+                        cuenta,
+                        monto,
+                        cuitrabajador});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void retirarAsync(int cuenta, long monto, long cuitrabajador) {
+            this.retirarAsync(cuenta, monto, cuitrabajador, null);
+        }
+        
+        /// <remarks/>
+        public void retirarAsync(int cuenta, long monto, long cuitrabajador, object userState) {
             if ((this.retirarOperationCompleted == null)) {
                 this.retirarOperationCompleted = new System.Threading.SendOrPostCallback(this.OnretirarOperationCompleted);
             }
             this.InvokeAsync("retirar", new object[] {
                         cuenta,
-                        monto}, this.retirarOperationCompleted, userState);
+                        monto,
+                        cuitrabajador}, this.retirarOperationCompleted, userState);
         }
         
         private void OnretirarOperationCompleted(object arg) {
             if ((this.retirarCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.retirarCompleted(this, new retirarCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public cuenta[] mostrarCuentasAsociadas([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cui) {
-            object[] results = this.Invoke("mostrarCuentasAsociadas", new object[] {
-                        cui});
-            return ((cuenta[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void mostrarCuentasAsociadasAsync(long cui) {
-            this.mostrarCuentasAsociadasAsync(cui, null);
-        }
-        
-        /// <remarks/>
-        public void mostrarCuentasAsociadasAsync(long cui, object userState) {
-            if ((this.mostrarCuentasAsociadasOperationCompleted == null)) {
-                this.mostrarCuentasAsociadasOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarCuentasAsociadasOperationCompleted);
-            }
-            this.InvokeAsync("mostrarCuentasAsociadas", new object[] {
-                        cui}, this.mostrarCuentasAsociadasOperationCompleted, userState);
-        }
-        
-        private void OnmostrarCuentasAsociadasOperationCompleted(object arg) {
-            if ((this.mostrarCuentasAsociadasCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.mostrarCuentasAsociadasCompleted(this, new mostrarCuentasAsociadasCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public prestamo[] mostrarPrestamosCliente([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int nomina) {
-            object[] results = this.Invoke("mostrarPrestamosCliente", new object[] {
-                        nomina});
-            return ((prestamo[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void mostrarPrestamosClienteAsync(int nomina) {
-            this.mostrarPrestamosClienteAsync(nomina, null);
-        }
-        
-        /// <remarks/>
-        public void mostrarPrestamosClienteAsync(int nomina, object userState) {
-            if ((this.mostrarPrestamosClienteOperationCompleted == null)) {
-                this.mostrarPrestamosClienteOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarPrestamosClienteOperationCompleted);
-            }
-            this.InvokeAsync("mostrarPrestamosCliente", new object[] {
-                        nomina}, this.mostrarPrestamosClienteOperationCompleted, userState);
-        }
-        
-        private void OnmostrarPrestamosClienteOperationCompleted(object arg) {
-            if ((this.mostrarPrestamosClienteCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.mostrarPrestamosClienteCompleted(this, new mostrarPrestamosClienteCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public prestamo[] mostrarPrestamosTrabajador() {
-            object[] results = this.Invoke("mostrarPrestamosTrabajador", new object[0]);
-            return ((prestamo[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void mostrarPrestamosTrabajadorAsync() {
-            this.mostrarPrestamosTrabajadorAsync(null);
-        }
-        
-        /// <remarks/>
-        public void mostrarPrestamosTrabajadorAsync(object userState) {
-            if ((this.mostrarPrestamosTrabajadorOperationCompleted == null)) {
-                this.mostrarPrestamosTrabajadorOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarPrestamosTrabajadorOperationCompleted);
-            }
-            this.InvokeAsync("mostrarPrestamosTrabajador", new object[0], this.mostrarPrestamosTrabajadorOperationCompleted, userState);
-        }
-        
-        private void OnmostrarPrestamosTrabajadorOperationCompleted(object arg) {
-            if ((this.mostrarPrestamosTrabajadorCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.mostrarPrestamosTrabajadorCompleted(this, new mostrarPrestamosTrabajadorCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public estadoPrestamo[] mostrarEstadosPrestamos() {
-            object[] results = this.Invoke("mostrarEstadosPrestamos", new object[0]);
-            return ((estadoPrestamo[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void mostrarEstadosPrestamosAsync() {
-            this.mostrarEstadosPrestamosAsync(null);
-        }
-        
-        /// <remarks/>
-        public void mostrarEstadosPrestamosAsync(object userState) {
-            if ((this.mostrarEstadosPrestamosOperationCompleted == null)) {
-                this.mostrarEstadosPrestamosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarEstadosPrestamosOperationCompleted);
-            }
-            this.InvokeAsync("mostrarEstadosPrestamos", new object[0], this.mostrarEstadosPrestamosOperationCompleted, userState);
-        }
-        
-        private void OnmostrarEstadosPrestamosOperationCompleted(object arg) {
-            if ((this.mostrarEstadosPrestamosCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.mostrarEstadosPrestamosCompleted(this, new mostrarEstadosPrestamosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string cambiarEstadoPrestamo([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int idprestamo, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int idestado) {
-            object[] results = this.Invoke("cambiarEstadoPrestamo", new object[] {
-                        idprestamo,
-                        idestado});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void cambiarEstadoPrestamoAsync(int idprestamo, int idestado) {
-            this.cambiarEstadoPrestamoAsync(idprestamo, idestado, null);
-        }
-        
-        /// <remarks/>
-        public void cambiarEstadoPrestamoAsync(int idprestamo, int idestado, object userState) {
-            if ((this.cambiarEstadoPrestamoOperationCompleted == null)) {
-                this.cambiarEstadoPrestamoOperationCompleted = new System.Threading.SendOrPostCallback(this.OncambiarEstadoPrestamoOperationCompleted);
-            }
-            this.InvokeAsync("cambiarEstadoPrestamo", new object[] {
-                        idprestamo,
-                        idestado}, this.cambiarEstadoPrestamoOperationCompleted, userState);
-        }
-        
-        private void OncambiarEstadoPrestamoOperationCompleted(object arg) {
-            if ((this.cambiarEstadoPrestamoCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.cambiarEstadoPrestamoCompleted(this, new cambiarEstadoPrestamoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public cuenta[] mostrarCuentasCliente([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cui) {
-            object[] results = this.Invoke("mostrarCuentasCliente", new object[] {
-                        cui});
-            return ((cuenta[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void mostrarCuentasClienteAsync(long cui) {
-            this.mostrarCuentasClienteAsync(cui, null);
-        }
-        
-        /// <remarks/>
-        public void mostrarCuentasClienteAsync(long cui, object userState) {
-            if ((this.mostrarCuentasClienteOperationCompleted == null)) {
-                this.mostrarCuentasClienteOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarCuentasClienteOperationCompleted);
-            }
-            this.InvokeAsync("mostrarCuentasCliente", new object[] {
-                        cui}, this.mostrarCuentasClienteOperationCompleted, userState);
-        }
-        
-        private void OnmostrarCuentasClienteOperationCompleted(object arg) {
-            if ((this.mostrarCuentasClienteCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.mostrarCuentasClienteCompleted(this, new mostrarCuentasClienteCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public cliente mostrarPropietarioDeCuenta([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int cuenta) {
-            object[] results = this.Invoke("mostrarPropietarioDeCuenta", new object[] {
-                        cuenta});
-            return ((cliente)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void mostrarPropietarioDeCuentaAsync(int cuenta) {
-            this.mostrarPropietarioDeCuentaAsync(cuenta, null);
-        }
-        
-        /// <remarks/>
-        public void mostrarPropietarioDeCuentaAsync(int cuenta, object userState) {
-            if ((this.mostrarPropietarioDeCuentaOperationCompleted == null)) {
-                this.mostrarPropietarioDeCuentaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarPropietarioDeCuentaOperationCompleted);
-            }
-            this.InvokeAsync("mostrarPropietarioDeCuenta", new object[] {
-                        cuenta}, this.mostrarPropietarioDeCuentaOperationCompleted, userState);
-        }
-        
-        private void OnmostrarPropietarioDeCuentaOperationCompleted(object arg) {
-            if ((this.mostrarPropietarioDeCuentaCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.mostrarPropietarioDeCuentaCompleted(this, new mostrarPropietarioDeCuentaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -438,36 +305,6 @@ namespace Banquetzal.SWFase3 {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int puntosCliente([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cui) {
-            object[] results = this.Invoke("puntosCliente", new object[] {
-                        cui});
-            return ((int)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void puntosClienteAsync(long cui) {
-            this.puntosClienteAsync(cui, null);
-        }
-        
-        /// <remarks/>
-        public void puntosClienteAsync(long cui, object userState) {
-            if ((this.puntosClienteOperationCompleted == null)) {
-                this.puntosClienteOperationCompleted = new System.Threading.SendOrPostCallback(this.OnpuntosClienteOperationCompleted);
-            }
-            this.InvokeAsync("puntosCliente", new object[] {
-                        cui}, this.puntosClienteOperationCompleted, userState);
-        }
-        
-        private void OnpuntosClienteOperationCompleted(object arg) {
-            if ((this.puntosClienteCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.puntosClienteCompleted(this, new puntosClienteCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string asociarCuenta([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cui, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int idcuenta) {
             object[] results = this.Invoke("asociarCuenta", new object[] {
                         cui,
@@ -494,40 +331,6 @@ namespace Banquetzal.SWFase3 {
             if ((this.asociarCuentaCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.asociarCuentaCompleted(this, new asociarCuentaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string transferir([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int origen, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int destino, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long monto) {
-            object[] results = this.Invoke("transferir", new object[] {
-                        origen,
-                        destino,
-                        monto});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void transferirAsync(int origen, int destino, long monto) {
-            this.transferirAsync(origen, destino, monto, null);
-        }
-        
-        /// <remarks/>
-        public void transferirAsync(int origen, int destino, long monto, object userState) {
-            if ((this.transferirOperationCompleted == null)) {
-                this.transferirOperationCompleted = new System.Threading.SendOrPostCallback(this.OntransferirOperationCompleted);
-            }
-            this.InvokeAsync("transferir", new object[] {
-                        origen,
-                        destino,
-                        monto}, this.transferirOperationCompleted, userState);
-        }
-        
-        private void OntransferirOperationCompleted(object arg) {
-            if ((this.transferirCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.transferirCompleted(this, new transferirCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -596,84 +399,30 @@ namespace Banquetzal.SWFase3 {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public producto[] mostarProductosMasSolicitados() {
-            object[] results = this.Invoke("mostarProductosMasSolicitados", new object[0]);
-            return ((producto[])(results[0]));
+        public int puntosCliente([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cui) {
+            object[] results = this.Invoke("puntosCliente", new object[] {
+                        cui});
+            return ((int)(results[0]));
         }
         
         /// <remarks/>
-        public void mostarProductosMasSolicitadosAsync() {
-            this.mostarProductosMasSolicitadosAsync(null);
+        public void puntosClienteAsync(long cui) {
+            this.puntosClienteAsync(cui, null);
         }
         
         /// <remarks/>
-        public void mostarProductosMasSolicitadosAsync(object userState) {
-            if ((this.mostarProductosMasSolicitadosOperationCompleted == null)) {
-                this.mostarProductosMasSolicitadosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostarProductosMasSolicitadosOperationCompleted);
+        public void puntosClienteAsync(long cui, object userState) {
+            if ((this.puntosClienteOperationCompleted == null)) {
+                this.puntosClienteOperationCompleted = new System.Threading.SendOrPostCallback(this.OnpuntosClienteOperationCompleted);
             }
-            this.InvokeAsync("mostarProductosMasSolicitados", new object[0], this.mostarProductosMasSolicitadosOperationCompleted, userState);
+            this.InvokeAsync("puntosCliente", new object[] {
+                        cui}, this.puntosClienteOperationCompleted, userState);
         }
         
-        private void OnmostarProductosMasSolicitadosOperationCompleted(object arg) {
-            if ((this.mostarProductosMasSolicitadosCompleted != null)) {
+        private void OnpuntosClienteOperationCompleted(object arg) {
+            if ((this.puntosClienteCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.mostarProductosMasSolicitadosCompleted(this, new mostarProductosMasSolicitadosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public proveedor[] mostarProveedoresMasSolicitados() {
-            object[] results = this.Invoke("mostarProveedoresMasSolicitados", new object[0]);
-            return ((proveedor[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void mostarProveedoresMasSolicitadosAsync() {
-            this.mostarProveedoresMasSolicitadosAsync(null);
-        }
-        
-        /// <remarks/>
-        public void mostarProveedoresMasSolicitadosAsync(object userState) {
-            if ((this.mostarProveedoresMasSolicitadosOperationCompleted == null)) {
-                this.mostarProveedoresMasSolicitadosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostarProveedoresMasSolicitadosOperationCompleted);
-            }
-            this.InvokeAsync("mostarProveedoresMasSolicitados", new object[0], this.mostarProveedoresMasSolicitadosOperationCompleted, userState);
-        }
-        
-        private void OnmostarProveedoresMasSolicitadosOperationCompleted(object arg) {
-            if ((this.mostarProveedoresMasSolicitadosCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.mostarProveedoresMasSolicitadosCompleted(this, new mostarProveedoresMasSolicitadosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public proveedor[] mostrarProveedores() {
-            object[] results = this.Invoke("mostrarProveedores", new object[0]);
-            return ((proveedor[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void mostrarProveedoresAsync() {
-            this.mostrarProveedoresAsync(null);
-        }
-        
-        /// <remarks/>
-        public void mostrarProveedoresAsync(object userState) {
-            if ((this.mostrarProveedoresOperationCompleted == null)) {
-                this.mostrarProveedoresOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarProveedoresOperationCompleted);
-            }
-            this.InvokeAsync("mostrarProveedores", new object[0], this.mostrarProveedoresOperationCompleted, userState);
-        }
-        
-        private void OnmostrarProveedoresOperationCompleted(object arg) {
-            if ((this.mostrarProveedoresCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.mostrarProveedoresCompleted(this, new mostrarProveedoresCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.puntosClienteCompleted(this, new puntosClienteCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -747,33 +496,321 @@ namespace Banquetzal.SWFase3 {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
+        public System.Nullable<double>[] prueba() {
+            object[] results = this.Invoke("prueba", new object[0]);
+            return ((System.Nullable<double>[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void pruebaAsync() {
+            this.pruebaAsync(null);
+        }
+        
+        /// <remarks/>
+        public void pruebaAsync(object userState) {
+            if ((this.pruebaOperationCompleted == null)) {
+                this.pruebaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnpruebaOperationCompleted);
+            }
+            this.InvokeAsync("prueba", new object[0], this.pruebaOperationCompleted, userState);
+        }
+        
+        private void OnpruebaOperationCompleted(object arg) {
+            if ((this.pruebaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.pruebaCompleted(this, new pruebaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string agregarProveedor([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nombre, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string direccion) {
-            object[] results = this.Invoke("agregarProveedor", new object[] {
-                        nombre,
-                        direccion});
+        public cuenta[] mostrarCuentasCliente([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cui) {
+            object[] results = this.Invoke("mostrarCuentasCliente", new object[] {
+                        cui});
+            return ((cuenta[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mostrarCuentasClienteAsync(long cui) {
+            this.mostrarCuentasClienteAsync(cui, null);
+        }
+        
+        /// <remarks/>
+        public void mostrarCuentasClienteAsync(long cui, object userState) {
+            if ((this.mostrarCuentasClienteOperationCompleted == null)) {
+                this.mostrarCuentasClienteOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarCuentasClienteOperationCompleted);
+            }
+            this.InvokeAsync("mostrarCuentasCliente", new object[] {
+                        cui}, this.mostrarCuentasClienteOperationCompleted, userState);
+        }
+        
+        private void OnmostrarCuentasClienteOperationCompleted(object arg) {
+            if ((this.mostrarCuentasClienteCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mostrarCuentasClienteCompleted(this, new mostrarCuentasClienteCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public proveedor[] mostarProveedoresMasSolicitados() {
+            object[] results = this.Invoke("mostarProveedoresMasSolicitados", new object[0]);
+            return ((proveedor[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mostarProveedoresMasSolicitadosAsync() {
+            this.mostarProveedoresMasSolicitadosAsync(null);
+        }
+        
+        /// <remarks/>
+        public void mostarProveedoresMasSolicitadosAsync(object userState) {
+            if ((this.mostarProveedoresMasSolicitadosOperationCompleted == null)) {
+                this.mostarProveedoresMasSolicitadosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostarProveedoresMasSolicitadosOperationCompleted);
+            }
+            this.InvokeAsync("mostarProveedoresMasSolicitados", new object[0], this.mostarProveedoresMasSolicitadosOperationCompleted, userState);
+        }
+        
+        private void OnmostarProveedoresMasSolicitadosOperationCompleted(object arg) {
+            if ((this.mostarProveedoresMasSolicitadosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mostarProveedoresMasSolicitadosCompleted(this, new mostarProveedoresMasSolicitadosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string cambiarEstadoPrestamo([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int idprestamo, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int idestado) {
+            object[] results = this.Invoke("cambiarEstadoPrestamo", new object[] {
+                        idprestamo,
+                        idestado});
             return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void agregarProveedorAsync(string nombre, string direccion) {
-            this.agregarProveedorAsync(nombre, direccion, null);
+        public void cambiarEstadoPrestamoAsync(int idprestamo, int idestado) {
+            this.cambiarEstadoPrestamoAsync(idprestamo, idestado, null);
         }
         
         /// <remarks/>
-        public void agregarProveedorAsync(string nombre, string direccion, object userState) {
-            if ((this.agregarProveedorOperationCompleted == null)) {
-                this.agregarProveedorOperationCompleted = new System.Threading.SendOrPostCallback(this.OnagregarProveedorOperationCompleted);
+        public void cambiarEstadoPrestamoAsync(int idprestamo, int idestado, object userState) {
+            if ((this.cambiarEstadoPrestamoOperationCompleted == null)) {
+                this.cambiarEstadoPrestamoOperationCompleted = new System.Threading.SendOrPostCallback(this.OncambiarEstadoPrestamoOperationCompleted);
             }
-            this.InvokeAsync("agregarProveedor", new object[] {
-                        nombre,
-                        direccion}, this.agregarProveedorOperationCompleted, userState);
+            this.InvokeAsync("cambiarEstadoPrestamo", new object[] {
+                        idprestamo,
+                        idestado}, this.cambiarEstadoPrestamoOperationCompleted, userState);
         }
         
-        private void OnagregarProveedorOperationCompleted(object arg) {
-            if ((this.agregarProveedorCompleted != null)) {
+        private void OncambiarEstadoPrestamoOperationCompleted(object arg) {
+            if ((this.cambiarEstadoPrestamoCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.agregarProveedorCompleted(this, new agregarProveedorCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.cambiarEstadoPrestamoCompleted(this, new cambiarEstadoPrestamoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public proveedor[] mostrarProveedores() {
+            object[] results = this.Invoke("mostrarProveedores", new object[0]);
+            return ((proveedor[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mostrarProveedoresAsync() {
+            this.mostrarProveedoresAsync(null);
+        }
+        
+        /// <remarks/>
+        public void mostrarProveedoresAsync(object userState) {
+            if ((this.mostrarProveedoresOperationCompleted == null)) {
+                this.mostrarProveedoresOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarProveedoresOperationCompleted);
+            }
+            this.InvokeAsync("mostrarProveedores", new object[0], this.mostrarProveedoresOperationCompleted, userState);
+        }
+        
+        private void OnmostrarProveedoresOperationCompleted(object arg) {
+            if ((this.mostrarProveedoresCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mostrarProveedoresCompleted(this, new mostrarProveedoresCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public cliente mostrarPropietarioDeCuenta([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int cuenta) {
+            object[] results = this.Invoke("mostrarPropietarioDeCuenta", new object[] {
+                        cuenta});
+            return ((cliente)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mostrarPropietarioDeCuentaAsync(int cuenta) {
+            this.mostrarPropietarioDeCuentaAsync(cuenta, null);
+        }
+        
+        /// <remarks/>
+        public void mostrarPropietarioDeCuentaAsync(int cuenta, object userState) {
+            if ((this.mostrarPropietarioDeCuentaOperationCompleted == null)) {
+                this.mostrarPropietarioDeCuentaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarPropietarioDeCuentaOperationCompleted);
+            }
+            this.InvokeAsync("mostrarPropietarioDeCuenta", new object[] {
+                        cuenta}, this.mostrarPropietarioDeCuentaOperationCompleted, userState);
+        }
+        
+        private void OnmostrarPropietarioDeCuentaOperationCompleted(object arg) {
+            if ((this.mostrarPropietarioDeCuentaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mostrarPropietarioDeCuentaCompleted(this, new mostrarPropietarioDeCuentaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public prestamo[] mostrarPrestamosTrabajador() {
+            object[] results = this.Invoke("mostrarPrestamosTrabajador", new object[0]);
+            return ((prestamo[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mostrarPrestamosTrabajadorAsync() {
+            this.mostrarPrestamosTrabajadorAsync(null);
+        }
+        
+        /// <remarks/>
+        public void mostrarPrestamosTrabajadorAsync(object userState) {
+            if ((this.mostrarPrestamosTrabajadorOperationCompleted == null)) {
+                this.mostrarPrestamosTrabajadorOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarPrestamosTrabajadorOperationCompleted);
+            }
+            this.InvokeAsync("mostrarPrestamosTrabajador", new object[0], this.mostrarPrestamosTrabajadorOperationCompleted, userState);
+        }
+        
+        private void OnmostrarPrestamosTrabajadorOperationCompleted(object arg) {
+            if ((this.mostrarPrestamosTrabajadorCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mostrarPrestamosTrabajadorCompleted(this, new mostrarPrestamosTrabajadorCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public prestamo[] mostrarPrestamosCliente([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int nomina) {
+            object[] results = this.Invoke("mostrarPrestamosCliente", new object[] {
+                        nomina});
+            return ((prestamo[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mostrarPrestamosClienteAsync(int nomina) {
+            this.mostrarPrestamosClienteAsync(nomina, null);
+        }
+        
+        /// <remarks/>
+        public void mostrarPrestamosClienteAsync(int nomina, object userState) {
+            if ((this.mostrarPrestamosClienteOperationCompleted == null)) {
+                this.mostrarPrestamosClienteOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarPrestamosClienteOperationCompleted);
+            }
+            this.InvokeAsync("mostrarPrestamosCliente", new object[] {
+                        nomina}, this.mostrarPrestamosClienteOperationCompleted, userState);
+        }
+        
+        private void OnmostrarPrestamosClienteOperationCompleted(object arg) {
+            if ((this.mostrarPrestamosClienteCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mostrarPrestamosClienteCompleted(this, new mostrarPrestamosClienteCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public cuenta[] mostrarCuentasAsociadas([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] long cui) {
+            object[] results = this.Invoke("mostrarCuentasAsociadas", new object[] {
+                        cui});
+            return ((cuenta[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mostrarCuentasAsociadasAsync(long cui) {
+            this.mostrarCuentasAsociadasAsync(cui, null);
+        }
+        
+        /// <remarks/>
+        public void mostrarCuentasAsociadasAsync(long cui, object userState) {
+            if ((this.mostrarCuentasAsociadasOperationCompleted == null)) {
+                this.mostrarCuentasAsociadasOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarCuentasAsociadasOperationCompleted);
+            }
+            this.InvokeAsync("mostrarCuentasAsociadas", new object[] {
+                        cui}, this.mostrarCuentasAsociadasOperationCompleted, userState);
+        }
+        
+        private void OnmostrarCuentasAsociadasOperationCompleted(object arg) {
+            if ((this.mostrarCuentasAsociadasCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mostrarCuentasAsociadasCompleted(this, new mostrarCuentasAsociadasCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public estadoPrestamo[] mostrarEstadosPrestamos() {
+            object[] results = this.Invoke("mostrarEstadosPrestamos", new object[0]);
+            return ((estadoPrestamo[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mostrarEstadosPrestamosAsync() {
+            this.mostrarEstadosPrestamosAsync(null);
+        }
+        
+        /// <remarks/>
+        public void mostrarEstadosPrestamosAsync(object userState) {
+            if ((this.mostrarEstadosPrestamosOperationCompleted == null)) {
+                this.mostrarEstadosPrestamosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostrarEstadosPrestamosOperationCompleted);
+            }
+            this.InvokeAsync("mostrarEstadosPrestamos", new object[0], this.mostrarEstadosPrestamosOperationCompleted, userState);
+        }
+        
+        private void OnmostrarEstadosPrestamosOperationCompleted(object arg) {
+            if ((this.mostrarEstadosPrestamosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mostrarEstadosPrestamosCompleted(this, new mostrarEstadosPrestamosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ServicioWeb/", ResponseNamespace="http://ServicioWeb/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public producto[] mostarProductosMasSolicitados() {
+            object[] results = this.Invoke("mostarProductosMasSolicitados", new object[0]);
+            return ((producto[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mostarProductosMasSolicitadosAsync() {
+            this.mostarProductosMasSolicitadosAsync(null);
+        }
+        
+        /// <remarks/>
+        public void mostarProductosMasSolicitadosAsync(object userState) {
+            if ((this.mostarProductosMasSolicitadosOperationCompleted == null)) {
+                this.mostarProductosMasSolicitadosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmostarProductosMasSolicitadosOperationCompleted);
+            }
+            this.InvokeAsync("mostarProductosMasSolicitados", new object[0], this.mostarProductosMasSolicitadosOperationCompleted, userState);
+        }
+        
+        private void OnmostarProductosMasSolicitadosOperationCompleted(object arg) {
+            if ((this.mostarProductosMasSolicitadosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mostarProductosMasSolicitadosCompleted(this, new mostarProductosMasSolicitadosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -793,267 +830,6 @@ namespace Banquetzal.SWFase3 {
                 return true;
             }
             return false;
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ServicioWeb/")]
-    public partial class cuenta {
-        
-        private long cuiContadorField;
-        
-        private long cuiPresidenteField;
-        
-        private long cuiPropietarioField;
-        
-        private long cuiViceField;
-        
-        private int estadoField;
-        
-        private double fondosField;
-        
-        private int idField;
-        
-        private string individualidadField;
-        
-        private string propietarioField;
-        
-        private int tipoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public long cuiContador {
-            get {
-                return this.cuiContadorField;
-            }
-            set {
-                this.cuiContadorField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public long cuiPresidente {
-            get {
-                return this.cuiPresidenteField;
-            }
-            set {
-                this.cuiPresidenteField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public long cuiPropietario {
-            get {
-                return this.cuiPropietarioField;
-            }
-            set {
-                this.cuiPropietarioField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public long cuiVice {
-            get {
-                return this.cuiViceField;
-            }
-            set {
-                this.cuiViceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int estado {
-            get {
-                return this.estadoField;
-            }
-            set {
-                this.estadoField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public double fondos {
-            get {
-                return this.fondosField;
-            }
-            set {
-                this.fondosField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string individualidad {
-            get {
-                return this.individualidadField;
-            }
-            set {
-                this.individualidadField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string propietario {
-            get {
-                return this.propietarioField;
-            }
-            set {
-                this.propietarioField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int tipo {
-            get {
-                return this.tipoField;
-            }
-            set {
-                this.tipoField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ServicioWeb/")]
-    public partial class proveedor {
-        
-        private int canjesField;
-        
-        private string direccionField;
-        
-        private int idField;
-        
-        private string nombreField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int canjes {
-            get {
-                return this.canjesField;
-            }
-            set {
-                this.canjesField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string direccion {
-            get {
-                return this.direccionField;
-            }
-            set {
-                this.direccionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ServicioWeb/")]
-    public partial class producto {
-        
-        private int canjesField;
-        
-        private int idField;
-        
-        private string nombreField;
-        
-        private int valorField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int canjes {
-            get {
-                return this.canjesField;
-            }
-            set {
-                this.canjesField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int valor {
-            get {
-                return this.valorField;
-            }
-            set {
-                this.valorField = value;
-            }
         }
     }
     
@@ -1127,106 +903,6 @@ namespace Banquetzal.SWFase3 {
             }
             set {
                 this.puntosField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ServicioWeb/")]
-    public partial class cliente {
-        
-        private string apellidoField;
-        
-        private long cuiField;
-        
-        private string nacimientoField;
-        
-        private string nombreField;
-        
-        private int puntosField;
-        
-        private double salarioField;
-        
-        private string usuarioField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string apellido {
-            get {
-                return this.apellidoField;
-            }
-            set {
-                this.apellidoField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public long cui {
-            get {
-                return this.cuiField;
-            }
-            set {
-                this.cuiField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nacimiento {
-            get {
-                return this.nacimientoField;
-            }
-            set {
-                this.nacimientoField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int puntos {
-            get {
-                return this.puntosField;
-            }
-            set {
-                this.puntosField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public double salario {
-            get {
-                return this.salarioField;
-            }
-            set {
-                this.salarioField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string usuario {
-            get {
-                return this.usuarioField;
-            }
-            set {
-                this.usuarioField = value;
             }
         }
     }
@@ -1393,6 +1069,419 @@ namespace Banquetzal.SWFase3 {
     }
     
     /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ServicioWeb/")]
+    public partial class cliente {
+        
+        private string apellidoField;
+        
+        private long cuiField;
+        
+        private string nacimientoField;
+        
+        private string nombreField;
+        
+        private int puntosField;
+        
+        private double salarioField;
+        
+        private string usuarioField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string apellido {
+            get {
+                return this.apellidoField;
+            }
+            set {
+                this.apellidoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long cui {
+            get {
+                return this.cuiField;
+            }
+            set {
+                this.cuiField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nacimiento {
+            get {
+                return this.nacimientoField;
+            }
+            set {
+                this.nacimientoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int puntos {
+            get {
+                return this.puntosField;
+            }
+            set {
+                this.puntosField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public double salario {
+            get {
+                return this.salarioField;
+            }
+            set {
+                this.salarioField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string usuario {
+            get {
+                return this.usuarioField;
+            }
+            set {
+                this.usuarioField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ServicioWeb/")]
+    public partial class proveedor {
+        
+        private int canjesField;
+        
+        private string direccionField;
+        
+        private int idField;
+        
+        private string nombreField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int canjes {
+            get {
+                return this.canjesField;
+            }
+            set {
+                this.canjesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string direccion {
+            get {
+                return this.direccionField;
+            }
+            set {
+                this.direccionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ServicioWeb/")]
+    public partial class cuenta {
+        
+        private long cuiContadorField;
+        
+        private long cuiPresidenteField;
+        
+        private long cuiPropietarioField;
+        
+        private long cuiViceField;
+        
+        private int estadoField;
+        
+        private double fondosField;
+        
+        private int idField;
+        
+        private string individualidadField;
+        
+        private string propietarioField;
+        
+        private int tipoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long cuiContador {
+            get {
+                return this.cuiContadorField;
+            }
+            set {
+                this.cuiContadorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long cuiPresidente {
+            get {
+                return this.cuiPresidenteField;
+            }
+            set {
+                this.cuiPresidenteField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long cuiPropietario {
+            get {
+                return this.cuiPropietarioField;
+            }
+            set {
+                this.cuiPropietarioField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long cuiVice {
+            get {
+                return this.cuiViceField;
+            }
+            set {
+                this.cuiViceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int estado {
+            get {
+                return this.estadoField;
+            }
+            set {
+                this.estadoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public double fondos {
+            get {
+                return this.fondosField;
+            }
+            set {
+                this.fondosField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string individualidad {
+            get {
+                return this.individualidadField;
+            }
+            set {
+                this.individualidadField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string propietario {
+            get {
+                return this.propietarioField;
+            }
+            set {
+                this.propietarioField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int tipo {
+            get {
+                return this.tipoField;
+            }
+            set {
+                this.tipoField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ServicioWeb/")]
+    public partial class producto {
+        
+        private int canjesField;
+        
+        private int idField;
+        
+        private string nombreField;
+        
+        private int valorField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int canjes {
+            get {
+                return this.canjesField;
+            }
+            set {
+                this.canjesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int valor {
+            get {
+                return this.valorField;
+            }
+            set {
+                this.valorField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void agregarProveedorCompletedEventHandler(object sender, agregarProveedorCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class agregarProveedorCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal agregarProveedorCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void transferirCompletedEventHandler(object sender, transferirCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class transferirCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal transferirCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void retirarCompletedEventHandler(object sender, retirarCompletedEventArgs e);
     
@@ -1414,188 +1503,6 @@ namespace Banquetzal.SWFase3 {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void mostrarCuentasAsociadasCompletedEventHandler(object sender, mostrarCuentasAsociadasCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class mostrarCuentasAsociadasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal mostrarCuentasAsociadasCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public cuenta[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((cuenta[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void mostrarPrestamosClienteCompletedEventHandler(object sender, mostrarPrestamosClienteCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class mostrarPrestamosClienteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal mostrarPrestamosClienteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public prestamo[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((prestamo[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void mostrarPrestamosTrabajadorCompletedEventHandler(object sender, mostrarPrestamosTrabajadorCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class mostrarPrestamosTrabajadorCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal mostrarPrestamosTrabajadorCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public prestamo[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((prestamo[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void mostrarEstadosPrestamosCompletedEventHandler(object sender, mostrarEstadosPrestamosCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class mostrarEstadosPrestamosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal mostrarEstadosPrestamosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public estadoPrestamo[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((estadoPrestamo[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void cambiarEstadoPrestamoCompletedEventHandler(object sender, cambiarEstadoPrestamoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class cambiarEstadoPrestamoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal cambiarEstadoPrestamoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void mostrarCuentasClienteCompletedEventHandler(object sender, mostrarCuentasClienteCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class mostrarCuentasClienteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal mostrarCuentasClienteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public cuenta[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((cuenta[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void mostrarPropietarioDeCuentaCompletedEventHandler(object sender, mostrarPropietarioDeCuentaCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class mostrarPropietarioDeCuentaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal mostrarPropietarioDeCuentaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public cliente Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((cliente)(this.results[0]));
             }
         }
     }
@@ -1628,32 +1535,6 @@ namespace Banquetzal.SWFase3 {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void puntosClienteCompletedEventHandler(object sender, puntosClienteCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class puntosClienteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal puntosClienteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public int Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((int)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void asociarCuentaCompletedEventHandler(object sender, asociarCuentaCompletedEventArgs e);
     
     /// <remarks/>
@@ -1665,32 +1546,6 @@ namespace Banquetzal.SWFase3 {
         private object[] results;
         
         internal asociarCuentaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void transferirCompletedEventHandler(object sender, transferirCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class transferirCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal transferirCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -1758,78 +1613,26 @@ namespace Banquetzal.SWFase3 {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void mostarProductosMasSolicitadosCompletedEventHandler(object sender, mostarProductosMasSolicitadosCompletedEventArgs e);
+    public delegate void puntosClienteCompletedEventHandler(object sender, puntosClienteCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class mostarProductosMasSolicitadosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class puntosClienteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal mostarProductosMasSolicitadosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal puntosClienteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
         
         /// <remarks/>
-        public producto[] Result {
+        public int Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((producto[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void mostarProveedoresMasSolicitadosCompletedEventHandler(object sender, mostarProveedoresMasSolicitadosCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class mostarProveedoresMasSolicitadosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal mostarProveedoresMasSolicitadosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public proveedor[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((proveedor[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void mostrarProveedoresCompletedEventHandler(object sender, mostrarProveedoresCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class mostrarProveedoresCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal mostrarProveedoresCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public proveedor[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((proveedor[])(this.results[0]));
+                return ((int)(this.results[0]));
             }
         }
     }
@@ -1888,17 +1691,95 @@ namespace Banquetzal.SWFase3 {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void agregarProveedorCompletedEventHandler(object sender, agregarProveedorCompletedEventArgs e);
+    public delegate void pruebaCompletedEventHandler(object sender, pruebaCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class agregarProveedorCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class pruebaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal agregarProveedorCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal pruebaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Nullable<double>[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Nullable<double>[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void mostrarCuentasClienteCompletedEventHandler(object sender, mostrarCuentasClienteCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mostrarCuentasClienteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mostrarCuentasClienteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public cuenta[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((cuenta[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void mostarProveedoresMasSolicitadosCompletedEventHandler(object sender, mostarProveedoresMasSolicitadosCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mostarProveedoresMasSolicitadosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mostarProveedoresMasSolicitadosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public proveedor[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((proveedor[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void cambiarEstadoPrestamoCompletedEventHandler(object sender, cambiarEstadoPrestamoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class cambiarEstadoPrestamoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal cambiarEstadoPrestamoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -1908,6 +1789,188 @@ namespace Banquetzal.SWFase3 {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void mostrarProveedoresCompletedEventHandler(object sender, mostrarProveedoresCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mostrarProveedoresCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mostrarProveedoresCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public proveedor[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((proveedor[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void mostrarPropietarioDeCuentaCompletedEventHandler(object sender, mostrarPropietarioDeCuentaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mostrarPropietarioDeCuentaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mostrarPropietarioDeCuentaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public cliente Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((cliente)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void mostrarPrestamosTrabajadorCompletedEventHandler(object sender, mostrarPrestamosTrabajadorCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mostrarPrestamosTrabajadorCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mostrarPrestamosTrabajadorCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public prestamo[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((prestamo[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void mostrarPrestamosClienteCompletedEventHandler(object sender, mostrarPrestamosClienteCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mostrarPrestamosClienteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mostrarPrestamosClienteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public prestamo[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((prestamo[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void mostrarCuentasAsociadasCompletedEventHandler(object sender, mostrarCuentasAsociadasCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mostrarCuentasAsociadasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mostrarCuentasAsociadasCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public cuenta[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((cuenta[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void mostrarEstadosPrestamosCompletedEventHandler(object sender, mostrarEstadosPrestamosCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mostrarEstadosPrestamosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mostrarEstadosPrestamosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public estadoPrestamo[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((estadoPrestamo[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void mostarProductosMasSolicitadosCompletedEventHandler(object sender, mostarProductosMasSolicitadosCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mostarProductosMasSolicitadosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mostarProductosMasSolicitadosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public producto[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((producto[])(this.results[0]));
             }
         }
     }
